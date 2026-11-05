@@ -14,3 +14,4 @@ svg{width:24px;height:24px;flex-shrink:0}button svg,.link svg{width:20px;height:
 @media(max-width:600px){.ios .g3{grid-template-columns:repeat(3,minmax(0,1fr))}.ios .tile{padding:12px 9px;min-width:0}.ios .tile b{font-size:13px}.ios .tile>span:last-child{font-size:11px}.ios .cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.ios .g2,.ios .g2e{grid-template-columns:1fr}.sheet .btn-row .btn{flex-grow:1;white-space:normal;min-height:44px;height:auto;padding:10px 14px}.ios .score{flex-wrap:wrap}.ios .sheet .field-row input{min-height:44px}.ios .screen{gap:14px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.unit-art animateTransform{display:none}}
 .sheet-body{grid-auto-rows:max-content;align-content:start;min-height:0}.group .gi{width:100%;text-align:left}
+@media(max-width:999px){.win .sidebar>.nav:last-child{margin-top:auto!important}}

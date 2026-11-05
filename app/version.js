@@ -1,1 +1,1 @@
-window.LERNPASS_VERSION="1.7.1";
+window.LERNPASS_VERSION="1.7.2";
