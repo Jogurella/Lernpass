@@ -1,0 +1,4 @@
+{
+ "1.7.0":"Windows-App im verbindlichen Design der Lernpass-Vorlagen. Gemeinsame Oberfläche für iPhone vorbereitet. 94 Fragen, freie Antworten, Katalog, Lernplan und Lernpass. Offline-Speicherung, Geräteanmeldung, Tailscale-Server und signierter GitHub-Updatekanal.",
+ "1.7.1":"Abschluss der Prüfung von Windows-Oberfläche, Geräteabgleich und signierten Updates. Lernstände und Einstellungen bleiben bei der Aktualisierung erhalten."
+}

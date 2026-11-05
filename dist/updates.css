@@ -1,0 +1,93 @@
+/* Exam scheduling and device sync use the existing learning-room palette. */
+.deadline-panel{margin:24px 0;padding:28px 30px}
+.deadline-panel .section-top{align-items:center;gap:20px;flex-wrap:wrap}
+.deadline-panel h2{font-size:24px;margin:8px 0 0}
+.deadline-panel>p{font-size:12px;max-width:790px;line-height:1.85}
+.deadline-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0;padding:20px;background:#f5f9f6;border:1px solid #e4ece6;border-radius:14px}
+.deadline-metrics>div{min-width:0}
+.deadline-metrics b{font-size:29px;font-weight:650;letter-spacing:-1px;color:var(--green);display:block;line-height:1.2}
+.deadline-metrics span{display:block;margin-top:7px;font-size:11px;line-height:1.7;color:var(--muted)}
+.deadline-phase{display:flex;align-items:center;gap:10px;color:var(--green);font-size:12px;font-weight:550;margin-bottom:15px}
+.deadline-panel .notice{margin:16px 0 0;font-size:12px}
+.sync-indicator{display:flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid #dce7e0;border-radius:999px;font-size:10px;color:#526c61;background:#f5f9f6;white-space:nowrap;min-height:35px}
+.sync-indicator i{width:6px;height:6px;background:#79a58a;border-radius:50%;flex-shrink:0}
+.sync-indicator.pending,.sync-indicator.offline{background:#f7f8fa;border-color:var(--line);color:var(--muted)}
+.sync-indicator.pending i,.sync-indicator.offline i{background:#9da7b0}
+.sync-indicator.conflict,.sync-indicator.waiting{color:#936021;background:#fcf7ee;border-color:#eadcc4}
+.sync-indicator.conflict i,.sync-indicator.waiting i{background:#c28b42}
+.sync-short{display:none}
+.sync-message{padding:18px 20px;border-radius:14px;background:#f3f8f5;border:1px solid #e0eae3;margin-bottom:20px}
+.sync-message>strong{color:var(--green);font-size:16px}
+.sync-message p{margin:7px 0 0;font-size:12px;line-height:1.85}
+.sync-message small{display:block;margin-top:10px;font-size:10px;color:var(--muted)}
+.sync-message.conflict,.sync-message.waiting{background:#fcf8ef;border-color:#e9dcc4}
+.sync-comparison{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.sync-comparison>div{border:1px solid var(--line);border-radius:13px;padding:16px;min-width:0}
+.sync-comparison b{font-size:12px}
+.sync-comparison p{font-size:11px;margin:8px 0 0;line-height:1.8}
+.sync-differences{margin:18px 0;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.sync-differences summary{cursor:pointer;color:var(--green);font-size:12px;font-weight:650;min-height:28px}
+.sync-differences article{border-top:1px solid var(--line);padding-top:15px;margin-top:15px}
+.sync-differences article>strong{display:block;font-size:12px;margin-bottom:12px}
+.sync-differences small{display:block;color:var(--muted);font-size:10px}
+.sync-differences article p{margin:5px 0 12px;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+#syncDetails hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+#syncDetails>.button-row{gap:10px}
+#examDeadline,#finalReviewDays{display:block;width:100%;min-height:46px;margin-top:8px}
+.calendar-grid{max-height:660px;overflow-y:auto;padding:4px;scrollbar-color:#bdcec4 transparent;scrollbar-width:thin}
+@media(max-width:1000px){.top-actions{gap:10px}.top-actions .streak{display:none}}
+@media(max-width:700px){
+ .deadline-panel{padding:24px 21px;margin:20px 0}
+ .deadline-panel .section-top{display:block;margin-bottom:14px}
+ .deadline-panel .section-top>.text-link{margin-top:14px;min-height:44px}
+ .deadline-panel h2{font-size:23px;line-height:1.28}
+ .deadline-metrics{gap:12px;padding:17px 14px;margin:20px 0}
+ .deadline-metrics b{font-size:25px}
+ .deadline-metrics span{font-size:10px;line-height:1.75}
+ .deadline-phase{align-items:flex-start;font-size:11px;line-height:1.8}
+ .deadline-phase .icon{margin-top:2px;width:17px;height:17px}
+ .top-actions{gap:7px}.sync-full{display:none}.sync-short{display:inline}
+ .sync-indicator{padding:7px 9px;font-size:9px;min-height:34px;gap:5px}
+ .sync-comparison{grid-template-columns:1fr}
+ #syncDetails>.button-row{align-items:stretch;flex-direction:column}
+ #syncDetails>.button-row>.button{width:100%}
+ #syncDetails>.button-row>.text-link{min-height:44px;justify-content:center}
+ .calendar-grid{max-height:520px}
+}
+@media print{.sync-indicator{display:none}.calendar-grid{max-height:none;overflow:visible}.deadline-panel .text-link{display:none}}
+.heading-tools{display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-shrink:0}
+.heading-tools>.button{font-size:12px;min-height:46px}
+.exam-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:25px;align-items:start}
+.exam-input-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.exam-input-grid .field-label{min-width:0;font-size:11px}
+#examStart,#examMinutes,#examReview,#setupDeadline,#setupReview{display:block;width:100%;min-height:46px;margin-top:8px;font-size:14px}
+#examWeekdays{gap:6px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));margin:12px 0 18px}
+#examWeekdays .weekday{padding:9px 0;min-width:0;font-size:11px}
+.exam-save{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}
+.setup-exam-date{padding:20px 22px;margin:23px 0;background:#f1f7f3;border:1px solid #dfeae2;border-radius:14px}
+.setup-exam-date .field-label{margin:0;font-size:13px;color:var(--green)}
+.setup-exam-date small{display:block;color:var(--muted);font-size:11px;line-height:1.8;margin-top:10px}
+.plan-preview{border:1px solid #e1e9e3;background:#f8faf8;border-radius:15px;padding:21px;margin-top:20px}
+#examPreview>.plan-preview{margin-top:0}
+.plan-preview h3{font-size:18px;line-height:1.35;margin:9px 0 16px}
+.preview-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:20px 0}
+.preview-summary>span{font-size:10px;color:var(--muted);line-height:1.7;min-width:0}
+.preview-summary b{display:block;color:var(--green);font-size:23px;line-height:1.2;margin-bottom:6px}
+.plan-preview .notice{font-size:11px;padding:14px;margin-bottom:14px}
+.forecast-days{border-top:1px solid #e1e9e3;margin-top:20px;padding-top:14px}
+.forecast-days summary{font-size:12px;font-weight:600;color:var(--green);cursor:pointer;min-height:34px}
+.forecast-row{display:grid;grid-template-columns:1fr 1.2fr auto;align-items:center;gap:12px;padding:14px 0;border-top:1px solid var(--line);font-size:11px}
+.forecast-row small{display:block;color:var(--muted);font-size:9px;line-height:1.7;margin-top:4px}
+.forecast-row>strong{font-size:10px;font-weight:550;white-space:nowrap}
+.forecast-row>span{min-width:0}
+.forecast-note{font-size:10px;line-height:1.8;margin:16px 0 0}
+@media(max-width:1000px){.exam-layout{grid-template-columns:1fr}.exam-input-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){
+ .heading-tools{align-items:stretch;width:100%;margin-top:18px}.heading-tools>.button{width:100%;font-size:12px;justify-content:center}
+ .exam-input-grid{grid-template-columns:1fr;gap:4px;margin-top:12px}.exam-layout{gap:16px}
+ #examDeadline,#examStart,#examMinutes,#examReview,#setupDeadline,#setupReview{font-size:16px;min-height:48px}
+ .exam-save{flex-direction:column;align-items:stretch;position:sticky;bottom:0;background:var(--paper);z-index:2;padding-top:14px;padding-bottom:10px}.exam-save>.button{width:100%}
+ .setup-exam-date{padding:18px;margin:19px 0}
+ .plan-preview{padding:19px 17px}.preview-summary{gap:12px}.preview-summary b{font-size:22px}
+ .forecast-row{grid-template-columns:1fr auto;gap:8px}.forecast-row>span:nth-child(2){font-size:10px}.forecast-row>strong{grid-column:2;font-size:10px;color:var(--muted)}
+}

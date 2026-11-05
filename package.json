@@ -1,0 +1,31 @@
+{
+  "name": "lernpass",
+  "version": "1.7.0",
+  "private": true,
+  "description": "Lernpass für MEC H1 – gemeinsame App für Windows und iPhone",
+  "scripts": {
+    "build": "node scripts/build-app.mjs",
+    "test": "node --test tests/*.cjs",
+    "preview": "node scripts/preview-native.mjs",
+    "tauri": "tauri",
+    "windows:build": "node scripts/build-windows.mjs",
+    "ios:sync": "node scripts/prepare-ios.mjs"
+  },
+  "dependencies": {
+    "@capacitor/app": "8.1.2",
+    "@capacitor/camera": "8.2.6",
+    "@capacitor/core": "8.6.0",
+    "@capacitor/filesystem": "8.1.5",
+    "@capacitor/haptics": "8.0.2",
+    "@capacitor/ios": "8.6.0",
+    "@capacitor/keyboard": "8.0.6",
+    "@capacitor/share": "8.0.3",
+    "@capacitor/status-bar": "8.0.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0",
+    "@tauri-apps/cli": "2.12.4",
+    "esbuild": "0.28.2",
+    "wrangler": "4.157.0"
+  }
+}

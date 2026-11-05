@@ -1,0 +1,54 @@
+
+/* Layout: Vorschau-Bühne mit Gerät (iPhone 393×852 / Windows-Fenster 1180×760); innen dieselben Bildschirme, Liquid-Glass-Ebenen über einem ruhigen Lichtfeld mit Millimeterraster. */
+:root{
+  --ink:#13202b; --ink-2:#4a5866; --ink-3:#7f8b97;
+  --paper:#e6ecf1; --stage:#d9e1e8;
+  --glass:rgba(255,255,255,.50); --glass-strong:rgba(255,255,255,.74); --glass-thin:rgba(255,255,255,.30);
+  --glass-edge:rgba(255,255,255,.88); --glass-low:rgba(255,255,255,.22); --glass-shadow:rgba(28,48,72,.14);
+  --hair:rgba(19,32,43,.09); --hair-2:rgba(19,32,43,.05); --grid:rgba(31,96,120,.06);
+  --signal:#dd7419; --signal-soft:rgba(221,116,25,.14); --on-signal:#fff;
+  --flow:#1b8aa1; --flow-soft:rgba(27,138,161,.13);
+  --ok:#1f8c5a; --ok-soft:rgba(31,140,90,.13); --warn:#b97a10; --warn-soft:rgba(201,131,22,.15);
+  --err:#c9443b; --err-soft:rgba(201,68,59,.12); --check:#5f63c8; --check-soft:rgba(95,99,200,.13);
+  --field-a:#8fd0dc; --field-b:#f6c690; --field-c:#bcc5f0;
+  --s0:#a9b4be; --s1:#8fb8c6; --s2:#5fa9bd; --s3:#2f97ae; --s4:#2a9a7b; --s5:#1f8c5a;
+  --bezel:#1b2026; --titlebar:rgba(255,255,255,.42);
+  --ui:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono","Cascadia Code",Consolas,monospace;
+  --spring:cubic-bezier(.32,1.42,.56,1); --ease:cubic-bezier(.22,.8,.24,1);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#eaf0f4; --ink-2:#a9b6c1; --ink-3:#77848f; --paper:#0a1117; --stage:#060b10;
+  --glass:rgba(28,40,52,.48); --glass-strong:rgba(34,48,62,.76); --glass-thin:rgba(30,44,58,.30);
+  --glass-edge:rgba(255,255,255,.16); --glass-low:rgba(255,255,255,.05); --glass-shadow:rgba(0,0,0,.5);
+  --hair:rgba(255,255,255,.09); --hair-2:rgba(255,255,255,.05); --grid:rgba(120,200,220,.05);
+  --signal:#f0913a; --signal-soft:rgba(240,145,58,.17); --on-signal:#1a0f04;
+  --flow:#45b8cf; --flow-soft:rgba(69,184,207,.15);
+  --ok:#3fbf86; --ok-soft:rgba(63,191,134,.15); --warn:#e3a73f; --warn-soft:rgba(227,167,63,.15);
+  --err:#ef6a5f; --err-soft:rgba(239,106,95,.15); --check:#9a9df0; --check-soft:rgba(154,157,240,.16);
+  --field-a:#0f4b57; --field-b:#5c3510; --field-c:#252c66;
+  --s0:#47535e; --s1:#3c6876; --s2:#3a8396; --s3:#3ba0b6; --s4:#35ae8a; --s5:#3fbf86;
+  --bezel:#2a3038; --titlebar:rgba(20,30,40,.5); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#eaf0f4; --ink-2:#a9b6c1; --ink-3:#77848f; --paper:#0a1117; --stage:#060b10;
+  --glass:rgba(28,40,52,.48); --glass-strong:rgba(34,48,62,.76); --glass-thin:rgba(30,44,58,.30);
+  --glass-edge:rgba(255,255,255,.16); --glass-low:rgba(255,255,255,.05); --glass-shadow:rgba(0,0,0,.5);
+  --hair:rgba(255,255,255,.09); --hair-2:rgba(255,255,255,.05); --grid:rgba(120,200,220,.05);
+  --signal:#f0913a; --signal-soft:rgba(240,145,58,.17); --on-signal:#1a0f04;
+  --flow:#45b8cf; --flow-soft:rgba(69,184,207,.15);
+  --ok:#3fbf86; --ok-soft:rgba(63,191,134,.15); --warn:#e3a73f; --warn-soft:rgba(227,167,63,.15);
+  --err:#ef6a5f; --err-soft:rgba(239,106,95,.15); --check:#9a9df0; --check-soft:rgba(154,157,240,.16);
+  --field-a:#0f4b57; --field-b:#5c3510; --field-c:#252c66;
+  --s0:#47535e; --s1:#3c6876; --s2:#3a8396; --s3:#3ba0b6; --s4:#35ae8a; --s5:#3fbf86;
+  --bezel:#2a3038; --titlebar:rgba(20,30,40,.5); color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{background:var(--stage);color:var(--ink);font-family:var(--ui);-webkit-font-smoothing:antialiased;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 28px}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none;padding:0}
+:focus-visible{outline:2px solid var(--flow);outline-offset:2px;border-radius:10px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums}
+

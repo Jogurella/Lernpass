@@ -1,0 +1,5 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [{"idx": 0, "version": "6", "when": 1793879400000, "tag": "0000_learning_sync", "breakpoints": true}, {"idx": 1, "version": "6", "when": 1793894400000, "tag": "0001_personal_ai", "breakpoints": true}]
+}

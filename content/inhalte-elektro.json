@@ -1,0 +1,1571 @@
+[
+  {
+    "id": "D27",
+    "title": "Leitungstypen richtig lesen",
+    "category": "Elektrotechnik",
+    "question": "Für eine feste Inneninstallation soll eine passende Leitung gewählt werden. Nenne geeignete Typen, zerlege A05VV-U 3G1,5 vollständig und grenze zulässige Verlegeorte ab.",
+    "answer": [
+      {
+        "label": "Geeignete Beispiele",
+        "text": "Mantelleitung YM beziehungsweise AT-N05VV-U; Aderleitung H07V-U in einem geeigneten geschlossenen Rohr- oder Kanalsystem; weitere Installationsleitungen nur entsprechend örtlicher Norm und Herstellerfreigabe."
+      },
+      {
+        "label": "Kennzeichnung",
+        "text": "A = anerkannter nationaler Typ, H würde harmonisierter Typ bedeuten. 05 = Bemessungsspannung U₀/U 300/500 V; erstes V = PVC-Aderisolierung, zweites V = PVC-Mantel; U = eindrähtiger Leiter. 3 = drei Adern insgesamt; G = grün-gelbe Schutzleiterader enthalten; 1,5 = Nennquerschnitt jeder Ader in mm²."
+      },
+      {
+        "label": "Einsatzgrenzen",
+        "text": "Für feste Verlegung in trockenen, feuchten oder nassen Innenräumen auf, in oder unter Putz gemäß Produktdatenblatt. Kein Erdkabel. Ungeschützte Außenverlegung und Betonverlegung nicht pauschal zulässig; konkrete Freigabe prüfen. Auswahl und Installation gehören zur Elektrofachkraft."
+      }
+    ],
+    "mnemonic": "A ist national, H harmonisiert; G zählt den Schutzleiter mit.",
+    "pitfall": "Die Bezeichnung beginnt mit A und der Zahl 05, nicht mit H oder den Buchstaben AO. Aus 1,5 mm² folgt allein noch kein zulässiger Sicherungswert.",
+    "keywords": [
+      "YM",
+      "A05VV-U",
+      "AT-N05VV-U",
+      "300/500 V",
+      "PVC",
+      "3G1,5"
+    ],
+    "sources": [
+      {
+        "label": "LAPP: Typenkurzzeichen T6",
+        "url": "https://www.lappkabel.de/fileadmin/catalog/de_T_pdf/T6_Typenkurzzeichen_de.pdf"
+      },
+      {
+        "label": "HEIRU: Datenblatt A05VV-U / AT-N05VV-U",
+        "url": "https://www.heiru.com/images/pdf/At/AT-N05VV-U_de.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 15
+  },
+  {
+    "id": "D28",
+    "title": "CEE: Verwechslungsschutz und Pilot",
+    "category": "Elektrotechnik",
+    "question": "Erkläre, wie CEE-Verbindungen falsches Zusammenstecken erschweren. Beschreibe Schutzkontakt und Pilotkontakt einschließlich Kontaktfolge beim Stecken und Ziehen sowie zwei typische Kennfarben.",
+    "answer": [
+      {
+        "label": "Mechanische Zuordnung",
+        "text": "Nase und Nut legen die Stecklage fest. Die zur Nut definierte Uhrzeitstellung des Schutzkontakts codiert zusammen mit Polzahl und Bauform Spannung beziehungsweise Frequenz. Unterschiedliche Stromgrößen haben unterschiedliche Abmessungen. Farben helfen bei der Erkennung; sie ersetzen die mechanische Codierung nicht."
+      },
+      {
+        "label": "Schutzkontakt",
+        "text": "Der PE-Stift und seine Buchse haben einen größeren Durchmesser als die Kontakte von L und N. PE kontaktiert voreilend und trennt nacheilend: Die Schutzverbindung besteht vor den aktiven Kontakten und bleibt bis nach deren Trennung erhalten."
+      },
+      {
+        "label": "Pilotkontakt",
+        "text": "Bei einer dafür ausgelegten Verbindung: PE zuerst, Hauptkontakte danach, Pilot zuletzt. Beim Ziehen öffnet zuerst der Pilot, anschließend trennen die Hauptkontakte, zuletzt PE. Der Pilot kann über eine korrekt ausgeführte Verriegelung ein Schütz abschalten; allein macht er keine beliebige Steckverbindung lastfrei."
+      },
+      {
+        "label": "Farben",
+        "text": "Blau steht typisch für 200–250 V, etwa 230 V; Rot typisch für 380–440 V, etwa 400 V. Weitere Werte ergeben sich aus Kennzeichnung und Normtabelle."
+      }
+    ],
+    "mnemonic": "PE zuerst und zuletzt; Pilot zuletzt hinein, zuerst heraus.",
+    "pitfall": "Pilot und PE haben entgegengesetzte zeitliche Aufgaben. Die Uhrzahl bezeichnet eine Position, keine zulässige Betriebsdauer.",
+    "keywords": [
+      "CEE",
+      "PE",
+      "Pilotkontakt",
+      "Uhrzeitstellung",
+      "Kennfarbe",
+      "IEC 60309"
+    ],
+    "sources": [
+      {
+        "label": "MENNEKES: Schutzleiter, Uhrzeitstellung und Kennfarben",
+        "url": "https://www.mennekes.at/industry/wissen/fuer-elektroprofi/schutzleiterkontakt-uhrzeitstellung-und-steckerfarben/"
+      },
+      {
+        "label": "Bals: CEE-Norm und Pilotkontakt",
+        "url": "https://m.bals.com/news-und-wissen/lexikon/cee-norm"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 15
+  },
+  {
+    "id": "D29",
+    "title": "Widerstandskennzeichnung",
+    "category": "Elektrotechnik",
+    "question": "Lies einen Widerstand mit vier Farbringen und erkläre alternative Beschriftungen. Nutze ein eigenes Zahlenbeispiel und unterscheide Wert, Multiplikator und Toleranz.",
+    "answer": [
+      {
+        "label": "Vier Ringe",
+        "text": "Ring 1 und 2 liefern die beiden Wertziffern, Ring 3 den Zehnerpotenz-Multiplikator, Ring 4 die Toleranz. Beispiel Rot–Violett–Braun–Gold: 27 × 10 Ω = 270 Ω ±5 %. Der meist abgesetzte Toleranzring hilft bei der Leserichtung."
+      },
+      {
+        "label": "Ziffernfarben",
+        "text": "Schwarz 0, Braun 1, Rot 2, Orange 3, Gelb 4, Grün 5, Blau 6, Violett 7, Grau 8, Weiß 9. Als Multiplikator bedeuten Gold ×0,1 und Silber ×0,01; als Toleranz Gold ±5 % und Silber ±10 %."
+      },
+      {
+        "label": "Weitere Kennzeichnungen",
+        "text": "Klartext wie 270 Ω oder 2,2 kΩ; Buchstaben als Dezimalzeichen wie 4R7 = 4,7 Ω und 2K2 = 2,2 kΩ; häufig dreistelliger SMD-Code 272 = 27 × 10² Ω = 2,7 kΩ. Kleine SMD-Bauteile können unbeschriftet sein. Für Sondercodes gilt das Datenblatt."
+      }
+    ],
+    "mnemonic": "Ziffer, Ziffer, Faktor, Fehlergrenze.",
+    "pitfall": "Vier Farbringe bedeuten zwei Wertziffern. Ein fünfbandiger Präzisionswiderstand verwendet normalerweise drei Wertziffern.",
+    "keywords": [
+      "Farbringe",
+      "Widerstand",
+      "Toleranz",
+      "Multiplikator",
+      "SMD-Code"
+    ],
+    "sources": [
+      {
+        "label": "Vishay: Widerstandsfarbcode und E-Reihen",
+        "url": "https://www.vishay.com/docs/20143/colorcod.pdf"
+      },
+      {
+        "label": "TE Connectivity: Widerstandsfarbcodes",
+        "url": "https://www.te.com/en/products/passive-active-electronic-components/resistors/intersection/resistor-color-codes.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 16
+  },
+  {
+    "id": "D30",
+    "title": "Installationskanäle auswählen",
+    "category": "Elektrotechnik",
+    "question": "Du planst eine übersichtliche Leitungsführung. Vergleiche Kanalbauformen, Vorteile und Werkstoffe und erläutere die Schutzmaßnahme für leitfähige Kanalsysteme.",
+    "answer": [
+      {
+        "label": "Bauformen",
+        "text": "Leitungsführungskanal für die Wand, Brüstungs- beziehungsweise Geräteeinbaukanal, Sockelleistenkanal, Bodenkanal und Verdrahtungskanal im Schaltschrank sind Beispiele. Bauform und Einbauort müssen zusammenpassen."
+      },
+      {
+        "label": "Vorteile",
+        "text": "Geordnete Leitungsführung mit mechanischem Schutz, leichterer Zugang bei Erweiterung und Wartung sowie Trennung unterschiedlicher Stromkreise durch geeignete Kammern oder Trennstege. Füllgrad, Wärmeabfuhr und Biegeradien bleiben zu berücksichtigen."
+      },
+      {
+        "label": "Werkstoffe",
+        "text": "Kunststoffe, etwa PVC oder halogenfreie Ausführungen, sowie Stahlblech oder Aluminium. Auswahl nach mechanischer Belastung, Brandanforderungen, Korrosion und Umgebung."
+      },
+      {
+        "label": "Metallkanäle",
+        "text": "Die Elektrofachkraft beurteilt und realisiert die erforderliche Schutzleiter- beziehungsweise Potentialausgleichseinbindung nach Systemzulassung und Norm. Elektrische Durchgängigkeit von Verbindern, Deckeln und Trennstegen sicherstellen und prüfen; eine lackierte Schraubverbindung genügt nicht automatisch. Den Kanal nicht ohne Zulassung als Schutzleiter verwenden."
+      }
+    ],
+    "mnemonic": "Ordnung, Schutz und Zugang brauchen auch Platz und Erdungskonzept.",
+    "pitfall": "Eine Metallabdeckung ist nicht allein durch Aufsetzen sicher elektrisch verbunden. Herstellerangaben zur Kontaktierung beachten.",
+    "keywords": [
+      "Installationskanal",
+      "Brüstungskanal",
+      "Verdrahtungskanal",
+      "Potentialausgleich",
+      "Metallkanal"
+    ],
+    "sources": [
+      {
+        "label": "OBO: Planungshilfen Gebäudeinstallation",
+        "url": "https://www.obo.de/out/media/Planungshilfen-Gebaeudeinstallation_DE.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 16
+  },
+  {
+    "id": "D31",
+    "title": "Vom Schaltplan zur Leiterplatte",
+    "category": "Elektrotechnik",
+    "question": "Beschreibe zwei typische Leiterplatten-Basismaterialien, den Zweck eines Layouts und zwei Wege zur Herstellung des Leiterbildes. Erläutere einen Fertigungsweg genauer.",
+    "answer": [
+      {
+        "label": "Basismaterialien",
+        "text": "FR-4 besteht aus Glasgewebe und Epoxidharz und ist weit verbreitet. FR-2 ist phenolharzgebundenes Hartpapier für einfachere Anwendungen. Eine Kupferkaschierung bildet die Grundlage der Leiterbahnen."
+      },
+      {
+        "label": "Layout",
+        "text": "Das Layout legt reale Bauteilpositionen, Anschlussflächen, Leiterbahnen, Bohrungen und gegebenenfalls mehrere Kupferlagen fest. Es setzt die elektrische Netzliste räumlich um und berücksichtigt Stromtragfähigkeit, Abstände, EMV und Fertigbarkeit. Entwurf typischerweise mit CAD."
+      },
+      {
+        "label": "Zwei Herstellungswege",
+        "text": "Fotolithografische Übertragung mit anschließendem Ätzen; alternativ Isolationsfräsen für geeignete Prototypen. Auch das direkte Aufbringen einer Ätzmaske ist bei einfachen Mustern möglich."
+      },
+      {
+        "label": "Fotoverfahren im Überblick",
+        "text": "Das geplante Leiterbild wird durch Film oder Direktbelichtung auf einen lichtempfindlichen Resist übertragen. Entwickeln erzeugt die Schutzmaske; ungeschütztes Kupfer wird entfernt. Danach folgen weitere Bearbeitungs- und Prüfschritte. Chemikalien nur in geeigneter Werkstatt handhaben und fachgerecht entsorgen."
+      }
+    ],
+    "mnemonic": "Schaltplan verbindet logisch, Layout ordnet räumlich.",
+    "pitfall": "Das Foto einer bestückten Platine ist kein Layout. Basismaterial, Kupferlage und Lötstopplack erfüllen unterschiedliche Aufgaben.",
+    "keywords": [
+      "FR-4",
+      "FR-2",
+      "Layout",
+      "CAD",
+      "Fotolithografie",
+      "Isolationsfräsen"
+    ],
+    "sources": [
+      {
+        "label": "Altium: Aufbau und Basismaterial einer Leiterplatte",
+        "url": "https://resources.altium.com/de/p/what-is-a-pcb"
+      },
+      {
+        "label": "Eurocircuits: Leiterplattenfertigung",
+        "url": "https://www.eurocircuits.com/de/technische-richtlinien/leiterplattenfertigung/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 17
+  },
+  {
+    "id": "D32",
+    "title": "Wärme aus Elektronik abführen",
+    "category": "Elektrotechnik",
+    "question": "Ein Leistungsbauteil benötigt Kühlung. Erkläre geeignete Materialien und Bauformen, die Einflussgrößen auf den Wärmewiderstand, übliche Oberflächenfarben und die Aufgabe der Wärmeleitpaste.",
+    "answer": [
+      {
+        "label": "Material und Aufbau",
+        "text": "Häufig Aluminium wegen Gewicht, Kosten und guter Wärmeleitung; Kupfer bei höherem Bedarf an Wärmeleitung. Eine Auflagefläche nimmt Wärme vom Bauteil auf; Rippen, Stifte oder Lamellen vergrößern die Abgabefläche. Wärme gelangt durch Leitung, Konvektion und Strahlung an die Umgebung."
+      },
+      {
+        "label": "Wärmewiderstand",
+        "text": "Rth = Temperaturdifferenz / Verlustleistung, Einheit K/W. Ein kleinerer Wert bedeutet bessere Wärmeabfuhr unter denselben Bedingungen. Entscheidend sind Werkstoff, Größe, Rippengeometrie, Einbaulage, Luftstrom, Einbauraum und Oberfläche. Datenblattwerte gelten nur für die angegebenen Prüfbedingungen."
+      },
+      {
+        "label": "Oberflächen",
+        "text": "Typisch sind naturfarbenes beziehungsweise blankes Aluminium und schwarz eloxierte Oberflächen; andere Farben sind möglich. Eloxierung beeinflusst unter anderem Korrosionsschutz und Wärmestrahlung. Die Farbe allein bewertet keinen Kühlkörper."
+      },
+      {
+        "label": "Wärmeleitpaste",
+        "text": "Sie füllt mikroskopische Unebenheiten und verdrängt schlecht leitende Luft zwischen Bauteil und Kühlkörper. Eine dünne, gleichmäßige geeignete Schicht reduziert den Übergangswiderstand. Erforderliche elektrische Isolierung muss durch dafür spezifizierte Materialien erfolgen."
+      }
+    ],
+    "mnemonic": "Große Fläche, guter Luftweg, kleiner Übergangswiderstand.",
+    "pitfall": "Wärmeleitpaste ersetzt keinen Kühlkörper und ist nicht automatisch elektrisch isolierend. Rth des Kühlkörpers ist nur ein Teil der gesamten Wärmekette.",
+    "keywords": [
+      "Kühlkörper",
+      "Aluminium",
+      "Kupfer",
+      "Wärmewiderstand",
+      "K/W",
+      "Wärmeleitpaste"
+    ],
+    "sources": [
+      {
+        "label": "Seifert electronic: Wärmewiderstände von Kühlprofilen",
+        "url": "https://www.seifert-electronic.de/wp-content/uploads/2023/02/Thermische-Widerstaende-Kuehlprofile.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 17
+  },
+  {
+    "id": "D33",
+    "title": "Schmelzsicherungen erkennen",
+    "category": "Elektrotechnik",
+    "question": "Ordne Schmelzsicherungen nach ihrer Bauform ein. Erkläre Kennmelder, Bemessungsstrom und Passeinsatz und nenne einen sicheren Grundsatz beim Austausch.",
+    "answer": [
+      {
+        "label": "Bauformen",
+        "text": "Schraubsicherungssysteme D/DIAZED und D0/NEOZED; NH-Sicherungen mit Messerkontakten; zylindrische Geräte- oder Feinsicherungen, etwa in Glas- oder Keramikausführung. Die Funktion entsteht durch einen bei Überstrom schmelzenden Leiter. Das im Katalog erwähnte Schaubild liegt zu D33 nicht bei."
+      },
+      {
+        "label": "Kennmelder",
+        "text": "Er zeigt das Ansprechen eines dafür ausgestatteten Schmelzeinsatzes an, etwa durch Abfallen oder eine veränderte Anzeige. Der Kennmelder ersetzt weder eine elektrische Prüfung noch das Feststellen der Spannungsfreiheit."
+      },
+      {
+        "label": "Strom erkennen",
+        "text": "Maßgeblich sind Aufdruck und Typdaten. Bei D/D0 unterstützt die Kennfarbe, beispielsweise Rot 10 A, Grau 16 A und Blau 20 A. Zusätzlich müssen Baugröße, Spannung, Ausschaltvermögen und Betriebsklasse passen."
+      },
+      {
+        "label": "Passeinsatz und Austausch",
+        "text": "Passeinsätze verhindern im jeweiligen D/D0-System mechanisch das Einsetzen eines zu hoch bemessenen Einsatzes. Nicht entfernen oder überbrücken. Defekte Einsätze nur passend ersetzen; Ursache klären und Arbeiten an Verteilungen nach Sicherheitsregeln der Elektrofachkraft überlassen."
+      }
+    ],
+    "mnemonic": "Aufdruck bestimmt den Einsatz, Passeinsatz begrenzt ihn.",
+    "pitfall": "Eine größere Sicherung behebt keinen Überlastfehler. Farbe und Kennmelder allein beweisen keinen sicheren Zustand.",
+    "keywords": [
+      "Schmelzsicherung",
+      "DIAZED",
+      "NEOZED",
+      "NH",
+      "Kennmelder",
+      "Passeinsatz"
+    ],
+    "sources": [
+      {
+        "label": "Elektro Technologie Zentrum: Schmelzsicherungen",
+        "url": "https://www.etz-stuttgart.de/multimedia/MM_UEBA_V2/ALLGEMEINE%2BDATEIEN_V2/Zentrale%2BDateien/X_Basics%2BET/X_Bauteile/Schmelzsicherungen-p-20029344.pdf"
+      },
+      {
+        "label": "Hager: Sicherungsmaterial",
+        "url": "https://hager.com/de/loesungen/energieverteilung/sicherungsmaterial"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 18
+  },
+  {
+    "id": "D34",
+    "title": "Kontaktwerkstoffe und Gleichstrom",
+    "category": "Elektrotechnik",
+    "question": "Wähle Kontaktmaterialien für unterschiedliche Aufgaben: Nenne Beispiele, begründe eine korrosionsbeständige Ausführung und erkläre die besonderen Anforderungen beim Schalten von Gleichstrom.",
+    "answer": [
+      {
+        "label": "Werkstoffe",
+        "text": "Kupfer und Kupferlegierungen dienen häufig als Kontaktträger. Für die Kontaktflächen kommen Silber und Silberlegierungen beziehungsweise Verbundwerkstoffe, etwa AgNi oder AgSnO₂, sowie Gold, Palladium oder Platin für passende Signalaufgaben infrage."
+      },
+      {
+        "label": "Chemische Beständigkeit",
+        "text": "Geeignete Edelmetallkontakte, besonders Gold beziehungsweise Goldlegierungen für kleine Signale, widerstehen vielen korrosiven Einflüssen besser. Die Auswahl richtet sich nach konkreter Atmosphäre und Schaltlast. Eine dünne Goldauflage kann bei hoher Schaltenergie rasch abgetragen werden."
+      },
+      {
+        "label": "Gleichstrom",
+        "text": "Es fehlt der natürliche Stromnulldurchgang des Wechselstroms. Ein Lichtbogen kann deshalb länger bestehen, Kontakte erodieren oder verschweißen. Ausschließlich für Spannung, Strom und Lastart geeignete DC-Schaltgeräte einsetzen; induktive Lasten benötigen die vom Hersteller vorgesehene Überspannungsbegrenzung. Polung oder Reihenschaltung von Polen nur gemäß Freigabe."
+      }
+    ],
+    "mnemonic": "Kleine Signale brauchen saubere Kontakte; DC braucht Lichtbogenbeherrschung.",
+    "pitfall": "Eine AC-Stromangabe lässt sich nicht unverändert auf DC übertragen. Gold ist kein universeller Kontaktwerkstoff für hohe Lasten.",
+    "keywords": [
+      "AgNi",
+      "AgSnO₂",
+      "Goldkontakt",
+      "Korrosion",
+      "Gleichstrom",
+      "Lichtbogen"
+    ],
+    "sources": [
+      {
+        "label": "OMRON: Technische Grundlagen von Relais",
+        "url": "https://www.ia.omron.com/support/guide/36/further_information.html"
+      },
+      {
+        "label": "TE Connectivity: Kontaktwerkstoffe und Lebensdauer",
+        "url": "https://www.te.com/en/products/relays-and-contactors/electromechanical-relays/intersection/relay-contact-life.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 18
+  },
+  {
+    "id": "D35",
+    "title": "Leiterplatten und Multilayer",
+    "category": "Elektrotechnik",
+    "question": "Erkläre die Aufgaben einer Leiterplatte, unterscheide mindestens drei Ausführungen und beschreibe den inneren Aufbau sowie Nutzen eines Multilayers.",
+    "answer": [
+      {
+        "label": "Grundaufgabe",
+        "text": "Eine Leiterplatte trägt Bauteile mechanisch und verbindet sie elektrisch durch strukturierte Kupferflächen und Leiterbahnen auf einem isolierenden Träger. Lötflächen, Bohrungen und Schutzschichten ergänzen den Aufbau."
+      },
+      {
+        "label": "Drei Ausführungen",
+        "text": "Einseitig: eine leitende Kupferlage. Doppelseitig: Kupfer auf beiden Seiten, bei Bedarf durch metallisierte Bohrungen verbunden. Mehrlagig beziehungsweise Multilayer: mehrere strukturierte Kupferlagen im verpressten Isolierstoffverbund. Daneben unterscheidet man starre, flexible und starrflexible Leiterplatten."
+      },
+      {
+        "label": "Multilayer",
+        "text": "Innen- und Außenlagen werden durch isolierende Schichten getrennt und gezielt über Durchkontaktierungen verbunden. Dadurch sind kompakte Verdrahtung und definierte Signal-, Masse- und Versorgungslagen möglich. Der Lagenaufbau muss bereits im Layout auf Herstellung und elektrische Eigenschaften abgestimmt werden."
+      }
+    ],
+    "mnemonic": "Einseitig, doppelseitig, mehrlagig: Kupferlagen zählen.",
+    "pitfall": "Zwei bestückte Seiten bedeuten nicht automatisch einen Multilayer. Entscheidend ist die Anzahl leitender Lagen.",
+    "keywords": [
+      "Leiterplatte",
+      "einseitig",
+      "doppelseitig",
+      "Multilayer",
+      "Durchkontaktierung",
+      "Starrflex"
+    ],
+    "sources": [
+      {
+        "label": "Würth Elektronik: Ein-, doppelseitige und Multilayer-Leiterplatten",
+        "url": "https://www.we-online.com/de/produkte/leiterplatten/basic"
+      },
+      {
+        "label": "Eurocircuits: Leiterplattenfertigung",
+        "url": "https://www.eurocircuits.com/de/technische-richtlinien/leiterplattenfertigung/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 19
+  },
+  {
+    "id": "D36",
+    "title": "Wärmeschrumpfartikel",
+    "category": "Elektrotechnik",
+    "question": "Du legst Schrumpfmaterial für Kabelverbindungen bereit. Erkläre sachgerechte Lagerung, erforderliche Eigenschaften und mehrere Anwendungen.",
+    "answer": [
+      {
+        "label": "Lagerung",
+        "text": "Sauber, trocken, ohne mechanische Quetschung und nach Herstellerangaben lagern. Vor direkter Sonne, UV und Wärmequellen schützen, damit das Material nicht vorzeitig schrumpft oder altert. Lagerdauer und Lagertemperatur hängen vom Material ab; keine allgemeingültige Haltbarkeit annehmen."
+      },
+      {
+        "label": "Eigenschaften",
+        "text": "Zum Einsatz passende elektrische Isolation, Temperatur- und Alterungsbeständigkeit sowie ausreichende mechanische Festigkeit. Je nach Umgebung sind Flammwidrigkeit, Medienbeständigkeit und UV-Beständigkeit nötig. Durchmesser vor und nach Schrumpfung, Schrumpfverhältnis, Wanddicke und gegebenenfalls Innenkleber müssen zur Verbindung passen."
+      },
+      {
+        "label": "Anwendungen",
+        "text": "Isolation von Verbindungen, Scheuerschutz, Bündelung und Kennzeichnung; Kleberausführungen zum geeigneten Abdichten; Endkappen für Kabelenden und Formteile für Abzweige. Verarbeitung mit dem vorgesehenen Werkzeug und kontrollierter Wärmeeinwirkung, bei elektrischen Verbindungen im sicher getrennten Zustand."
+      }
+    ],
+    "mnemonic": "Kühl lagern, passend wählen, kontrolliert schrumpfen.",
+    "pitfall": "Nicht jeder Schrumpfschlauch dichtet gegen Wasser ab. Ein schwarzer Schlauch ist nicht automatisch für jede Außenanwendung geeignet.",
+    "keywords": [
+      "Schrumpfschlauch",
+      "Schrumpfverhältnis",
+      "Innenkleber",
+      "Isolation",
+      "Endkappe",
+      "Lagerung"
+    ],
+    "sources": [
+      {
+        "label": "HellermannTyton: Wärmeschrumpfschläuche",
+        "url": "https://www.hellermanntyton.at/kompetenzen/schrumpfschlauch"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 19
+  },
+  {
+    "id": "D39",
+    "title": "Strombelastbarkeit und Verlegung",
+    "category": "Elektrotechnik",
+    "question": "Zwei Leitungen gleichen Querschnitts können unterschiedlich belastbar sein. Begründe das und erläutere drei typische Referenzverlegearten für feste Leitungen.",
+    "answer": [
+      {
+        "label": "Einflussgrößen",
+        "text": "Leiterwerkstoff und Querschnitt, zulässige Isolierstofftemperatur, Umgebungstemperatur, Zahl belasteter Adern, Häufung sowie Art der Wärmeabfuhr bestimmen die Strombelastbarkeit. Wärmedämmung, Sonneneinstrahlung und ein geschlossener Kanal können sie verringern. Für Erdkabel kommen Bodenbedingungen hinzu."
+      },
+      {
+        "label": "Drei Beispiele",
+        "text": "A2: mehradrige Leitung im Installationsrohr in einer wärmegedämmten Wand. B2: mehradrige Leitung im Rohr auf einer Wand. C: geeignete mehradrige Leitung direkt auf oder an einer Wand. Unterschiedliche thermische Bedingungen führen zu unterschiedlichen Tabellenwerten; die reale Ausführung muss zur Referenz passen."
+      },
+      {
+        "label": "Dimensionierung",
+        "text": "Die Elektrofachkraft wählt die passende Normtabelle und berücksichtigt Korrekturfaktoren. Zusätzlich sind Spannungsfall, Kurzschlussfestigkeit und Schutzabschaltung nachzuweisen. Für einen üblichen Überlastschutz gilt als Auswahlbedingung IB ≤ IN ≤ IZ: Betriebsstrom, Bemessungsstrom der Schutzeinrichtung und zulässige Leitungsbelastbarkeit."
+      }
+    ],
+    "mnemonic": "Der Querschnitt leitet Strom, die Umgebung entscheidet über Wärme.",
+    "pitfall": "Gleicher Querschnitt bedeutet nicht gleiche Absicherung. Tabellenwerte ohne Verlegeart und Korrekturfaktoren sind keine fertige Auslegung.",
+    "keywords": [
+      "Strombelastbarkeit",
+      "A2",
+      "B2",
+      "C",
+      "Häufung",
+      "Spannungsfall"
+    ],
+    "sources": [
+      {
+        "label": "LAPP: Strombelastbarkeit und Dimensionierung",
+        "url": "https://www.lapp.com/de/at/produkte/eigenschaften-technologien/elektrische-eigenschaften/strombelastbarkeit/e/071001"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 21
+  },
+  {
+    "id": "D41",
+    "title": "Aktive und passive Sensorprinzipien",
+    "category": "Automation",
+    "question": "Ordne ein Thermoelement und einen Pt100 nach ihrem Messprinzip ein. Erkläre die zwei Gruppen und zeige, warum die Einteilung nicht dasselbe wie analog oder binär bedeutet.",
+    "answer": [
+      {
+        "label": "Aktiv nach Messprinzip",
+        "text": "Ein aktives, auch generatorisches Sensorelement erzeugt das elektrische Messsignal aus der Messgröße selbst. Beispiel: Ein Thermoelement erzeugt eine Spannung infolge einer Temperaturdifferenz. Das Sensorelement benötigt hierfür keine elektrische Anregung; eine angeschlossene Auswerteelektronik kann trotzdem Versorgung benötigen."
+      },
+      {
+        "label": "Passiv nach Messprinzip",
+        "text": "Ein passives, auch parametrisches Element verändert eine elektrische Größe wie Widerstand, Kapazität oder Induktivität. Ein Pt100 ändert seinen Widerstand mit der Temperatur. Um diese Änderung auszuwerten, wird ein Messstrom beziehungsweise eine Anregung benötigt."
+      },
+      {
+        "label": "Andere Einteilungen",
+        "text": "Analog oder binär beschreibt das Ausgangssignal: stetiger Messwert oder zwei Zustände. Beide thermischen Beispiele liefern zunächst analoge Informationen. In Datenblättern kann aktiv auch einen versorgten Sensor mit Elektronik bezeichnen; deshalb die verwendete Definition ausdrücklich nennen."
+      }
+    ],
+    "mnemonic": "Aktiv erzeugt, passiv verändert; analog und binär beschreiben das Signal.",
+    "pitfall": "Die Behauptung aktiv = binär und passiv = analog ist falsch. Auch Hilfsenergie und Messprinzip dürfen nicht ohne Definition vermischt werden.",
+    "keywords": [
+      "aktiver Sensor",
+      "passiver Sensor",
+      "generatorisch",
+      "parametrisch",
+      "Thermoelement",
+      "Pt100"
+    ],
+    "sources": [
+      {
+        "label": "Rössel Messtechnik: Aktive und passive Sensoren",
+        "url": "https://www.roessel-messtechnik.de/de/infothek/faq.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 22
+  },
+  {
+    "id": "D42",
+    "title": "Analoge Weg- und Winkelerfassung",
+    "category": "Automation",
+    "question": "Erkläre die Bedeutung eines analogen Sensors. Beschreibe ein Linearpotentiometer als Wegsensor und nenne Anwendungen für lineare und drehende Potentiometer.",
+    "answer": [
+      {
+        "label": "Analoges Signal",
+        "text": "Der Ausgang kann innerhalb seines Messbereichs stetig abgestufte Werte annehmen, etwa eine wegabhängige Spannung oder ein aufbereitetes Stromsignal. Im Unterschied zu einem binären Schalter wird nicht nur eine Grenzposition erkannt."
+      },
+      {
+        "label": "Linearpotentiometer",
+        "text": "Es besitzt eine Widerstandsbahn mit zwei Endanschlüssen und einen beweglichen Schleifer als dritten Anschluss. Eine mechanisch gekoppelte Schubstange bewegt den Schleifer entlang der Bahn. Mit Versorgung zwischen den Enden bildet der Schleifer einen Spannungsteiler; bei linearer Bahn und hochohmiger Auswertung ist die Ausgangsspannung proportional zum Weg."
+      },
+      {
+        "label": "Anwendungen",
+        "text": "Linear: Hubrückmeldung an Zylindern, Position eines Schlittens oder einer Pressenachse. Drehend: Winkelrückmeldung eines Stellventils, Joystick oder manueller Sollwertgeber. Geeigneten Messbereich und mechanische Endlagen beachten; ein Standardsensor ersetzt keine Sicherheitsüberwachung."
+      }
+    ],
+    "mnemonic": "Drei Anschlüsse teilen Spannung nach Weg oder Winkel.",
+    "pitfall": "Ein potentiometrischer Präzisionsweggeber soll normalerweise hochohmig als Spannungsteiler ausgewertet werden. Eine Schleiferlast kann die Kennlinie verfälschen.",
+    "keywords": [
+      "analog",
+      "Linearpotentiometer",
+      "Drehpotentiometer",
+      "Schleifer",
+      "Spannungsteiler",
+      "Wegmessung"
+    ],
+    "sources": [
+      {
+        "label": "Novotechnik: Messprinzip potentiometrischer Sensoren",
+        "url": "https://www.novotechnik.de/fileadmin/user_upload/pdfs/news/presse/Pressemitteilung_nov218_Crashtest-Dummys.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 22
+  },
+  {
+    "id": "D43",
+    "title": "Gesundheit und verwertbare Abfälle",
+    "category": "Sicherheit",
+    "question": "Beurteile eine Werkstattumgebung: Welche Einwirkungen können die Gesundheit schädigen, und welche sauber getrennten Werkstoffreste eignen sich gut zur Wiederverwertung?",
+    "answer": [
+      {
+        "label": "Einwirkungen",
+        "text": "Lärm kann das Gehör schädigen; Vibrationen belasten Hände, Gelenke oder Rücken. Hitze, Kälte, Zugluft und schlechte Beleuchtung erhöhen Belastung und Unfallrisiko. Stäube, Rauch, Dämpfe und Gase können Atemwege oder Organe schädigen. Je nach Tätigkeit kommen UV-/Laserstrahlung oder andere physikalische Einwirkungen hinzu."
+      },
+      {
+        "label": "Gut verwertbare Fraktionen",
+        "text": "Sortenreine, möglichst saubere Reste aus Stahl, Aluminium und Kupfer; getrenntes Glas sowie Papier und Karton. Auch getrennte, eindeutig bekannte Thermoplaste lassen sich häufig verwerten. Sammlung nach betrieblichem Entsorgungskonzept und lokalen Annahmebedingungen."
+      },
+      {
+        "label": "Trennung erhalten",
+        "text": "Gefährliche Stoffe, ölverschmutzte Späne, Batterien und Elektroaltgeräte getrennt erfassen. Materialverbunde und starke Verunreinigungen erschweren Recycling. Gefährdungen zuerst an der Quelle mindern, etwa durch Absaugung und Lärmminderung, ergänzt durch Organisation und geeignete PSA."
+      }
+    ],
+    "mnemonic": "Belastungen an der Quelle senken, Stoffe an der Quelle trennen.",
+    "pitfall": "Recyclingfähig bedeutet nicht, dass beliebig verunreinigte oder gefährliche Reste in die normale Wertstoffsammlung gehören.",
+    "keywords": [
+      "Lärm",
+      "Vibration",
+      "Staub",
+      "Gefahrstoffe",
+      "Recycling",
+      "Sortenreinheit"
+    ],
+    "sources": [
+      {
+        "label": "Gesundheit.gv.at: Belastungen am Arbeitsplatz",
+        "url": "https://www.gesundheit.gv.at/leben/lebenswelt/beruf/arbeitsplatz/ergonomie-am-arbeitsplatz.html"
+      },
+      {
+        "label": "Österreich.gv.at: Abfallvermeidung und Mülltrennung",
+        "url": "https://www.oesterreich.gv.at/de/themen/bauen_und_wohnen/abfall/Seite.3790051"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 23
+  },
+  {
+    "id": "D44",
+    "title": "Kältemittel und Elektroaltgeräte",
+    "category": "Sicherheit",
+    "question": "Nenne zwei konkrete Kältemittel und fünf gesundheitsschädliche Stoffe aus dem technischen Umfeld. Erläutere die sachgerechte Abgabe ausgedienter Elektrogeräte in Österreich.",
+    "answer": [
+      {
+        "label": "Zwei Kältemittel",
+        "text": "R600a ist Isobutan, R290 ist Propan. Beide sind brennbare Kohlenwasserstoffe und werden in dafür konstruierten Kälteanlagen verwendet. Welches Mittel ein Gerät enthält, steht am Typenschild. Kältekreisläufe nicht öffnen oder beschädigen; Arbeiten und Rückgewinnung qualifizierten Fachbetrieben überlassen."
+      },
+      {
+        "label": "Elektroaltgeräte",
+        "text": "Getrennt vom Restmüll an zugelassenen Sammelstellen beziehungsweise über die vorgesehene Rücknahme abgeben. Für Haushaltsgeräte bieten kommunale Sammelstellen eine kostenlose Abgabe; Handelsrücknahme richtet sich nach den gesetzlichen Bedingungen. Gewerbliche Geräte haben teilweise andere Rücknahmewege. Kühlgeräte vollständig und unbeschädigt einer fachgerechten Behandlung zuführen."
+      },
+      {
+        "label": "Fünf Beispiele",
+        "text": "Blei, Quecksilber, Cadmium, Verbindungen mit sechswertigem Chrom und der Weichmacher DEHP sind gesundheitsschädliche Beispiele. Gefährdung und Schutz richten sich nach Stoffform, Menge und Exposition. Kennzeichnung, Sicherheitsdatenblätter und betriebliche Entsorgungsregeln beachten."
+      }
+    ],
+    "mnemonic": "Kältemittel am Schild lesen, Altgeräte getrennt abgeben.",
+    "pitfall": "R600a ist Isobutan, kein beliebiges Propan-Butan-Gemisch. Nicht jedes FCKW-freie Kältemittel ist unbrennbar oder klimaneutral.",
+    "keywords": [
+      "R600a",
+      "R290",
+      "Isobutan",
+      "Propan",
+      "Elektroaltgeräte",
+      "Schadstoffe"
+    ],
+    "sources": [
+      {
+        "label": "EMSD: Sicherheit brennbarer Kältemittel",
+        "url": "https://www.emsd.gov.hk/filemanager/en/content_2/EMSDnFSDnLD_Joint_Notice.pdf"
+      },
+      {
+        "label": "USP Österreich: Elektroaltgeräte und Rücknahme",
+        "url": "https://www.usp.gv.at/themen/betrieb-und-umwelt/abfallrecht/weitere-informationen-abfallrecht/abfall-und-produktregelungen/elektroaltgeraete/elektroaltgeraete-hersteller-eigenimporteure-haendler.html"
+      },
+      {
+        "label": "RIS: Elektroaltgeräteverordnung § 4, Stoffbeschränkungen",
+        "url": "https://ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20004052&Paragraf=4"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 23
+  },
+  {
+    "id": "D45",
+    "title": "Industrielle Datennetze verkabeln",
+    "category": "Automation",
+    "question": "Vergleiche gebräuchliche Industrie-Netzwerkstecker und Übertragungsleitungen. Erkläre UTP, FTP und STP und nutze eindeutige moderne Schirmungsbezeichnungen.",
+    "answer": [
+      {
+        "label": "Steckverbinder",
+        "text": "RJ45, auch in robusten Industriegehäusen; M12 mit D-Codierung für entsprechende Ethernet-Anwendungen und X-Codierung für höhere Datenraten. Je nach Bussystem auch D-Sub oder spezifische Busstecker. Für Lichtwellenleiter sind beispielsweise LC- oder SC-Verbindungen üblich. Steckgesicht, Codierung und System müssen zusammenpassen."
+      },
+      {
+        "label": "Leitungen",
+        "text": "Verdrillte Kupferadernpaare für Ethernet und viele Feldbusse, systemspezifische Koaxialleitungen sowie Glas- oder Kunststoff-Lichtwellenleiter. Auswahl nach Übertragungsstrecke, Datenrate, EMV, mechanischer Beanspruchung und Umgebung; die Farbe allein identifiziert kein Kabel."
+      },
+      {
+        "label": "Abkürzungen",
+        "text": "UTP = Unshielded Twisted Pair, ungeschirmte verdrillte Paare. FTP = Foiled Twisted Pair, Folienabschirmung. STP = Shielded Twisted Pair, ältere Sammelbezeichnung für geschirmte Paare beziehungsweise Kabel; ihre genaue Bedeutung ist nicht überall einheitlich."
+      },
+      {
+        "label": "Eindeutige Schreibweise",
+        "text": "U/UTP: weder Gesamt- noch Paarschirm. F/UTP: gemeinsamer Folienschirm, Paare ohne Einzelschirm. U/FTP: jedes Paar in Folie, ohne Gesamtschirm. S/FTP: Gesamtgeflecht plus Folie je Paar. Vor dem Schrägstrich steht der Gesamtschirm, dahinter der Paarschirm."
+      }
+    ],
+    "mnemonic": "Vor dem Schrägstrich das Ganze, dahinter die einzelnen Paare.",
+    "pitfall": "UPT und SPT im Ausgangskatalog sind Schreibfehler für UTP und STP. Aus der alten Angabe STP allein folgt keine eindeutige Schirmkonstruktion.",
+    "keywords": [
+      "RJ45",
+      "M12",
+      "Twisted Pair",
+      "UTP",
+      "FTP",
+      "STP",
+      "S/FTP"
+    ],
+    "sources": [
+      {
+        "label": "HARTING: Industrielle Ethernet-Schnittstellen",
+        "url": "https://www.harting.com/de-DE/industrielle-ethernet-loesungen"
+      },
+      {
+        "label": "Schneider Electric: Schirmungsbezeichnungen für Twisted Pair",
+        "url": "https://www.se.com/fr/fr/faqs/FA18636/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 24
+  },
+  {
+    "id": "D46",
+    "title": "Kabeleinführungen dicht und isoliert",
+    "category": "Elektrotechnik",
+    "question": "Eine Leitung soll in ein Gehäuse eingeführt werden. Welche Bauteile erhalten die Schutzart, welche Auswahl- und Montagepunkte sind wichtig und was ist bei einem schutzisolierten Kunststoffgehäuse besonders zu beachten?",
+    "answer": [
+      {
+        "label": "Geeignete Einführung",
+        "text": "Passende Kabelverschraubung, dafür zugelassene Durchführungstülle oder Dichteinsatz verwenden. Sie dichten Gehäuse und Kabelmantel ab; eine geeignete Verschraubung übernimmt zusätzlich Zugentlastung und gegebenenfalls Knickschutz. Unbenutzte Öffnungen mit geeigneten Blindteilen schließen."
+      },
+      {
+        "label": "Auswahl und Montage",
+        "text": "Gewinde, Wandstärke, Klemm- und Dichtbereich müssen zum tatsächlichen Außendurchmesser und Kabel passen. Vorgesehene Dichtungen und Drehmomente einhalten, Mantel unbeschädigt klemmen und Biegeradius beachten. IP-Schutzart, Temperatur, UV-, Medien- und gegebenenfalls EMV-/Ex-Anforderungen für das gesamte System prüfen. Nicht ohne freigegebenen Mehrfachdichteinsatz mehrere Kabel in eine Einfachdichtung pressen."
+      },
+      {
+        "label": "Isolierstoffgehäuse",
+        "text": "Bei Schutzklasse II darf die Durchführung die doppelte beziehungsweise verstärkte Isolierung nicht überbrücken. Geeignete isolierende Einführungen gemäß Gehäusefreigabe verwenden. Eine beliebige Metallverschraubung mit innenliegender Gegenmutter kann die Schutzisolierung beeinträchtigen; die Schutzklasse ist von der Elektrofachkraft zu beurteilen."
+      }
+    ],
+    "mnemonic": "Dicht am Mantel, passend zur Wand, Schutzklasse erhalten.",
+    "pitfall": "IP-Schutzart gegen Fremdkörper und Wasser ist etwas anderes als Schutzklasse gegen elektrischen Schlag. Ein Kunststoffgehäuse allein garantiert keine Schutzklasse II.",
+    "keywords": [
+      "Kabelverschraubung",
+      "IP-Schutzart",
+      "Zugentlastung",
+      "Schutzklasse II",
+      "Isolierstoffgehäuse"
+    ],
+    "sources": [
+      {
+        "label": "LAPP: Kabelverschraubungen und Abdichtung",
+        "url": "https://www.lapp.com/de/de/produkte/kabelverschraubungen/einfacheinfuehrungen/c/113981"
+      },
+      {
+        "label": "LANUK NRW: Elektrotechnisches Ausbildungs-Handbuch, Schutzisolierung",
+        "url": "https://www.lanuk.nrw.de/fileadmin/lanuvpubl/0_lua/hndbetec.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 24
+  },
+  {
+    "id": "E1",
+    "title": "Ein Ventil erhält keinen wirksamen Befehl",
+    "category": "Automation",
+    "question": "An einer Maschine reagiert ein 24-V-Magnetventil mit SPS-Transistorausgang nicht. Entwirf eine sichere Diagnosekette, erkläre den Ersatz von Hilfsschützen und definiere die Übertragungsrate.",
+    "answer": [
+      {
+        "label": "Sicher beginnen",
+        "text": "Fehlerbild, letzte Änderungen, Stromlauf- und Pneumatikplan sowie Meldungen aufnehmen. Gefährliche Bewegungen verhindern; Eingriffe nur durch beauftragtes Fachpersonal mit gesicherten Energiequellen. Auch ein 24-V-Steuersignal kann gefährliche Maschinenbewegungen auslösen."
+      },
+      {
+        "label": "Signalweg eingrenzen",
+        "text": "Freigaben und Verriegelungen, SPS-Betriebszustand, Programmbedingung und Ausgangsdiagnose prüfen. Danach Lastversorgung, gemeinsame Bezugspotentiale, Stecker und Leitung, passende PNP-/NPN-Beschaltung, Ausgangsbelastbarkeit sowie Spule und Schutzbeschaltung beurteilen. Qualifizierte elektrische Prüfungen folgen dem freigegebenen Prüfplan. Ist die elektrische Ansteuerung in Ordnung, Druckversorgung, Vorsteuerung, Durchflussrichtung und mechanisches Klemmen untersuchen."
+      },
+      {
+        "label": "Hilfsschütze ersetzen",
+        "text": "Reine Logikfunktionen lassen sich durch Programmverknüpfungen, Merker, Zeiten und Zähler ersetzen. Für Lastanpassung oder Potentialtrennung können geeignete Koppelrelais beziehungsweise Halbleiterstufen erforderlich bleiben. Eine Standard-SPS ersetzt keine geforderte Sicherheitsfunktion."
+      },
+      {
+        "label": "Übertragungsrate",
+        "text": "Datenmenge je Zeit, meist in bit/s, kbit/s oder Mbit/s. 1 Mbit/s entspricht einer Million Bit pro Sekunde. Protokoll- und Verwaltungsdaten verringern den nutzbaren Datendurchsatz. Baud bezeichnet Symbole je Sekunde und ist nicht immer gleich bit/s."
+      }
+    ],
+    "mnemonic": "Befehl, Ausgang, Leitung, Spule, Pneumatik.",
+    "pitfall": "Eine leuchtende Ausgangs-LED beweist weder ausreichende Spannung an der Spule noch einen funktionsfähigen Ventilmechanismus. Ausgänge nicht ungesichert erzwingen.",
+    "keywords": [
+      "Magnetventil",
+      "Transistorausgang",
+      "PNP",
+      "NPN",
+      "Hilfsschütz",
+      "bit/s"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Dokumentation S7-1200",
+        "url": "https://support.industry.siemens.com/cs/ww/de/view/109744173"
+      },
+      {
+        "label": "Festo: Störungsbeseitigung und Herstellerdokumentation",
+        "url": "https://www.festo.com/de/de/e/support/support-erhalten/hilfe-und-stoerungsbeseitigung-id_21652"
+      },
+      {
+        "label": "AUVA: Fünf Sicherheitsregeln",
+        "url": "https://auva.at/praevention/medien-und-publikationen/publikationen-us/5-sicherheitsregeln-110-x-80-mm/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 42
+  },
+  {
+    "id": "E2",
+    "title": "Gleichrichter liefert zu wenig Spannung",
+    "category": "Elektrotechnik",
+    "question": "Bei einem Brückengleichrichter fällt der gemessene Gleichanteil deutlich ab. Erkläre einen möglichen Diodenfehler, eine fachgerechte Diodenprüfung und den Begriff Kommunikationsprotokoll.",
+    "answer": [
+      {
+        "label": "Plausible Ursache",
+        "text": "Eine unterbrochene Diode kann einen der beiden Strompfade der Brücke sperren. Statt beider Halbwellen wird nur noch eine genutzt. Ohne Glättung und bei vergleichbarer Last kann der Gleichspannungsmittelwert ungefähr halbiert sein; die Pulsfrequenz sinkt von 2f auf f. Mit Siebkondensator ist die genaue Spannung last- und kapazitätsabhängig. Das Symptom allein beweist diesen Fehler nicht."
+      },
+      {
+        "label": "Diodenprüfung",
+        "text": "Nur an sicher spannungsfreiem, fachgerecht entladenem Gerät prüfen; bei netzverbundenen Geräten durch Elektrofachkräfte. Parallele Schaltungspfade nötigenfalls durch fachgerechtes Trennen eines Anschlusses ausschließen. Im Diodentest zeigt eine normale Si-Diode in Durchlassrichtung typisch etwa 0,5–0,8 V und in Sperrrichtung OL. Sehr klein in beiden Richtungen spricht für Kurzschluss, OL in beiden für Unterbrechung."
+      },
+      {
+        "label": "Protokoll",
+        "text": "Vereinbarte Regeln für den Datenaustausch: zum Beispiel Nachrichtenaufbau, Adressierung, Bedeutung der Daten, zeitlicher Ablauf und Fehlererkennung. Teilnehmer benötigen zueinander passende Protokolle; ein passender Stecker genügt nicht."
+      }
+    ],
+    "mnemonic": "Fehlt eine Halbwelle, fehlt ein Strompfad.",
+    "pitfall": "Halbe Ausgangsspannung bedeutet nicht immer genau eine defekte Diode. Glättung, Last, Versorgung und Messart beeinflussen den Wert.",
+    "keywords": [
+      "Brückengleichrichter",
+      "Graetz",
+      "Diode",
+      "Einweggleichrichtung",
+      "Diodentest",
+      "Protokoll"
+    ],
+    "sources": [
+      {
+        "label": "Fluke: Fehler an Gleichrichtern verstehen",
+        "url": "https://media.fluke.com/275d3144-9c10-4f5d-992d-b1060066d6cf_original%20file.pdf"
+      },
+      {
+        "label": "Fluke: Diodenprüfung",
+        "url": "https://www.fluke.com/de-at/mehr-erfahren/blog/digitalmultimeter/anleitung-zum-pruefen-von-dioden"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 42
+  },
+  {
+    "id": "E3",
+    "title": "Stern-Dreieck-Anlauf startet nicht",
+    "category": "Elektrotechnik",
+    "question": "Eine Stern-Dreieck-Steuerung reagiert auf den Startbefehl nicht. Beschreibe ein strukturiertes, sicheres Vorgehen und erkläre anschließend den Begriff Netzwerktopologie.",
+    "answer": [
+      {
+        "label": "Auftrag und Sicherheit",
+        "text": "Störung und Sollablauf anhand des Plans verstehen; Maschine gegen unbeabsichtigtes Anlaufen sichern. Elektrische Eingriffe nur als beauftragte Fachkraft und grundsätzlich im freigeschalteten, gesicherten und auf Spannungsfreiheit geprüften Zustand. Not-Halt oder Verriegelungen nicht überbrücken."
+      },
+      {
+        "label": "Kette statt Teiletausch",
+        "text": "Zunächst Versorgung und Schutzgeräte anhand der vorgesehenen Anzeigen kontrollieren. Im Steuerpfad schrittweise Sicherung und Steuerspannungsversorgung, Stop-/Freigabekette, Motorschutzkontakt, Starttaster und Verdrahtung eingrenzen. Danach Spulendaten, Spulen, Selbsthaltung, elektrische und mechanische Verriegelung sowie Zeitrelais beurteilen. Messungen legt die Elektrofachkraft nach Gefährdungsbeurteilung fest. Nach Reparatur vollständigen sicheren Ablauf und Verriegelung prüfen und dokumentieren."
+      },
+      {
+        "label": "Topologie",
+        "text": "Sie beschreibt die physische oder logische Verknüpfung der Netzwerkteilnehmer. Beispiele: Linie, Bus, Stern, Ring und Baum. Bei einem Stern sind Teilnehmer mit einem zentralen Knoten verbunden; ein Ring besitzt einen geschlossenen Verbindungsweg."
+      }
+    ],
+    "mnemonic": "Vom gemeinsamen Freigabepfad bis zur Spule eingrenzen.",
+    "pitfall": "Wenn gar kein Schütz anzieht, zuerst gemeinsame Bedingungen untersuchen. Ein überbrückter Schutzkontakt kann einen Fehler verdecken und Menschen gefährden.",
+    "keywords": [
+      "Stern-Dreieck",
+      "Schütz",
+      "Freigabekette",
+      "Verriegelung",
+      "Topologie"
+    ],
+    "sources": [
+      {
+        "label": "AUVA: Fünf Sicherheitsregeln",
+        "url": "https://auva.at/praevention/medien-und-publikationen/publikationen-us/5-sicherheitsregeln-110-x-80-mm/"
+      },
+      {
+        "label": "ABB: Prüfung und Wartung von Schützen und Motorstartern",
+        "url": "https://library.e.abb.com/public/a1a9d7b1b9c3495f9282037d0c4fcaaa/2CDC101005M0101.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 43
+  },
+  {
+    "id": "E4",
+    "title": "Drehstrommotor anschließen und schützen",
+    "category": "Elektrotechnik",
+    "question": "Plane den Anschluss eines Drehstrommotors auf fachlicher Ebene. Welche Daten bestimmen die Zuleitung, welche Schutzgeräte kommen infrage und was muss vor der Freigabe zur Inbetriebnahme geprüft oder eingestellt sein?",
+    "answer": [
+      {
+        "label": "Zuleitung",
+        "text": "Ausgangspunkt ist der Motor-Bemessungsstrom bei richtiger Spannung und Schaltung. Zusätzlich Anlaufstrom und Anlaufdauer, Leitungslänge und Spannungsfall, Leiterwerkstoff, belastete Adern, Verlegeart, Häufung, Umgebungstemperatur und mechanische Einflüsse berücksichtigen. Schutzleiter, Kurzschlussfestigkeit und rechtzeitige Schutzabschaltung sind ebenfalls auszulegen. Ein pauschaler Querschnitt allein nach kW genügt nicht."
+      },
+      {
+        "label": "Motorschutz",
+        "text": "Motorschutzschalter mit thermischem und magnetischem Auslöser; Überlastrelais oder elektronische Schutzgeräte mit passendem Schalt- und Kurzschlussschutz; direkte Temperaturüberwachung, etwa PTC-Fühler in der Wicklung. Eine Kurzschlusssicherung allein schützt nicht zuverlässig gegen jede Motorüberlastung."
+      },
+      {
+        "label": "Vor der Freigabe",
+        "text": "Elektrofachkraft prüft Versorgung, Typenschild, Anschlussbild und Stern-/Dreieck-Eignung; Schutzleiter, Isolation und weitere erforderliche Schutzmaßnahmen; Klemmen, Zugentlastung, mechanische Befestigung, freie Kühlung und sichere Lastanbindung. Motorschutz, Anlaufzeiten und gegebenenfalls Umrichterdaten passend einstellen. Der Einstellstrom hängt auch vom Einbauort des Schutzgeräts ab. Drehrichtung und Sicherheitsfunktionen mit geschütztem Prüfablauf erproben und Ergebnisse dokumentieren."
+      }
+    ],
+    "mnemonic": "Typenschild, Leitung, Schutz und Mechanik gemeinsam prüfen.",
+    "pitfall": "Motorschutz nicht höher einstellen, damit der Motor durchläuft. Stern oder Dreieck wird aus Netzspannung und Typenschild abgeleitet.",
+    "keywords": [
+      "Drehstrommotor",
+      "Zuleitung",
+      "Motorschutz",
+      "PTC",
+      "Inbetriebnahme",
+      "Typenschild"
+    ],
+    "sources": [
+      {
+        "label": "LAPP: Strombelastbarkeit und Dimensionierung",
+        "url": "https://www.lapp.com/de/at/produkte/eigenschaften-technologien/elektrische-eigenschaften/strombelastbarkeit/e/071001"
+      },
+      {
+        "label": "WEG: Sicherheit, Anschluss, Schutz und Wartung von Motoren",
+        "url": "https://static.weg.net/medias/downloadcenter/h8e/h88/WEG-WMO-safe-area-50031071-manual-en-es.pdf"
+      },
+      {
+        "label": "Siemens: SIRIUS 3RW30/3RW40, Motorschutz",
+        "url": "https://support.industry.siemens.com/dl/files/095/38752095/att_1310809/v1/Manual_softstarter_3RW30_3RW40_de-DE.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 43
+  },
+  {
+    "id": "E5",
+    "title": "Sicher, zuverlässig und übersichtlich",
+    "category": "Sicherheit",
+    "question": "Eine Elektroinstallation soll Menschen schützen, zuverlässig arbeiten und gut beherrschbar bleiben. Erkläre diese drei Ziele und nenne zu jedem drei konkrete Gestaltungsmaßnahmen.",
+    "answer": [
+      {
+        "label": "Unfallsicherheit",
+        "text": "Menschen vor elektrischem Schlag, Verbrennung und anderen Gefahren schützen. Drei Maßnahmen: wirksamer Berührungsschutz durch Isolation beziehungsweise Abdeckungen; fachgerecht ausgeführte Schutzmaßnahme mit Schutzleiter und automatischer Abschaltung, wo vorgesehen; sichere Trenn- und Notfallfunktionen mit geeignetem Zugangsschutz. Ein RCD ergänzt nur die dafür vorgesehenen Schutzkonzepte."
+      },
+      {
+        "label": "Betriebssicherheit",
+        "text": "Die Anlage erfüllt ihre Aufgabe unter erwartbaren Bedingungen ohne unzulässige Erwärmung oder Ausfälle. Drei Maßnahmen: Leitungen und Schaltgeräte für die Belastung auslegen; Schutzgeräte passend auswählen und koordinieren; Umgebung berücksichtigen, zum Beispiel Schutzart, Kühlung und EMV, und planmäßige Wartung vorsehen."
+      },
+      {
+        "label": "Übersichtlichkeit",
+        "text": "Bedienung, Prüfung und Fehlersuche müssen eindeutig möglich sein. Drei Maßnahmen: Betriebsmittel, Leiter und Klemmen dauerhaft kennzeichnen; Schaltpläne und Dokumentation aktuell halten; geordnete Leitungswege, sinnvolle räumliche Gruppierung und erforderliche Trennung von Stromkreisen schaffen."
+      },
+      {
+        "label": "Umsetzung",
+        "text": "Errichtung und elektrische Prüfung sind Aufgaben der dafür qualifizierten Fachkräfte nach den anwendbaren österreichischen Regeln. Die drei Ziele ergänzen einander und müssen gemeinsam erfüllt werden."
+      }
+    ],
+    "mnemonic": "Menschen schützen, Funktion sichern, Zusammenhänge sichtbar machen.",
+    "pitfall": "Ein ordentlicher Schaltschrank ist nicht automatisch elektrisch sicher. Kennzeichnung ersetzt keine Schutzprüfung.",
+    "keywords": [
+      "Unfallsicherheit",
+      "Betriebssicherheit",
+      "Übersichtlichkeit",
+      "Kennzeichnung",
+      "Schutzmaßnahme"
+    ],
+    "sources": [
+      {
+        "label": "OVE: OVE E 8101, Ausgabe 2025-10-01",
+        "url": "https://www.ove.at/ove-standardization/normen-produkte/ove-e-8101/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 44
+  },
+  {
+    "id": "E6",
+    "title": "Systematische Fehlersuche verstehen",
+    "category": "Elektrotechnik",
+    "question": "Welche Voraussetzungen braucht methodische Fehlersuche? Ordne typische Fehler und Ursachen einer Leitungsunterbrechung ein und erkläre das Spannungsprinzip der Unterbrechungssuche ohne eine Anleitung für Arbeiten an Netzspannung zu geben.",
+    "answer": [
+      {
+        "label": "Voraussetzung",
+        "text": "Die Sollfunktion, den aktuellen Schaltplan und die Signal-/Energiekette verstehen. Dazu kommen passende Fachqualifikation, ein sicherer Arbeitsauftrag, geeignete Prüfmittel und die Kenntnis der Schutzmaßnahmen. Fehlerbild, Zeitpunkt und letzte Änderungen erfassen, dann Hypothesen gezielt prüfen."
+      },
+      {
+        "label": "Fehlerarten",
+        "text": "Elektrische, mechanische und Steuerungs-/Parametrierfehler; sie können dauerhaft oder zeitweise auftreten. Häufige elektrische Ursachen sind Unterbrechung, Kurzschluss, Erd- oder Körperschluss, hoher Übergangswiderstand, falscher Anschluss und fehlende Versorgung."
+      },
+      {
+        "label": "Unterbrechung",
+        "text": "Mögliche Ursachen: Leiterbruch durch Biegung oder Schwingung, lose beziehungsweise fehlerhaft verpresste Klemme, Korrosion, thermische Schädigung oder mechanische Beschädigung. Auch eine ausgelöste Sicherung oder ein offener Schaltkontakt kann den Strompfad unterbrechen."
+      },
+      {
+        "label": "Spannungsprinzip",
+        "text": "Theoretisch fällt bei einem geschlossenen, nahezu ideal leitenden Abschnitt fast keine Spannung ab. Über einer Unterbrechung kann unter definierten Schaltungsbedingungen nahezu die Versorgungsspannung liegen. Rückspeisung, Parallelpfade und hochohmige Messgeräte können die Deutung verfälschen. Die Fachkraft entscheidet über ein sicheres Messverfahren; zum Lernen dient ein strombegrenztes Schutzkleinspannungsmodell. Reparaturen und Widerstands-/Durchgangsprüfungen erfolgen im nachgewiesen spannungsfreien Zustand."
+      }
+    ],
+    "mnemonic": "Sollzustand kennen, Fehler eingrenzen, Ursache belegen.",
+    "pitfall": "Null Volt an einer einzelnen Messstelle beweist keine Spannungsfreiheit. Ein zufälliger Bauteiltausch ist keine methodische Diagnose.",
+    "keywords": [
+      "Fehlersuche",
+      "Unterbrechung",
+      "Kurzschluss",
+      "Körperschluss",
+      "Übergangswiderstand",
+      "Spannungsabfall"
+    ],
+    "sources": [
+      {
+        "label": "DGUV: Betrieb elektrischer Anlagen und Betriebsmittel",
+        "url": "https://publikationen.dguv.de/widgets/pdf/download/article/313"
+      },
+      {
+        "label": "LANUK NRW: Elektrotechnisches Ausbildungs-Handbuch, Schutzisolierung",
+        "url": "https://www.lanuk.nrw.de/fileadmin/lanuvpubl/0_lua/hndbetec.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 44
+  },
+  {
+    "id": "E7",
+    "title": "Störungssuche sicher beginnen",
+    "category": "Sicherheit",
+    "question": "Nenne zwei erste Prüfgedanken bei einer elektrischen Störung. Welche Fehler werden spannungsfrei untersucht, und welche Messgeräte unterstützen die Eingrenzung von Kurzschluss- und Isolationsfehlern?",
+    "answer": [
+      {
+        "label": "Zwei erste Prüfungen",
+        "text": "Erstens Sichtkontrolle auf Beschädigung, Verfärbung, lose Verbindungen oder auffällige Betriebsanzeigen. Zweitens Versorgung und Betriebsbereitschaft anhand der vorgesehenen Anzeigen beziehungsweise durch eine fachgerecht geplante Spannungsprüfung kontrollieren. Vor Öffnen oder Eingriff sind Gefährdungen und sicherer Anlagenzustand zu klären."
+      },
+      {
+        "label": "Spannungsfrei untersuchen",
+        "text": "Kurz- und Erdschlussstellen, Isolationsschäden sowie Unterbrechungen mit Widerstands- oder Durchgangsmessung werden nicht bei angelegter Netzspannung gesucht. An Bauteilen können zusätzlich gespeicherte Energie oder Fremdeinspeisungen anliegen. Die Elektrofachkraft trennt und sichert den betroffenen Bereich, stellt Spannungsfreiheit fest und berücksichtigt empfindliche Elektronik."
+      },
+      {
+        "label": "Prüfmittel",
+        "text": "Digitalmultimeter beziehungsweise Ohmmeter mit Durchgangsprüfung für niederohmige Verbindungen; Isolationswiderstandsmessgerät für geeignete Isolationsprüfungen; gegebenenfalls geeignetes Leitungsortungs-/Fehlersuchgerät. Prüfspannung und Messverfahren müssen zur Anlage passen. Ein zweipoliger Spannungsprüfer dient der fachgerechten Feststellung der Spannungsfreiheit."
+      }
+    ],
+    "mnemonic": "Erst ansehen und Versorgung klären, dann sicher eingrenzen.",
+    "pitfall": "Ohm- und Durchgangsbereiche gehören niemals an einen unter Netzspannung stehenden Stromkreis. Sicherungen wiederholt einzusetzen lokalisiert keinen Kurzschluss.",
+    "keywords": [
+      "Sichtprüfung",
+      "Versorgung",
+      "Durchgangsprüfung",
+      "Isolationsmessung",
+      "Spannungsprüfer",
+      "Kurzschluss"
+    ],
+    "sources": [
+      {
+        "label": "DGUV: Betrieb elektrischer Anlagen und Betriebsmittel",
+        "url": "https://publikationen.dguv.de/widgets/pdf/download/article/313"
+      },
+      {
+        "label": "AUVA: Fünf Sicherheitsregeln",
+        "url": "https://auva.at/praevention/medien-und-publikationen/publikationen-us/5-sicherheitsregeln-110-x-80-mm/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 45
+  },
+  {
+    "id": "E8",
+    "title": "Eine passende Steuerung wählen",
+    "category": "Automation",
+    "question": "Lege fünf begründete Kriterien für eine Maschinensteuerung fest. Vergleiche eine SPS mit einer konventionellen Schützsteuerung anhand von je zwei Vor- und Nachteilen.",
+    "answer": [
+      {
+        "label": "1: Ein- und Ausgänge",
+        "text": "Anzahl und Art der Sensoren/Aktoren, analoge Signale und elektrische Schnittstellen bestimmen benötigte Baugruppen und Reserven."
+      },
+      {
+        "label": "2: Zeitverhalten",
+        "text": "Reaktionszeit, Zykluszeit und gegebenenfalls Bewegungsregelung entscheiden, ob die Steuerung schnell und deterministisch genug arbeitet."
+      },
+      {
+        "label": "3: Funktionen und Kommunikation",
+        "text": "Ablaufkomplexität, Datenspeicherung, Diagnose, Bedienung und bestehende Busse bestimmen Speicher, Rechenleistung und Schnittstellen."
+      },
+      {
+        "label": "4: Umgebung und Sicherheit",
+        "text": "Temperatur, Feuchte, Schwingung und EMV müssen zur Bauart passen. Erforderliche Sicherheitsfunktionen benötigen ein dafür geeignetes, validiertes System."
+      },
+      {
+        "label": "5: Betrieb und Wirtschaftlichkeit",
+        "text": "Lebenszykluskosten, Ersatzteilversorgung, vorhandenes Personal, Softwarepflege und Erweiterbarkeit bestimmen die langfristige Eignung."
+      },
+      {
+        "label": "SPS: zwei Vorteile",
+        "text": "Abläufe können oft per Software geändert und erweitert werden. Diagnose und komplexe Verknüpfungen lassen sich mit weniger Logikverdrahtung realisieren."
+      },
+      {
+        "label": "SPS: zwei Nachteile",
+        "text": "Programmierung, Werkzeuge und Datensicherung erfordern Fachwissen und Aufwand. Ein Fehler an zentraler CPU, Versorgung oder Software kann größere Anlagenteile betreffen; bei sehr einfachen Aufgaben kann der Aufwand unverhältnismäßig sein."
+      }
+    ],
+    "mnemonic": "I/O, Zeit, Funktion, Umgebung, Betrieb.",
+    "pitfall": "Weniger Logikverdrahtung bedeutet nicht, dass eine SPS ohne Leistungs-Schaltgeräte auskommt. Standardausgänge übernehmen keine beliebige Sicherheitsabschaltung.",
+    "keywords": [
+      "SPS-Auswahl",
+      "I/O",
+      "Zykluszeit",
+      "Schützsteuerung",
+      "Lebenszykluskosten",
+      "Erweiterbarkeit"
+    ],
+    "sources": [
+      {
+        "label": "Hochschule Augsburg: SPS-Grundlagen, Vor- und Nachteile",
+        "url": "https://www.hs-augsburg.de/~roos/PAT/SPS/Programmieren_mit_SIMATIC_Manager_STEP_7.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 45
+  },
+  {
+    "id": "E9",
+    "title": "Österreichische Normen richtig zuordnen",
+    "category": "Sicherheit",
+    "question": "Ordne die historischen Verweise E 8001 und E 8701 sowie die Maschinen-Norm 60204-1 fachlich ein. Berücksichtige den Normenstand vom 5. November 2026, drei Auswahlkriterien und vier Bestandteile einer fachgerechten Abnahme.",
+    "answer": [
+      {
+        "label": "Niederspannungsanlagen",
+        "text": "ÖVE/ÖNORM E 8001 steht für frühere österreichische Errichtungsbestimmungen elektrischer Niederspannungsanlagen. Für aktuelle Planung ist insbesondere OVE E 8101 relevant; der OVE führt die Neufassung 2025-10-01. Bei Altanlagen sind Errichtungszeitpunkt, Änderungen und die einschlägige rechtliche Lage gesondert zu beurteilen."
+      },
+      {
+        "label": "Elektrische Geräte",
+        "text": "ÖVE/ÖNORM E 8701 betrifft Prüfungen nach Instandsetzung beziehungsweise Änderung und wiederkehrende Geräteprüfungen. Sie ist teilweise durch OVE EN 50678 für Prüfungen nach Reparatur und OVE EN 50699 für Wiederholungsprüfungen ersetzt. Ein vollständiger pauschaler Wegfall wäre falsch: OVE-Fachinformation G02 nennt beispielsweise Geräte unter 25 V AC beziehungsweise 60 V DC sowie bestimmte Reparaturprüfungen an Audio-/Video-/IT-Geräten. Produktbezogene Sondernormen können vorrangig sein."
+      },
+      {
+        "label": "Maschinen",
+        "text": "Richtig lautet die Nummer OVE EN 60204-1: elektrische Ausrüstung von Maschinen, allgemeine Anforderungen. Die Angabe EN 602014-1 ist ein Schreibfehler. Austrian Standards führt aktuell die Ausgabe 2026-08-01. Eine Maschine und die versorgende Gebäudeinstallation haben unterschiedliche, sich ergänzende Regelungsbereiche."
+      },
+      {
+        "label": "Drei Auswahlkriterien",
+        "text": "1. Geltungsbereich und Anlagen-/Produktart. 2. Aktuelle Ausgabe, Änderungen und Übergangsregelungen. 3. Österreichischer Rechts-, Vertrags- und Anwendungsbezug; Normenstatus und gesetzliche Verbindlichkeit getrennt prüfen."
+      },
+      {
+        "label": "Vier Abnahmepunkte",
+        "text": "1. Vollständige Dokumentation, Pläne, Betriebsanleitung und erforderliche Konformitätsunterlagen. 2. Besichtigung von Aufbau, Kennzeichnung, Auswahl und Schutzmaßnahmen. 3. Erforderliche elektrische Messungen durch qualifiziertes Prüfpersonal mit dokumentierten Ergebnissen. 4. Geschütztes Erproben von Funktion und Sicherheitsfunktionen einschließlich Wiederanlaufverhalten sowie dokumentierte Freigabe."
+      }
+    ],
+    "mnemonic": "Anlage: 8101. Gerät: passende Prüf-Norm. Maschine: 60204-1.",
+    "pitfall": "Nicht ungeprüft alte Normnummern auswendig anwenden. E 8701 ist nur teilweise ersetzt; technische Nachfolgenorm und gesetzlicher Verweis sind nicht dasselbe.",
+    "keywords": [
+      "OVE E 8101",
+      "ÖVE E 8001",
+      "E 8701",
+      "EN 50678",
+      "EN 50699",
+      "EN 60204-1"
+    ],
+    "sources": [
+      {
+        "label": "OVE: OVE E 8101, Ausgabe 2025-10-01",
+        "url": "https://www.ove.at/ove-standardization/normen-produkte/ove-e-8101/"
+      },
+      {
+        "label": "OVE: E 8701-1, Status teilweise ersetzt",
+        "url": "https://shop.ove.at/de/product/-ve-norm-e-8701-1-2003-01-01"
+      },
+      {
+        "label": "OVE: Fachinformation G02 zur Geräteprüfung",
+        "url": "https://www.ove.at/fileadmin/userdaten/docs/fachinformationen/OVE-Fachinformation-G02_202410.pdf"
+      },
+      {
+        "label": "Austrian Standards: OVE EN 60204-1:2026-08-01",
+        "url": "https://www.austrian-standards.at/de/shop/ove-en-60204-1-2026-08-01~p5078230"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 46
+  },
+  {
+    "id": "E10",
+    "title": "Steuerung oder Sensor ersetzen",
+    "category": "Automation",
+    "question": "Eine SPS-Anlage ist gestört. Erläutere Diagnose und Wiederfreigabe und nenne jeweils drei wichtige Prüfgruppen vor einem Steuerungstausch und vor dem Ersatz eines Sensors.",
+    "answer": [
+      {
+        "label": "Steuerungstausch: drei Prüfgruppen",
+        "text": "1. Vollständige geprüfte Sicherung von Programm, Parametern, Rezepturen und erforderlichen Lizenzen. 2. Kompatibilität von Hardware, Firmware, Baugruppen, Kommunikationsschnittstellen und Anschlussbelegung. 3. Sicherer Stillstand mit gesicherten Energien, geplanter Wiederinbetriebnahme sowie erneuter Funktions- und Sicherheitsprüfung."
+      },
+      {
+        "label": "Störung beheben",
+        "text": "Meldung und Zeitpunkt erfassen, Sollablauf und letzte Änderungen klären. Diagnosepuffer, Betriebszustand, Busstatus und Ein-/Ausgangsinformationen auswerten; Signalweg vom Sensor über Logik zum Aktor eingrenzen. Ursache durch Fachpersonal beheben, anschließend den gesamten betroffenen Ablauf und die Schutzfunktionen kontrolliert prüfen und dokumentieren. Ungeplantes Forcen oder Überbrücken von Sicherheitsfunktionen unterlassen."
+      },
+      {
+        "label": "Sensorersatz: drei Prüfgruppen",
+        "text": "1. Messprinzip, Zielmaterial, Schaltabstand beziehungsweise Messbereich und Schaltfunktion. 2. Versorgung, Pinbelegung, PNP/NPN, Öffner/Schließer, Analog- oder Bus-Schnittstelle. 3. Bauform, Montageart, Schutzart, Umgebung und gegebenenfalls zugelassene Sicherheitsfunktion. Einbaulage und Teach-/Parameterwerte nach Herstellerangaben herstellen."
+      },
+      {
+        "label": "Sicherheit",
+        "text": "Austausch nur durch beauftragtes Personal im gesicherten Zustand; elektrische Arbeiten der Elektrofachkraft überlassen. Auch ein funktionsgleicher Ersatz benötigt eine überprüfte Wiederfreigabe."
+      }
+    ],
+    "mnemonic": "Sichern, vergleichen, ersetzen, prüfen, freigeben.",
+    "pitfall": "Gleicher Stecker und gleiche Baugröße beweisen keine Austauschbarkeit. Ein Standardsensor ist kein Ersatz für einen Sicherheitssensor.",
+    "keywords": [
+      "SPS-Diagnose",
+      "Backup",
+      "Firmware",
+      "Sensortausch",
+      "PNP/NPN",
+      "Wiederfreigabe"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Diagnosekonzept für Automatisierungsanlagen",
+        "url": "https://contentpath.siemens.com/standardization/de_diagnosekonzept"
+      },
+      {
+        "label": "Festo Didactic: Induktiver Näherungsschalter, Daten und Montageart",
+        "url": "https://www.festo.com/de/de/p/naeherungsschalter-induktiv-m18-id_PROD_DID_548645"
+      },
+      {
+        "label": "Suva: Sichere Instandhaltung elektrischer Einrichtungen",
+        "url": "https://www.suva.ch/download/factsheets/sichere-instandhaltung--elektrische-einrichtungen--33079.D/standard-variante--33079.D"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 46
+  },
+  {
+    "id": "E11",
+    "title": "Lötfreie Verbindungen fachgerecht",
+    "category": "Elektrotechnik",
+    "question": "Nenne drei lötfreie Verbindungstechniken. Beschreibe die fachgerechte Vorbereitung und Prüfung einer Pressverbindung, die geeigneten Leiterarten und zwei konkrete Kennfarben mit Querschnittsbereich.",
+    "answer": [
+      {
+        "label": "Drei Techniken",
+        "text": "Schraubklemmen, Federkraft-/Push-in-Klemmen und Crimp-/Pressverbindungen. Weitere Beispiele sind Schneidklemm- und geeignete Steckverbindungen."
+      },
+      {
+        "label": "Arbeitsfolge",
+        "text": "Nur im gesicherten, spannungsfreien Arbeitsbereich: Verbinder passend zu Leiterwerkstoff, Querschnitt, Leiterklasse und Anschluss auswählen. Auf Herstellermaß abisolieren, ohne Drähte zu verletzen; Leiter vorbereiten und vollständig einführen. Mit freigegebenem Werkzeug und Einsatz in vorgegebener Anzahl und Richtung verpressen. Sichtprüfung und vorgesehene mechanische Kontrolle durchführen; Anschluss und erforderliche Isolation sachgerecht herstellen. Elektrische Endprüfung durch die Fachkraft."
+      },
+      {
+        "label": "Leitertypen",
+        "text": "DIN-Presskabelschuhe nach DIN 46235 sind je nach Ausführung und freigegebener Pressform für ein-, mehr-, fein- und feinstdrähtige Cu-Leiter vorgesehen, also Klassen 1, 2, 5 und 6. Normale Rohrkabelschuhe sind häufig für Klasse 2, isolierte Quetschkabelschuhe häufig für Klassen 5 und 6 freigegeben. Das konkrete Datenblatt entscheidet; Aluminium erfordert ein dafür ausgelegtes System."
+      },
+      {
+        "label": "Kennfarben als Beispiel",
+        "text": "Bei der dokumentierten DIN-/HAUPA-Zuordnung für isolierte Quetschkabelschuhe: Rot 0,5–1 mm², Blau 1,5–2,5 mm². Andere Produktserien geben für Rot auch bis 1,5 mm² frei. Maßgeblich sind Aufdruck und Datenblatt, nicht eine allein gemerkte Farbe."
+      }
+    ],
+    "mnemonic": "Leiter, Verbinder und Werkzeug bilden ein abgestimmtes System.",
+    "pitfall": "Kennfarben von Kabelschuhen und Aderendhülsen sind nicht allgemein austauschbar. Abkneifen einzelner Litzen macht einen unpassenden Verbinder nicht passend.",
+    "keywords": [
+      "Crimpen",
+      "Presskabelschuh",
+      "Quetschkabelschuh",
+      "Leiterklasse",
+      "Kennfarbe",
+      "Federkraftklemme"
+    ],
+    "sources": [
+      {
+        "label": "Klauke: Auswahl von DIN- und Rohrkabelschuhen",
+        "url": "https://www.klauke.com/at/de/din-presskabelschuh-oder-rohrkabelschuh"
+      },
+      {
+        "label": "Klauke: Kabelschuhe richtig verpressen",
+        "url": "https://www.klauke.com/ch/de/kabelschuhe-richtig-verpressen"
+      },
+      {
+        "label": "HAUPA: Kennfarben isolierter Quetschkabelschuhe",
+        "url": "https://haupa.com/fileadmin/Products/Info/de/info_crimp_isol_kabelschuh.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 47
+  },
+  {
+    "id": "E12",
+    "title": "Sensorfehler und Erstinbetriebnahme",
+    "category": "Automation",
+    "question": "Ein Näherungssensor meldet kein Werkstück. Nenne elektrische und mechanisch-anwendungsbezogene Fehler mit Abhilfe. Erläutere eine sichere Erstinbetriebnahme am Beispiel einer Zuführstation und zwei Zwecke des Protokolls.",
+    "answer": [
+      {
+        "label": "Elektrische Beispiele",
+        "text": "Fehlende Versorgung durch beschädigte Leitung oder losen Stecker: durch Fachpersonal eingrenzen und Verbindung fachgerecht instand setzen. Falsche Ausgangsart beziehungsweise Pinbelegung, etwa NPN statt erforderlichem PNP: Datenblätter und SPS-Eingang vergleichen und freigegebene Komponenten/Beschaltung herstellen."
+      },
+      {
+        "label": "Anwendungsbezogene Beispiele",
+        "text": "Ziel außerhalb des gesicherten Schaltabstands oder Sensor verstellt: fachgerecht ausrichten und Abstand einstellen. Ungeeignetes Zielmaterial oder unzulässiger bündiger/nichtbündiger Einbau: passenden Sensortyp beziehungsweise korrekte Montage wählen. Ein induktiver Sensor erkennt beispielsweise kein beliebiges Kunststoffteil."
+      },
+      {
+        "label": "Beispiel Zuführstation",
+        "text": "Vor dem Start Dokumentation, Montage, Anschluss und Schutzkonzept prüfen; elektrische Prüfungen erfolgen durch die Fachkraft. Gefahrenbereich räumen und sichern. Sensorzustände, Drehrichtung und Bewegungsabläufe nach freigegebenem Prüfplan schrittweise bei begrenzter Geschwindigkeit/Energie erproben, soweit technisch vorgesehen. Not-Halt, Verriegelungen und Wiederanlaufschutz validieren; danach definierten Probebetrieb und Übergabe durchführen."
+      },
+      {
+        "label": "Protokoll: zwei Zwecke",
+        "text": "Es belegt Zustand, Prüfumfang, Ergebnisse und Freigabeverantwortung. Außerdem hält es Parameter, Abweichungen und offene Punkte als Vergleichsbasis für spätere Wartung und Fehlersuche fest."
+      }
+    ],
+    "mnemonic": "Versorgung und Signal prüfen, Ziel und Abstand prüfen.",
+    "pitfall": "Die Sensor-LED und der SPS-Eingang sind zwei unterschiedliche Diagnosepunkte. Eine Erstinbetriebnahme ist mit einem erfolgreichen Probehub allein nicht abgeschlossen.",
+    "keywords": [
+      "Näherungssensor",
+      "Schaltabstand",
+      "PNP/NPN",
+      "Erstinbetriebnahme",
+      "Prüfprotokoll",
+      "Zuführstation"
+    ],
+    "sources": [
+      {
+        "label": "Festo Didactic: Induktiver Näherungsschalter, Daten und Montageart",
+        "url": "https://www.festo.com/de/de/p/naeherungsschalter-induktiv-m18-id_PROD_DID_548645"
+      },
+      {
+        "label": "AUVA: Fünf Sicherheitsregeln",
+        "url": "https://auva.at/praevention/medien-und-publikationen/publikationen-us/5-sicherheitsregeln-110-x-80-mm/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 47
+  },
+  {
+    "id": "E13",
+    "title": "Motor wird im Dauerbetrieb zu warm",
+    "category": "Elektrotechnik",
+    "question": "Ein Asynchronmotor mit Käfigläufer überhitzt. Erkläre für drei unterschiedliche Ursachen jeweils Wirkung und fachgerechte Abhilfe.",
+    "answer": [
+      {
+        "label": "1: Mechanische Überlast",
+        "text": "Zu große Last oder eine schwergängige Maschine erhöhen den benötigten Strom und damit die Kupferverluste. Wicklung und gegebenenfalls Lager werden zu heiß; die Isolierung altert schneller. Gesichert stillsetzen, Lastursache durch Fachpersonal klären, Mechanik instand setzen beziehungsweise Antrieb richtig auslegen. Motorschutz passend einstellen, nicht umgehen."
+      },
+      {
+        "label": "2: Phasenausfall oder Unsymmetrie",
+        "text": "Eine unterbrochene Zuleitung, ein beschädigter Kontakt oder ungleiche Spannungen können stark unsymmetrische Ströme und Erwärmung verursachen; zugleich sinkt das nutzbare Drehmoment. Elektrofachkraft prüft Versorgung, Anschlüsse und Schaltgeräte nach sicherem Prüfplan, beseitigt die Ursache und kontrolliert den Phasenausfallschutz."
+      },
+      {
+        "label": "3: Ungenügende Kühlung",
+        "text": "Verstopfte Lüftungswege, verschmutzte Rippen, ein defekter Lüfter oder zu hohe Umgebungstemperatur verhindern die Wärmeabgabe. Reinigung und Reparatur im gesicherten Zustand, freie Zu-/Abluft und passende Umgebung herstellen. Bei niedriger Umrichterdrehzahl kann eine geeignete Fremdkühlung erforderlich sein."
+      },
+      {
+        "label": "Wiederfreigabe",
+        "text": "Nach Abkühlung und Ursachenbehebung Zustand von Motor und Schutzsystem fachgerecht prüfen, Betriebswerte kontrolliert vergleichen und Befund dokumentieren. Nicht mehrfach weiterlaufen lassen, bis die Schutzeinrichtung auslöst."
+      }
+    ],
+    "mnemonic": "Zu viel Last, ungleiche Phasen oder zu wenig Luft.",
+    "pitfall": "Ein heißes Gehäuse allein lokalisiert die Ursache nicht. Ein höherer Motorschutz-Einstellwert ist keine Reparatur.",
+    "keywords": [
+      "Kurzschlussläufer",
+      "Überhitzung",
+      "Überlast",
+      "Phasenausfall",
+      "Kühlung",
+      "Isolationsalterung"
+    ],
+    "sources": [
+      {
+        "label": "ABB: Handbuch für Induktionsmotoren, Störungsdiagnose",
+        "url": "https://library.e.abb.com/public/6df512c64b0b4a659933aee242b2e7d5/Manual%20for%20Induction%20Motors%20and%20Generators_EN.pdf"
+      },
+      {
+        "label": "WEG: Sicherheit, Anschluss, Schutz und Wartung von Motoren",
+        "url": "https://static.weg.net/medias/downloadcenter/h8e/h88/WEG-WMO-safe-area-50031071-manual-en-es.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 48
+  },
+  {
+    "id": "E14",
+    "title": "Anlagenpflege und klarer SPS-Code",
+    "category": "Automation",
+    "question": "Stelle vier sinnvolle Instandhaltungsarbeiten zusammen. Begründe drei Vorteile eingehaltenen Wartungsintervallen und zwei Vorteile einer verständlichen SPS-Programmstruktur.",
+    "answer": [
+      {
+        "label": "Vier Arbeiten",
+        "text": "1. Vorgesehene Filter und Kühlwege reinigen oder wechseln. 2. Schmierstellen nach Herstellerplan versorgen. 3. Sensorbefestigungen, Leitungen, Stecker und pneumatische Leitungen auf Zustand beziehungsweise Leckage kontrollieren. 4. Schutz- und Sicherheitsfunktionen durch befugtes Personal nach Prüfplan kontrollieren. Jede Arbeit erfordert einen passend gesicherten Anlagenzustand."
+      },
+      {
+        "label": "Drei Gründe für Intervalle",
+        "text": "Sicherheit: Verschleiß und Schutzmängel rechtzeitig entdecken. Verfügbarkeit: ungeplante Stillstände verringern und notwendige Arbeiten planen. Qualität und Lebensdauer: reproduzierbare Funktion erhalten und teure Folgeschäden begrenzen. Intervalle folgen Herstellerangaben, Einsatzbedingungen und Erfahrung; vorgeschriebene Prüfungen sind zusätzlich zu beachten."
+      },
+      {
+        "label": "Zwei Programmvorteile",
+        "text": "Klar abgegrenzte Bausteine, aussagekräftige Namen und dokumentierte Schnittstellen erleichtern Diagnose und Einarbeitung. Gekapselte, geprüfte Funktionen lassen sich wiederverwenden und gezielter ändern, wodurch Änderungsaufwand und Fehlerwahrscheinlichkeit sinken."
+      }
+    ],
+    "mnemonic": "Pflegen hält verfügbar, Struktur hält verständlich.",
+    "pitfall": "Wartung ist mehr als Reinigen. Eine vorhandene Prüfliste beweist erst mit sachgerechter Durchführung und Dokumentation den erledigten Umfang.",
+    "keywords": [
+      "Instandhaltung",
+      "Wartungsintervall",
+      "Filter",
+      "Schmierung",
+      "SPS-Struktur",
+      "Wiederverwendung"
+    ],
+    "sources": [
+      {
+        "label": "DGUV: Instandhaltung sicher und praxisgerecht durchführen",
+        "url": "https://publikationen.dguv.de/widgets/pdf/download/article/338"
+      },
+      {
+        "label": "Siemens: Programmierleitfaden S7-1200/1500",
+        "url": "https://support.industry.siemens.com/dl/files/040/90885040/att_978091/v1/81318674_Programming_guideline_DOC_v161_de.pdf"
+      },
+      {
+        "label": "WEG: Sicherheit, Anschluss, Schutz und Wartung von Motoren",
+        "url": "https://static.weg.net/medias/downloadcenter/h8e/h88/WEG-WMO-safe-area-50031071-manual-en-es.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 48
+  },
+  {
+    "id": "E15",
+    "title": "Widerstände auslegen und einstellen",
+    "category": "Elektrotechnik",
+    "question": "Welche Daten brauchst du zur Auswahl eines Widerstands? Zeige einen Wert außerhalb einer gewählten E-Reihe durch Zusammenschaltung, berechne die Belastung und erkläre Aufbau sowie Funktion eines Potentiometers.",
+    "answer": [
+      {
+        "label": "Auswahlwerte",
+        "text": "Nennwiderstand und Toleranz, zulässige Dauer- und Impulsleistung, maximale Betriebsspannung, Temperaturkoeffizient, Umgebung und Bauform. Nennwerte werden häufig aus E-Reihen gewählt, zum Beispiel E12, E24 oder E96. Leistungsangaben gelten unter definierten Temperaturbedingungen."
+      },
+      {
+        "label": "Zwischenwert bilden",
+        "text": "In Reihe addieren sich Widerstände: Rges = R1 + R2. Beispiel aus E12-Werten: 1 kΩ + 220 Ω = 1,22 kΩ. Parallel gilt 1/Rges = 1/R1 + 1/R2; bei zwei Widerständen Rges = R1 × R2 / (R1 + R2). Alternativ passende feinere Normreihe oder einen geeigneten Abgleich verwenden. Toleranzen mitberücksichtigen."
+      },
+      {
+        "label": "Leistung",
+        "text": "Im jeweiligen Widerstand P = U × I = I² × R = U²/R berechnen. Beispiel: 10 V an 1 kΩ ergeben 0,1 W. Einen Typ mit ausreichender Reserve unter Beachtung von Datenblatt und Temperatur-Derating wählen. Spannungs- und Impulsgrenzen gelten zusätzlich, auch wenn die mittlere Leistung klein bleibt."
+      },
+      {
+        "label": "Potentiometer",
+        "text": "Widerstandsbahn mit zwei Endanschlüssen und beweglichem Schleifer mit drittem Anschluss. Als Spannungsteiler liefert er eine einstellbare Teilspannung; als veränderlicher Widerstand werden Schleifer und ein Ende genutzt, sofern der Typ dafür geeignet ist. Lineare oder logarithmische Kennlinie nach Anwendung wählen; Schleiferstrom und Teilbahnleistung begrenzen."
+      }
+    ],
+    "mnemonic": "Ohm legt die Funktion fest, Watt und Volt die Belastungsgrenzen.",
+    "pitfall": "Ein Potentiometer verträgt nicht auf jedem kleinen Teilstück seine gesamte Nennleistung. Für Präzisionsweggeber gelten besondere Vorgaben zur Schleiferbelastung.",
+    "keywords": [
+      "E-Reihe",
+      "Nennwiderstand",
+      "Toleranz",
+      "Verlustleistung",
+      "Derating",
+      "Potentiometer"
+    ],
+    "sources": [
+      {
+        "label": "Vishay: Widerstandsfarbcode und E-Reihen",
+        "url": "https://www.vishay.com/docs/20143/colorcod.pdf"
+      },
+      {
+        "label": "Vishay: Widerstandskenngrößen und Leistungsreduzierung",
+        "url": "https://www.vishay.com/docs/49873/49873_sg2113.pdf"
+      },
+      {
+        "label": "MEGATRON: Potentiometrische Positionssensoren",
+        "url": "https://www.megatron.de/kategorie/potentiometrische-positionssensoren"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 49
+  },
+  {
+    "id": "E16",
+    "title": "Vom Feldgerät zur Leitwarte",
+    "category": "Automation",
+    "question": "Erkläre den Informationsweg einer vernetzten Fabrik vom Feldgerät über Zelle und Kommunikationsnetz bis zur Leitwarte und zum externen Netz. Welche Kopplungsaufgabe kann ein LINK erfüllen? Ergänze ein nachvollziehbares Kommunikationsbeispiel aus einem Betrieb.",
+    "answer": [
+      {
+        "label": "Einordnung des Übersichtsbildes",
+        "text": "Die zugeordnete Bildseite zeigt Feldgeräte und Sensoren, lokale Steuerungen auf Zellebene, ein gemeinsames Ethernet-Kommunikationsnetz, SCADA auf Fabriksebene sowie eine über Gateway und Firewall abgegrenzte externe Ebene. Unterschiedliche Feldbusse beziehungsweise Ethernet-Systeme kommen nebeneinander vor; ein 4–20-mA-Signal ist dagegen eine analoge Punkt-zu-Punkt-Verbindung."
+      },
+      {
+        "label": "Kommunikation und Verfügbarkeit",
+        "text": "Controller sammeln Prozessdaten und geben Stellbefehle aus. Leit- und Bedienebenen visualisieren, archivieren und überwachen, beispielsweise mit OPC UA. Der dargestellte MRP-Ring kann nach einer einzelnen Leitungsunterbrechung einen alternativen Datenweg herstellen; er ersetzt keine Sicherheitsfunktion."
+      },
+      {
+        "label": "LINK",
+        "text": "Allgemein koppelt ein Link Teilnetze beziehungsweise Kommunikationssysteme und vermittelt den Datenaustausch. Sind unterschiedliche Protokolle beteiligt, übernimmt ein entsprechend ausgelegtes Gateway die Umsetzung. Medien- oder Geschwindigkeitsschnittstellen hängen vom konkreten Gerät ab. Das Bild benennt kein einzelnes LINK-Modell; daraus lässt sich etwa ein bestimmter DP/PA-Link nicht sicher ableiten."
+      },
+      {
+        "label": "Praktisches Beispiel",
+        "text": "Eine Förderzellen-SPS erhält Sensorwerte über eine dezentrale PROFINET-I/O-Station, steuert einen Antrieb und stellt Zählerstände für SCADA per OPC UA bereit. Übertrage dieses Beispiel auf die tatsächlich im eigenen Betrieb eingesetzten Systeme: Teilnehmer, Daten und Kommunikationswege konkret nennen."
+      }
+    ],
+    "mnemonic": "Feld erfasst, Zelle steuert, Leitwarte überwacht, Kopplung vermittelt.",
+    "pitfall": "Ein Kabel oder ein Switch übersetzt nicht automatisch Anwendungsprotokolle. Redundanz verbessert Verfügbarkeit und ist keine beliebige Freigabe für Internetzugriff.",
+    "keywords": [
+      "Feldebene",
+      "Zellebene",
+      "SCADA",
+      "LINK",
+      "MRP",
+      "OPC UA",
+      "Gateway"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Medienredundanz bei Ringtopologien",
+        "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_dede_20/kommunikation/profinet/medienredundanzprotokoll-mrp/medienredundanz-bei-ringtopologien"
+      },
+      {
+        "label": "Phoenix Contact: Geräte-Server und Gateways",
+        "url": "https://www.phoenixcontact.com/de-de/produkte/industrielle-kommunikation/geraeteserver-und-gateways?p=5"
+      },
+      {
+        "label": "OPC Foundation: OPC UA",
+        "url": "https://opcfoundation.org/about/opc-technologies/opc-ua/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 49,
+    "imagePage": 66
+  },
+  {
+    "id": "E17",
+    "title": "Leiterplatten bestücken und MOS schützen",
+    "category": "Elektrotechnik",
+    "question": "Formuliere drei Regeln für die Bestückung einer Platine und drei für den Austausch eines MOS-Bauteils. Woran erkennst du eine sachgerechte Lötverbindung, und welche Grenze hat eine reine Sichtprüfung?",
+    "answer": [
+      {
+        "label": "Bestückung: drei Regeln",
+        "text": "1. Richtige Bauteile und Werte mit Stückliste beziehungsweise Bestückungsplan vergleichen. 2. Lage und Polarität beachten, besonders bei ICs, Dioden und Elektrolytkondensatoren. 3. Saubere, unbeschädigte Anschlüsse, passende Abstände und einen für Bauteil und Leiterplatte geeigneten Lötprozess sicherstellen."
+      },
+      {
+        "label": "MOS-Austausch: drei Regeln",
+        "text": "1. Gerät sicher spannungsfrei machen und gespeicherte Energie fachgerecht abbauen; Arbeiten an Netzgeräten der Fachkraft überlassen. 2. ESD-geschützten Arbeitsplatz, geeignete ableitfähige Unterlage, Personenableitung und ESD-gerechtes Werkzeug verwenden; Bauteile bis zur Verarbeitung geschützt verpackt lassen. 3. Typ, Pinbelegung und Einbaurichtung prüfen und mit begrenzter, datenblattgerechter Wärmeeinwirkung aus-/einlöten, ohne Pads und Leiterbahnen abzulösen."
+      },
+      {
+        "label": "Lötstelle beurteilen",
+        "text": "Lot benetzt Anschluss und Lötfläche erkennbar, bildet eine passende gleichmäßige Kontur und eine mechanisch ruhige Verbindung. Keine Brücken, Risse, abgehobenen Pads oder unbenetzten Anschlussbereiche. Bleifreies Lot kann auch bei guter Verbindung matt wirken. Sichtprüfung unter Vergrößerung ergänzen durch die für die Baugruppe vorgesehenen elektrischen und funktionalen Prüfungen."
+      }
+    ],
+    "mnemonic": "Wert und Richtung prüfen, ESD vermeiden, Benetzung beurteilen.",
+    "pitfall": "Glänzend ist kein universeller Qualitätsnachweis. Unsichtbare ESD-Schäden können ein Bauteil erst später ausfallen lassen.",
+    "keywords": [
+      "Bestückung",
+      "MOS",
+      "ESD",
+      "Pinbelegung",
+      "Lötstelle",
+      "Benetzung"
+    ],
+    "sources": [
+      {
+        "label": "Toshiba: ESD-Schutz von MOS-Bauteilen",
+        "url": "https://toshiba.semicon-storage.com/ap-en/semiconductor/knowledge/faq/mosfet/mos-is-sensitive-to-static-electricityhow-do-you-protect-mosfets.html"
+      },
+      {
+        "label": "Kester: Eigenschaften bleifreier Lötstellen",
+        "url": "https://www.kester.com/knowledge-base/faq"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 50
+  },
+  {
+    "id": "E18",
+    "title": "Umbauten und Instandhaltung planen",
+    "category": "Automation",
+    "question": "Vor einer Erweiterung einer Automatisierungsanlage: Welche vier Planungspakete sind nötig? Erkläre außerdem die vier Grundmaßnahmen der Instandhaltung anhand einfacher Beispiele.",
+    "answer": [
+      {
+        "label": "1: Ziel und Bestand",
+        "text": "Anforderungen, gewünschte Leistung und vorhandenen Anlagenzustand erfassen. Pläne, Programmstand, Reserven an I/O, Leistung, Platz und Kommunikation sowie Schnittstellen zu anderen Anlagenteilen prüfen."
+      },
+      {
+        "label": "2: Sicherheit und Regelwerk",
+        "text": "Gefährdungen und Auswirkungen der Änderung beurteilen, Schutzkonzept und erforderliche Sicherheitsfunktionen festlegen. Zuständigkeiten, anwendbare Regeln, notwendige Prüfungen und mögliche Konsequenzen für Konformität und Dokumentation vorab klären."
+      },
+      {
+        "label": "3: Technische Umsetzung",
+        "text": "Kompatible Komponenten, Versorgung und Leitungsdimensionierung, mechanische/pneumatische Anpassungen und Softwareänderungen planen. Datensicherung, Ersatzteile und Rückkehrmöglichkeit zu einem freigegebenen Stand vorsehen."
+      },
+      {
+        "label": "4: Abwicklung und Freigabe",
+        "text": "Kosten, Personal, Lieferzeit und Stillstandsfenster abstimmen. Sichere Montage, Prüf- und Inbetriebnahmeplan, Abnahmekriterien, aktualisierte Unterlagen und Bedienerschulung festlegen. Durchführung und elektrische Prüfung durch entsprechend beauftragte Fachkräfte."
+      },
+      {
+        "label": "Vier Instandhaltungsmaßnahmen",
+        "text": "Wartung verzögert Verschleiß, etwa Schmieren. Inspektion ermittelt und beurteilt den Istzustand, etwa Lagerzustand prüfen. Instandsetzung stellt eine ausgefallene Funktion wieder her, etwa ein defektes Lager ersetzen. Verbesserung erhöht Zuverlässigkeit beziehungsweise Instandhaltbarkeit ohne Änderung der geforderten Funktion, etwa eine bekannte Verschleißursache konstruktiv beseitigen."
+      }
+    ],
+    "mnemonic": "Ziel, Sicherheit, Technik und Ablauf; warten, prüfen, reparieren, verbessern.",
+    "pitfall": "Ein Umbau endet nicht mit der Montage. Programm, Schaltplan, Schutzprüfung und Freigabe müssen den geänderten Zustand abbilden.",
+    "keywords": [
+      "Umbau",
+      "Erweiterung",
+      "Wartung",
+      "Inspektion",
+      "Instandsetzung",
+      "Verbesserung"
+    ],
+    "sources": [
+      {
+        "label": "DGUV: Instandhaltung sicher und praxisgerecht durchführen",
+        "url": "https://publikationen.dguv.de/widgets/pdf/download/article/338"
+      },
+      {
+        "label": "Austrian Standards: OVE EN 60204-1:2026-08-01",
+        "url": "https://www.austrian-standards.at/de/shop/ove-en-60204-1-2026-08-01~p5078230"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 50
+  }
+]
+

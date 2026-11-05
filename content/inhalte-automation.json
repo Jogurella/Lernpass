@@ -1,0 +1,1435 @@
+[
+  {
+    "id": "E19",
+    "title": "Drehstrommotor: Fehler eingrenzen",
+    "category": "Elektrotechnik",
+    "question": "Ein Drehstromantrieb läuft nicht richtig. Wie unterscheiden Sie drei typische Fehlerbilder, welche Befunde helfen bei der Diagnose und welche fachgerechte Abhilfe passt jeweils?",
+    "answer": [
+      {
+        "label": "Diagnose sicher vorbereiten",
+        "text": "Störung, Betriebszustand und letzte Änderung erfassen; Typenschild, Schaltplan, Motorschutz und gegebenenfalls Umrichterdiagnose zuordnen. Elektrische Messungen und Reparaturen gehören in die Hände einer Elektrofachkraft. Vor Eingriffen freischalten, gegen Wiedereinschalten sichern und den sicheren Zustand einschließlich nachlaufender Lasten herstellen."
+      },
+      {
+        "label": "Phasenausfall oder Versorgungsfehler",
+        "text": "Der Motor brummt, startet schlecht oder löst den Schutz aus. Mögliche Ursachen sind eine defekte Sicherung, ein beschädigter Leiter oder ein fehlerhafter Schützkontakt. Die Fachkraft prüft Versorgung und Stromsymmetrie, anschließend spannungsfrei die betroffenen Verbindungen. Die Ursache beseitigen und ein geeignetes defektes Bauteil ersetzen; den Schutz nicht überbrücken."
+      },
+      {
+        "label": "Überlastung oder mangelhafte Kühlung",
+        "text": "Hoher Strom und steigende Temperatur sprechen etwa für zu große Last, eine blockierte Mechanik, verschmutzte Lüftung oder falsche Betriebsbedingungen. Last und freien Lauf sowie Lüfter und Kühlwege überprüfen lassen. Mechanische Ursache beheben, Kühlung instand setzen und Belastung beziehungsweise Antriebsauslegung korrigieren."
+      },
+      {
+        "label": "Lager- oder Ausrichtfehler",
+        "text": "Raues Geräusch, Vibrationen und örtliche Erwärmung weisen auf beschädigte Lager, falsche Schmierung, Unwucht oder Kupplungsversatz hin. Geräusch- und Schwingungsbefunde mit Montagezustand und Wartungsdaten vergleichen. Fachgerecht ausrichten, die freigegebene Schmierung herstellen oder beschädigte Lager ersetzen; danach kontrollierter Funktionslauf und Dokumentation."
+      }
+    ],
+    "mnemonic": "Erst das Fehlerbild trennen: Versorgung, Wärme, Mechanik.",
+    "pitfall": "Eine größere Sicherung oder ein höher eingestellter Motorschutz beseitigt die Fehlerursache nicht.",
+    "keywords": [
+      "Phasenausfall",
+      "Motorschutz",
+      "Überlast",
+      "Lager",
+      "Diagnose"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: SIMOTICS – Störungen und Abhilfen",
+        "url": "https://cache.industry.siemens.com/dl/files/011/109475011/att_879160/v1/OperatingInstructions_en_1LH1_en-US.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 51
+  },
+  {
+    "id": "E20",
+    "title": "Anlage passend auslegen und SPS-Logik ausdrücken",
+    "category": "Automation",
+    "question": "Welche Leistungs- und Qualitätsdaten bestimmen die Größe einer Produktionsanlage, warum ist unnötige Präzision teuer und wie lässt sich dieselbe UND-Verknüpfung in zwei SPS-Darstellungen erklären?",
+    "answer": [
+      {
+        "label": "Dimensionierung",
+        "text": "Aus Stückzahl und verfügbarer Produktionszeit den erforderlichen Takt bestimmen. Werkstückmasse, Kräfte, Drehmoment, Geschwindigkeit und Lastwechsel legen die Antriebe fest. Verfügbarkeit, Rüstzeiten, Ausschuss, Energieversorgung, Platz und sinnvoll begründete Reserven mitrechnen. Der langsamste Prozessschritt begrenzt die Gesamtleistung."
+      },
+      {
+        "label": "Genauigkeit bedarfsgerecht wählen",
+        "text": "Maßgeblich sind Funktion und geforderte Toleranz. Engere Toleranzen als notwendig erhöhen meist Investition, Bearbeitungszeit und Messaufwand. Sie können außerdem empfindlichere Einstellungen sowie höheren Wartungsaufwand verlangen. Zu große Ungenauigkeit verursacht dagegen Ausschuss oder Montageprobleme."
+      },
+      {
+        "label": "Sprachen heute und im Altbestand",
+        "text": "IEC 61131-3:2025 nennt Strukturierter Text (ST), Kontaktplan (LD/KOP) und Funktionsbausteinsprache (FBD/FUP). SFC beschreibt eine Ablaufstruktur; Siemens GRAPH ist eine entsprechende Herstellerumsetzung. SCL ist die Siemens-Bezeichnung für ST. AWL/IL findet man in älteren Projekten und bestimmten Werkzeugen; sie gehört nicht zur gleichberechtigten aktuellen Sprachliste dieser Normausgabe."
+      },
+      {
+        "label": "Gleiche UND-Funktion in zwei Formen",
+        "text": "In ST lautet eine einfache Zuweisung beispielsweise: Freigabe := SensorA AND SensorB; In KOP stehen zwei zu SensorA und SensorB gehörende Schließerkontakte in Reihe vor der Spule Freigabe. Beide Eingänge müssen TRUE sein. Eine ODER-Verknüpfung verwendet OR beziehungsweise parallele Kontaktzweige. Diese Lernlogik ersetzt keine sicherheitsgerichtete Freigabe."
+      }
+    ],
+    "mnemonic": "Takt und Last bestimmen die Größe, die Toleranz bestimmt die Präzision.",
+    "pitfall": "AWL aus einem älteren Lehrbuch ungeprüft als aktuelle gleichrangige Normsprache anführen.",
+    "keywords": [
+      "Dimensionierung",
+      "Taktzeit",
+      "Toleranz",
+      "ST",
+      "KOP",
+      "FUP"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Antriebe mit Lastprofil dimensionieren",
+        "url": "https://support.industry.siemens.com/cs/attachments/109773995/micro-drive_in_tst_getting_started_en-US_en-US.pdf"
+      },
+      {
+        "label": "IEC: IEC 61131-3:2025 – aktueller Sprachumfang",
+        "url": "https://webstore.iec.ch/en/publication/68533"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 51
+  },
+  {
+    "id": "E21",
+    "title": "Robotereinsatz und klare Programmstruktur",
+    "category": "Automation",
+    "question": "Bewerten Sie einen Robotereinsatz mit je drei Chancen und Grenzen. Wie wird ein Automatisierungsprogramm verständlich gegliedert, und wie hilft ein wiederverwendbarer Baustein dabei?",
+    "answer": [
+      {
+        "label": "Drei Vorteile",
+        "text": "Roboter können wiederholte Bewegungen mit hoher Wiederholgenauigkeit ausführen, gleichmäßige Abläufe und planbare Taktzeiten unterstützen und Menschen von schweren, monotonen oder gefährlichen Tätigkeiten entlasten. Durch Umprogrammierung und Werkzeugwechsel sind sie für unterschiedliche Aufgaben einsetzbar."
+      },
+      {
+        "label": "Drei Nachteile oder Aufwände",
+        "text": "Anschaffung und Integration kosten Geld; Greifer, Vorrichtungen und Schutzkonzept gehören dazu. Programmierung, Einrichten und Instandhaltung benötigen qualifiziertes Personal. Bei wechselnden oder unzureichend beherrschten Prozessbedingungen entstehen zusätzlicher Sensorik- und Anpassungsaufwand sowie Stillstandsrisiken."
+      },
+      {
+        "label": "Drei Strukturierungsmöglichkeiten",
+        "text": "Erstens nach Anlagenfunktionen in überschaubare Module gliedern, etwa Zuführen, Spannen und Bearbeiten. Zweitens wiederkehrende Funktionen in parametrierbare Bausteine mit klaren Schnittstellen auslagern. Drittens Ablaufzustände mit einer nachvollziehbaren Schrittkette oder Zustandsmaschine organisieren. Einheitliche Namen und aussagekräftige Kommentare unterstützen alle drei."
+      },
+      {
+        "label": "Bausteinbeispiel",
+        "text": "Ein Baustein für einen Förderantrieb erhält Start, Stop und Rückmeldungen als Eingänge und liefert Ansteuerung, Betriebszustand und Störung zurück. Jede Antriebsinstanz erhält ihren eigenen Zustandsspeicher. So kann derselbe geprüfte Ablauf mehrfach genutzt werden, während eine Änderung an einer klar abgegrenzten Stelle erfolgt."
+      }
+    ],
+    "mnemonic": "Eine Funktion, eine klare Schnittstelle, ein eigener Zustand.",
+    "pitfall": "Wiederholgenauigkeit mit absoluter Positioniergenauigkeit oder Robotereinsatz mit automatisch sicherem Betrieb gleichsetzen.",
+    "keywords": [
+      "Roboter",
+      "Wiederholgenauigkeit",
+      "Modularisierung",
+      "Schnittstelle",
+      "Wiederverwendung"
+    ],
+    "sources": [
+      {
+        "label": "ABB: Robotik und Automatisierungsanwendungen",
+        "url": "https://www.abb.com/global/en/areas/robotics"
+      },
+      {
+        "label": "PLCopen: Software Construction Guidelines",
+        "url": "https://www.plcopen.org/guidelines/software-construction-guidelines/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 52
+  },
+  {
+    "id": "E22",
+    "title": "Sicher in der Roboterzelle arbeiten",
+    "category": "Sicherheit",
+    "question": "Welche vier Verhaltensgrundsätze schützen bei Robotertätigkeiten, und welche Informationen muss die Anlagendokumentation für Betrieb, Störung und Wartung bereitstellen?",
+    "answer": [
+      {
+        "label": "Berechtigung und Betriebsart",
+        "text": "Nur unterwiesene und für die Aufgabe beauftragte Personen arbeiten am Robotersystem. Betriebsanleitung, Betriebsarten und besondere Gefahren des Werkzeugs beachten. Einrichtbetrieb darf nur mit den dafür vorgesehenen Schutzmaßnahmen erfolgen, beispielsweise sicher reduzierter Geschwindigkeit und Zustimmungseinrichtung."
+      },
+      {
+        "label": "Schutzbereich und Wiederanlauf",
+        "text": "Schutzzäune, verriegelte Türen und berührungslos wirkende Schutzeinrichtungen nicht umgehen. Im Automatikbetrieb muss der Gefahrenbereich frei sein. Ein quittierter Schutzstopp darf keinen unerwarteten Anlauf auslösen; die freigegebene Wiederanlaufprozedur einhalten."
+      },
+      {
+        "label": "Energien und Lasten",
+        "text": "Vor Wartung oder Störungsbeseitigung alle gefährlichen Energien nach dem Anlagenverfahren sichern. Werkzeug, Werkstück und schwerkraftbelastete Achsen können auch bei abgeschalteten Antrieben gefährlich sein. Haltebremsen ersetzen keine erforderliche mechanische Lastsicherung."
+      },
+      {
+        "label": "Bewegungsraum und Reaktion",
+        "text": "Arbeitsraum einschließlich Greifer, Werkstück, Peripherie und möglicher Teilebewegungen berücksichtigen. Sichere Standposition und Fluchtmöglichkeit wählen; Not-Halt-Stellen kennen. Störungen melden und die Anlage bis zur fachgerechten Freigabe gesichert lassen."
+      },
+      {
+        "label": "Anlagendokumentation",
+        "text": "Dazu gehören bestimmungsgemäße Verwendung und Grenzen, Restrisiken, Schutzfunktionen, Bedienung und Betriebsarten, Transport und Aufstellung, Inbetriebnahme, Störungsbehebung und Wartungsplan. Schalt- und Pneumatik-/Hydraulikpläne, Schnittstellen, Teilelisten, Softwarestände, Prüfunterlagen sowie Zuständigkeiten müssen dem tatsächlichen Anlagenstand entsprechen."
+      }
+    ],
+    "mnemonic": "Betriebsart, Schutzbereich, Energie und Bewegungsraum gemeinsam betrachten.",
+    "pitfall": "Einen stillstehenden Roboter für ungefährlich halten oder eine Schutztür zur Fehlersuche überbrücken.",
+    "keywords": [
+      "Roboterzelle",
+      "Einrichtbetrieb",
+      "Schutzeinrichtung",
+      "Restenergie",
+      "Dokumentation"
+    ],
+    "sources": [
+      {
+        "label": "AUVA: Checkliste Industrieroboter",
+        "url": "https://auva.at/media/o4fo4ldo/checkliste_industrieroboter-bf_2511_oh.pdf"
+      },
+      {
+        "label": "Arbeitsinspektion: Auswahl und Benutzung von Arbeitsmitteln",
+        "url": "https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsmittel/gemeinsame_bestimmungen/definition_allgemeine_vorschriften.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 52
+  },
+  {
+    "id": "E23",
+    "title": "Automatisierungsebenen richtig zuordnen",
+    "category": "Automation",
+    "question": "Ordnen Sie Sensorik, SPS, HMI/SCADA, Fertigungsmanagement und Unternehmensplanung ihren Aufgaben zu. Was zeigt ein Netzwerkbild mit SPS, HMI, SCADA, Gateway, Firewall und Cloud tatsächlich?",
+    "answer": [
+      {
+        "label": "Prozess und Feld",
+        "text": "Im ISA-95-Modell ist Ebene 0 der physische Prozess. Ebene 1 erfasst ihn mit Sensoren und beeinflusst ihn mit Aktoren, zum Beispiel durch Messen einer Position und Bewegen eines Zylinders."
+      },
+      {
+        "label": "Steuerung und Bedienung",
+        "text": "Ebene 2 steuert und überwacht den Prozess. SPS/DCS verarbeiten Signale und koordinieren Maschinenfunktionen. HMI und SCADA stellen Zustände, Trends und Alarme dar und erlauben die dafür freigegebene Bedienung."
+      },
+      {
+        "label": "Fertigungs- und Unternehmensebene",
+        "text": "Ebene 3 unterstützt das Fertigungsmanagement, beispielsweise mit MES für Auftragsausführung, Rückverfolgung und Produktionsdaten. Ebene 4 plant unternehmensweit mit ERP etwa Material, Termine und betriebswirtschaftliche Ressourcen. In Lehrbüchern können Ebenennamen und Zählweise abweichen; die Aufgaben erklären die Zuordnung."
+      },
+      {
+        "label": "Bildbezug und Netzwerkkomponenten",
+        "text": "Die Originalübersicht zeigt Geräte im Feld, mehrere Steuerungen sowie HMI und SCADA an einer Netzwerkinfrastruktur. Ein Gateway verbindet Kommunikationsbereiche; die Firewall kontrolliert Verbindungen zum externen Netz. Cloud ist ein möglicher Dienstort und keine zusätzliche festgelegte ISA-95-Ebene. Ein gezeichneter Ring allein belegt noch keine funktionierende Redundanz."
+      }
+    ],
+    "mnemonic": "Unten wirkt die Anlage, darüber wird gesteuert, geführt und geplant.",
+    "pitfall": "Ein Switch mit einem Gateway verwechseln oder Cloud pauschal als oberste Automatisierungsebene bezeichnen.",
+    "keywords": [
+      "ISA-95",
+      "Feldebene",
+      "SPS",
+      "SCADA",
+      "MES",
+      "ERP"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: ISA-95-Ebenen",
+        "url": "https://www.siemens.com/fi-fi/technology/isa-95-framework-layers/"
+      },
+      {
+        "label": "Phoenix Contact: Industrielle Kommunikation und Übertragungsmedien",
+        "url": "https://www.phoenixcontact.com/en-au/products/industrial-communication"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 53,
+    "imagePage": 67
+  },
+  {
+    "id": "E24",
+    "title": "Industrielle Übertragungsmedien auswählen",
+    "category": "Automation",
+    "question": "Vergleichen Sie drei Medien für industrielle Datenübertragung, nennen Sie mindestens drei Auswahlkriterien und erläutern Sie den typischen Aufbau einer Kupfer- beziehungsweise Glasfaserverbindung.",
+    "answer": [
+      {
+        "label": "Drei Medien",
+        "text": "Kupferleitungen übertragen elektrische Signale und sind verbreitet sowie einfach anzuschließen. Lichtwellenleiter übertragen Licht, bieten galvanische Trennung und sind gegen elektromagnetische Einstreuung unempfindlich. Funk überträgt elektromagnetische Wellen ohne Datenleitung; Verfügbarkeit und Reichweite hängen unter anderem von Umgebung und Funkplanung ab."
+      },
+      {
+        "label": "Industrieanforderungen",
+        "text": "Wichtig sind passende Datenrate und zulässige Leitungslänge, ausreichende Störfestigkeit und geringe Fehlerrate sowie Eignung für Temperatur, Feuchte, Öl, UV und mechanische Beanspruchung. Bei bewegten Leitungen zählen Biegeradius und Schleppketteneignung. Steckverbinder, Schutzart und Übertragungszeit müssen zum Einsatz passen."
+      },
+      {
+        "label": "Kupferstrecke",
+        "text": "Eine typische geschirmte Datenleitung besteht aus isolierten Leitern, verdrillten Aderpaaren, gegebenenfalls Paar- und Gesamtschirm und einem geeigneten Außenmantel. Dazu gehören passende Stecker oder Anschlussmodule, Zugentlastung und die systemgerechte Schirmanbindung."
+      },
+      {
+        "label": "Lichtwellenleiter und Funkstrecke",
+        "text": "Ein Lichtwellenleiter besitzt Kern und optischen Mantel, Schutzschichten sowie je nach Leitung Zugentlastung und Außenmantel; Stecker und optische Sender/Empfänger vervollständigen die Strecke. Eine Funkstrecke benötigt Funkgeräte, Antennen und den Ausbreitungsraum. Der Aufbau einer Kupferleitung lässt sich daher nicht auf jedes Medium übertragen."
+      }
+    ],
+    "mnemonic": "Medium, Umgebung und Übertragungsanforderung müssen zusammenpassen.",
+    "pitfall": "Nur die Datenrate vergleichen und Bewegungsbeanspruchung, Reichweite oder elektromagnetische Umgebung vergessen.",
+    "keywords": [
+      "Kupfer",
+      "Lichtwellenleiter",
+      "Funk",
+      "EMV",
+      "Schirm",
+      "Biegeradius"
+    ],
+    "sources": [
+      {
+        "label": "Phoenix Contact: Industrielle Kommunikation und Übertragungsmedien",
+        "url": "https://www.phoenixcontact.com/en-au/products/industrial-communication"
+      },
+      {
+        "label": "PI: PROFIBUS-Installationsrichtlinien",
+        "url": "https://www.profibus.com/download/profibus-installation-guidelines"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 53
+  },
+  {
+    "id": "E25",
+    "title": "Stahl trennen und Schnittkanten nacharbeiten",
+    "category": "Mechanik",
+    "question": "Welches Handgerät eignet sich zum mobilen Trennen von Stahl? Beschreiben Sie für unterwiesene Fachkräfte den sicheren Grundablauf eines Scheibenwechsels und einer Serie gleich langer Sägeschnitte sowie den Zweck des Entgratens.",
+    "answer": [
+      {
+        "label": "Geeignetes Gerät",
+        "text": "Ein Winkelschleifer mit für Stahl und Gerät zugelassener Trennscheibe kann Reparaturschnitte ausführen. Werkstücksicherung, passende Trennschutzhaube, Zusatzhandgriff sowie Augen-/Gesichtsschutz, Gehörschutz und weitere arbeitsplatzabhängige Schutzmaßnahmen sind erforderlich. Funkenflug und brennbare Stoffe berücksichtigen."
+      },
+      {
+        "label": "Scheibenwechsel als Fachablauf",
+        "text": "Gerät nach Anleitung von der Energieversorgung trennen und Stillstand abwarten. Passende unbeschädigte Scheibe auswählen; Abmessungen, Aufnahme und zulässige Drehzahl müssen stimmen. Das freigegebene Befestigungssystem mit vorgesehenem Werkzeug lösen, Anlageflächen prüfen und Scheibe, Flansche und Spannmittel nach Herstelleranordnung montieren. Schutzhaube und freien Lauf kontrollieren; den vorgeschriebenen Probelauf in gesichertem Bereich durchführen. Schnellwechselsysteme haben einen eigenen Ablauf."
+      },
+      {
+        "label": "Gleich lange Werkstücke sägen",
+        "text": "Zeichnung und Schnittmaß festlegen; Material, Sägeblatt und Schnittdaten aufeinander abstimmen. Bei stillgesetzter Säge den vorgesehenen Längenanschlag einrichten und lange Stangen abstützen. Jedes Werkstück sicher im Spannmittel halten, den Schnitt mit freigegebenem Vorschub ausführen und erst nach Stillstand lösen oder entnehmen. Erstes Teil messen, Einstellung nötigenfalls korrigieren und die Serie mit regelmäßigen Maßkontrollen fortsetzen. Der Anschlag darf das abgetrennte Teil nicht einklemmen."
+      },
+      {
+        "label": "Entgraten",
+        "text": "Grate und scharfe Kanten verursachen Schnittverletzungen und können Montage, Auflage sowie Maßprüfung verfälschen. Nacharbeit verbessert die sichere Handhabung und die Funktion; geforderte Fasen und Maße müssen erhalten bleiben."
+      }
+    ],
+    "mnemonic": "Passendes Werkzeug, festes Werkstück, stillstehender Werkzeugwechsel.",
+    "pitfall": "Eine Trennscheibe seitlich zum Schruppen belasten oder das Werkstück an der Kreissäge freihändig halten.",
+    "keywords": [
+      "Winkelschleifer",
+      "Trennscheibe",
+      "Spannmittel",
+      "Längenanschlag",
+      "Entgraten"
+    ],
+    "sources": [
+      {
+        "label": "Bosch: Betriebsanleitung GWS – Scheibenmontage und Sicherheit",
+        "url": "https://www.bosch-professional.com/binary/manualsmedia/o20130v21_09004a11800a7daa.pdf"
+      },
+      {
+        "label": "Bosch: Metalltrennsäge GCD 12 JL, Herstellerunterlagen",
+        "url": "https://www.bosch-professional.com/de/de/products/gcd-12-jl-0601B28000"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 54
+  },
+  {
+    "id": "E26",
+    "title": "Hydraulikpumpe: Fördermenge und Fehler verstehen",
+    "category": "Mechanik",
+    "question": "Welche drei Fehlergruppen vermindern die Leistung einer Hydraulikanlage? Wie erkennt man Saug- und Druckseite von Zahnradpumpen am Funktionsprinzip, welche Instandsetzung ist möglich und lässt sich die Fördermenge bei unveränderter Drehzahl verstellen?",
+    "answer": [
+      {
+        "label": "Drei Fehlergruppen",
+        "text": "Erstens kann die Ansaugung behindert sein, etwa durch einen verschmutzten Saugfilter, zu niedrigen Ölstand oder eine undichte Saugleitung; Luft und Kavitation vermindern die Förderung. Zweitens verursachen verschlissene Pumpenspalte oder undichte Ventile interne Leckage. Drittens kann ein falsch eingestelltes oder defektes Druckbegrenzungsventil Öl zu früh zum Tank ableiten. Zu hohe Öltemperatur und falsche Viskosität können die Symptome verstärken."
+      },
+      {
+        "label": "Saug- und Druckseite im Bild",
+        "text": "Links ist eine Außenzahnradpumpe, rechts eine Innenzahnradpumpe mit Sichel zu erkennen. Dort, wo Zahnzwischenräume größer werden beziehungsweise Zähne aus dem Eingriff laufen, liegt die Saugseite. Das Öl wird in den Zahnlücken am Gehäuse entlang transportiert; beim erneuten Zahneingriff wird es zur Druckseite verdrängt. Eine feste Zuordnung oben/unten oder links/rechts erfordert erkennbare Drehrichtungspfeile; diese sind in der vorliegenden Abbildung nicht eindeutig lesbar."
+      },
+      {
+        "label": "Fachgerechte Reparatur",
+        "text": "Zunächst die Ursache nachweisen. Je nach freigegebener Bauart können Dichtungen, Lager oder passende Reparatursätze ersetzt werden. Verschlissene Zahnräder, Seitenplatten und Gehäuse erfordern häufig eine spezialisierte Überholung oder den Pumpenaustausch. Passungen nicht improvisiert nacharbeiten; Sauberkeit, Herstellerdaten und eine abschließende Prüfung sind wesentlich."
+      },
+      {
+        "label": "Konstante Drehzahl",
+        "text": "Für eine übliche Zahnrad-Konstantpumpe gilt näherungsweise Q = Vg · n · ηv. Bei festem Verdrängungsvolumen Vg und konstanter Drehzahl n lässt sich ihr theoretischer Förderstrom nicht wie bei einer Verstellpumpe einstellen. Eine Drossel oder ein Bypass verändert den Verbraucher- beziehungsweise Rücklaufstrom und erzeugt Verluste, aber nicht das geometrische Fördervolumen der Pumpe."
+      }
+    ],
+    "mnemonic": "Zähne öffnen: saugen. Zähne schließen: drücken.",
+    "pitfall": "Eine Drossel als Verstellung der Konstantpumpe erklären oder eine nicht erkennbare Drehrichtung erfinden.",
+    "keywords": [
+      "Zahnradpumpe",
+      "Saugseite",
+      "Druckseite",
+      "Leckage",
+      "Kavitation",
+      "Volumenstrom"
+    ],
+    "sources": [
+      {
+        "label": "Bosch Rexroth: Innenzahnradpumpen mit konstantem Verdrängungsvolumen",
+        "url": "https://www.boschrexroth.com/ics/Projects/GenericSelector/?ProductArea=PGP&c=ch&language=de"
+      },
+      {
+        "label": "Bosch Rexroth: Hydraulikfehler, Ursachen und Vorbeugung",
+        "url": "https://www.boschrexroth.com/en/pl/service-and-support/service/repairs/failures-causes-and-advices/"
+      },
+      {
+        "label": "Bosch Rexroth: Zahnradpumpen und Ersatzteilzuordnung",
+        "url": "https://www.boschrexroth.com/ics/AZMaschinen/FAQ.cfm?ModelCode=AZ&language=en"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 54,
+    "imagePage": 68
+  },
+  {
+    "id": "E27",
+    "title": "Buskommunikation und Übertragungsrichtungen",
+    "category": "Automation",
+    "question": "Was verbindet ein industrieller Bus, welche Informationen transportiert er und wie unterscheiden sich Simplex, Halbduplex und Vollduplex anhand anschaulicher Beispiele?",
+    "answer": [
+      {
+        "label": "Bedeutung und Aufgabe",
+        "text": "Ein Bus ist ein gemeinsamer Kommunikationsweg mit festgelegten elektrischen beziehungsweise optischen Eigenschaften und einem Protokoll. Steuerungen, dezentrale Ein-/Ausgänge, Sensoren und Antriebe tauschen darüber Prozessdaten, Parameter und Diagnosemeldungen aus. Es gibt keine für alle Bussysteme verbindliche Auflösung von BUS als Wortabkürzung."
+      },
+      {
+        "label": "Simplex",
+        "text": "Daten fließen nur in eine Richtung, beispielsweise von einem reinen Sender zu einem Empfänger. Es gibt auf diesem Kommunikationsweg keine Rückübertragung."
+      },
+      {
+        "label": "Halbduplex",
+        "text": "Beide Richtungen sind möglich, aber zeitlich abwechselnd. Teilnehmer müssen den Zugriff koordinieren. Eine typische RS-485-Verbindung arbeitet so; ein Teilnehmer sendet, während die anderen empfangen."
+      },
+      {
+        "label": "Vollduplex",
+        "text": "Beide Seiten können gleichzeitig senden und empfangen. Moderne geswitchte Ethernet-Verbindungen nutzen dies üblicherweise. Getrennte Übertragungsrichtungen beziehungsweise geeignete Signalverfahren ermöglichen den gleichzeitigen Austausch."
+      },
+      {
+        "label": "Begriffe auseinanderhalten",
+        "text": "Simplex/Halbduplex/Vollduplex beschreiben die Richtungen. Master-Slave, Token-Verfahren und Publisher/Subscriber beschreiben dagegen Rollen oder Kommunikationsabläufe. Bus-, Stern- und Ringstruktur bezeichnen die Topologie. Diese Einteilungen beantworten unterschiedliche Fragen."
+      }
+    ],
+    "mnemonic": "Simplex: hin. Halbduplex: abwechselnd. Vollduplex: gleichzeitig.",
+    "pitfall": "Die Übertragungsrichtung mit Buszugriffsverfahren oder Netzwerktopologie vermischen.",
+    "keywords": [
+      "Bus",
+      "Prozessdaten",
+      "Simplex",
+      "Halbduplex",
+      "Vollduplex",
+      "Protokoll"
+    ],
+    "sources": [
+      {
+        "label": "Cisco: Halbduplex, Vollduplex und Aushandlung",
+        "url": "https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/10561-3.html"
+      },
+      {
+        "label": "PI: PROFIBUS-Installationsrichtlinien",
+        "url": "https://www.profibus.com/download/profibus-installation-guidelines"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 55
+  },
+  {
+    "id": "E28",
+    "title": "Lichtgitter, Lichtvorhang und sichere Auswahl",
+    "category": "Sicherheit",
+    "question": "Wie lassen sich Mehrstrahlgeräte mit unterschiedlicher Auflösung unterscheiden? Nach welchen Daten wählen Sie ein Gerät für große Entfernungen aus, und welche Schutz- beziehungsweise Messaufgaben sind möglich?",
+    "answer": [
+      {
+        "label": "Begriffe und Auflösung",
+        "text": "Die Bezeichnungen werden nicht überall einheitlich verwendet. Ein Lichtvorhang besitzt meist viele eng benachbarte Strahlen und kann je nach Auflösung Finger oder Hände erfassen. Ein Mehrstrahl-Sicherheitslichtgitter mit wenigen weiter auseinanderliegenden Strahlen wird häufig zur Zugangssicherung eingesetzt. Entscheidend sind das Datenblatt und die vom Hersteller erklärte Verwendung."
+      },
+      {
+        "label": "Große Entfernungen",
+        "text": "Nicht allein anhand des Namens entscheiden. Verglichen werden spezifizierte Mindest-/Maximalreichweite, Auflösung, Schutzfeldhöhe und Umgebungsbedingungen. Ein Gerät mit wenigen Strahlen kann für große Zugangsbreiten geeignet sein, doch auch Lichtvorhänge sind je nach Typ für größere Reichweiten ausgelegt. Für eine konkrete Auswahl müssen Entfernung und erforderliche Erkennungsgröße bekannt sein."
+      },
+      {
+        "label": "Sicherheitsaufgaben",
+        "text": "Geeignete zertifizierte Systeme sichern Gefahrstellen oder Zugänge, indem sie eine Unterbrechung sicherheitsgerichtet auswerten. Sicherheitsabstand, Nachlaufzeit, Hintertretbarkeit und Wiederanlaufverhalten gehören zum Schutzkonzept; eine Schutzeinrichtung verhindert nicht automatisch das Wegschleudern von Teilen."
+      },
+      {
+        "label": "Mess- und Erfassungsaufgaben",
+        "text": "Messende Lichtgitter können Konturen, Höhe, Position, Anwesenheit oder Anzahl von Objekten erfassen. Ein Standard-Messgerät ist dadurch noch kein für Personenschutz geeignetes Sicherheitsgerät. Muting oder Ausblendung sind nur nach der vorgesehenen sicherheitstechnischen Auslegung zulässig."
+      }
+    ],
+    "mnemonic": "Für die Auswahl zählen Auflösung, Reichweite und Sicherheitsfunktion.",
+    "pitfall": "„Lichtgitter reicht immer weiter als Lichtvorhang“ als allgemeines Gesetz lernen.",
+    "keywords": [
+      "Lichtgitter",
+      "Lichtvorhang",
+      "Auflösung",
+      "Reichweite",
+      "Schutzfeld",
+      "Sicherheitsabstand"
+    ],
+    "sources": [
+      {
+        "label": "SICK: Was ist ein Sicherheits-Lichtvorhang?",
+        "url": "https://www.sick.com/be/de/was-genau-ist-ein-sicherheits-lichtvorhang/w/blog-definition-safety-light-curtain"
+      },
+      {
+        "label": "SICK: deTec4 – Auflösung, Reichweite und Schutzfeld",
+        "url": "https://www.sick.com/media/docs/0/40/840/operating_instructions_detec4_safety_light_curtain_de_im0079840.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 55
+  },
+  {
+    "id": "E29",
+    "title": "Hydraulik warten und Speicher sichern",
+    "category": "Sicherheit",
+    "question": "Welche drei Wartungsfelder sind bei einer Hydraulikanlage wichtig? Welche gespeicherten Energien sind vor Arbeiten zu beherrschen, wie unterscheiden sich zwei Speicherbauarten und welches Gas ist zugelassen?",
+    "answer": [
+      {
+        "label": "Drei Wartungsfelder",
+        "text": "Ölzustand und Ölstand überwachen; Verschmutzung, Wasser und auffällige Temperatur beachten. Filterzustand nach Wartungsplan prüfen und geeignete Filterelemente ersetzen lassen. Leitungen, Anschlüsse, Schläuche und Dichtungen auf Schäden und Leckagen kontrollieren sowie fällige Arbeiten dokumentieren. Leckagen nicht mit der Hand suchen."
+      },
+      {
+        "label": "Vor Arbeiten mit Speicher",
+        "text": "Nur fachkundiges Personal arbeitet nach Hersteller- und Anlagenanweisung. Anlage stillsetzen, Energien trennen und gegen Wiederanlauf sichern. Lasten mechanisch sichern; den Speicher von relevanten Anlagenteilen absperren und die Flüssigkeitsseite über die vorgesehene Einrichtung kontrolliert entlasten. Druckfreiheit an den betroffenen Stellen nachweisen. Bei Eingriffen am Speicher selbst muss auch die Gasseite entsprechend der Herstelleranweisung sicher drucklos sein. Das Abschalten der Pumpe allein genügt nicht."
+      },
+      {
+        "label": "Zwei Bauarten",
+        "text": "Beim Blasenspeicher trennt eine elastische Blase Gas und Hydraulikflüssigkeit. Beim Kolbenspeicher übernimmt ein beweglicher abgedichteter Kolben diese Trennung. Beide nutzen die Kompressibilität des Gases, um Energie aufzunehmen und bei sinkendem Systemdruck Flüssigkeit abzugeben."
+      },
+      {
+        "label": "Füllgas",
+        "text": "Für die üblichen gasbelasteten Hydraulikspeicher ist trockener Stickstoff in der vom Hersteller geforderten Qualität zu verwenden. Sauerstoff und Druckluft sind wegen Brand-/Explosionsgefahr ungeeignet. Das Befüllen ist eine Facharbeit mit freigegebener Füll- und Prüfausrüstung."
+      }
+    ],
+    "mnemonic": "Pumpe aus heißt nicht Speicher leer; Füllgas ist Stickstoff.",
+    "pitfall": "Eine Leitung lösen, obwohl noch Druck oder eine ungesicherte schwebende Last vorhanden ist.",
+    "keywords": [
+      "Hydraulikspeicher",
+      "Stickstoff",
+      "Blasenspeicher",
+      "Kolbenspeicher",
+      "Druckfreiheit",
+      "Wartung"
+    ],
+    "sources": [
+      {
+        "label": "HYDAC: Kolbenspeicher – Wartung und Sicherheit, nur Stickstoff",
+        "url": "https://betterfit-us.hydac.com/wp-content/uploads/Piston%20Maintenance%20Manual.pdf"
+      },
+      {
+        "label": "HYDAC: Funktionsweise von Hydraulikspeichern",
+        "url": "https://betterfit-us.hydac.com/faq/how-does-an-accumulator-work/"
+      },
+      {
+        "label": "Bosch Rexroth: Hydraulikfehler, Ursachen und Vorbeugung",
+        "url": "https://www.boschrexroth.com/en/pl/service-and-support/service/repairs/failures-causes-and-advices/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 56
+  },
+  {
+    "id": "E30",
+    "title": "Drucktransmitter und Ausgangssignale",
+    "category": "Automation",
+    "question": "Was macht ein Drucktransmitter, wo wird er eingesetzt und wie interpretieren Sie seine typischen analogen und digitalen Ausgänge?",
+    "answer": [
+      {
+        "label": "Funktion",
+        "text": "Ein Drucktransmitter beziehungsweise Druckmessumformer erfasst Druck über ein Sensorelement und wandelt ihn mit einer Auswerteelektronik in ein normiertes oder digitales Signal um. Relativ-, Absolut- oder Differenzdruck müssen zur Messaufgabe passen."
+      },
+      {
+        "label": "Einsatz und Auswahl",
+        "text": "Beispiele sind Drucküberwachung in Hydraulik und Pneumatik, Pumpenregelung, Filterüberwachung über Differenzdruck oder Füllstandsmessung über hydrostatischen Druck. Messbereich, Überlastfestigkeit, Medium, Temperatur, Prozessanschluss und Genauigkeit bestimmen die Auswahl."
+      },
+      {
+        "label": "Analoge Signale",
+        "text": "Verbreitet sind 4–20 mA und 0–10 V; die genaue Ausführung steht im Datenblatt. Bei 4–20 mA liegt der Messbereichsanfang typischerweise bei 4 mA und der Endwert bei 20 mA. Für einen Bereich 0–100 bar entsprechen 12 mA idealisiert 50 bar. Die SPS muss denselben Bereich und Signaltyp skalieren."
+      },
+      {
+        "label": "Digital und Abgrenzung",
+        "text": "Digitale Varianten liefern Messwert und häufig Diagnosedaten, etwa über IO-Link oder ein Bussystem. Nicht jeder Drucktransmitter besitzt jede Schnittstelle. Ein Druckschalter meldet dagegen vorrangig das Über-/Unterschreiten eines Schaltpunkts; Kombigeräte können Messwert und Schaltausgänge bereitstellen."
+      }
+    ],
+    "mnemonic": "Druck hinein, verwertbares Signal heraus.",
+    "pitfall": "Ein 4–20-mA-Signal als 0–20 mA skalieren oder Druckschalter und Messumformer gleichsetzen.",
+    "keywords": [
+      "Drucktransmitter",
+      "4–20 mA",
+      "0–10 V",
+      "Skalierung",
+      "Relativdruck",
+      "IO-Link"
+    ],
+    "sources": [
+      {
+        "label": "WIKA: Druckmessumformer A-10",
+        "url": "https://shop.wika.com/en-us/a_10.WIKA?ProductGroup=100277&fromGeoIpOverlay=true"
+      },
+      {
+        "label": "WIKA: Elektrische Schaltung bei Drucksensoren",
+        "url": "https://blog.wika.com/en/products/pressure-products/active-passive-sensor/?doing_wp_cron=1721298252.4989230632781982421875"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 56
+  },
+  {
+    "id": "E31",
+    "title": "Netzwerkstecker fachgerecht anschließen",
+    "category": "Elektrotechnik",
+    "question": "Wie planen und prüfen Sie eine Kupfer-Netzwerkverbindung mit RJ45? Welche Werkzeuge passen zu Crimp- und Feldsteckern, welche Leitung darf verwendet werden und wie ist eine unklare Angabe wie „einpolig“ fachlich zu klären?",
+    "answer": [
+      {
+        "label": "Leitung und Stecker abstimmen",
+        "text": "Die geforderte Kategorie, Schirmung, Aderzahl, Leiterquerschnitte sowie Durchmesser müssen zu Stecker und Anwendung passen. Massivleiter für feste Installation und Litzenleiter für flexible Patchleitungen brauchen dafür zugelassene Kontakte. Bei PoE zusätzlich Strombelastbarkeit und Erwärmung berücksichtigen."
+      },
+      {
+        "label": "Montagegrundablauf",
+        "text": "Verbindung außer Betrieb nehmen und nach der konkreten Herstelleranleitung ablängen sowie den Mantel entfernen, ohne Leiter oder Schirm zu verletzen. Verdrillung möglichst bis zur Kontaktstelle erhalten, Schirm und Zugentlastung richtig vorbereiten. Adern nach festgelegtem Schema T568A oder T568B beziehungsweise dem gerätespezifischen Industrie-Pinout einlegen. Kontakte vollständig herstellen und Gehäuse samt Zugentlastung schließen."
+      },
+      {
+        "label": "Passende Werkzeuge",
+        "text": "Ein geeigneter Mantelabsetzer und Seitenschneider gehören zur Vorbereitung. Konventionelle modulare Crimpstecker verlangen die passende Crimpzange; feldkonfektionierbare Schneidklemmstecker benötigen das vorgesehene Montagewerkzeug oder sind werkzeuglos. Eine beliebige Zange ersetzt keine kompatible Anschlusstechnik."
+      },
+      {
+        "label": "Prüfen",
+        "text": "Sichtprüfung und Wiremap prüfen Unterbrechung, Kurzschluss, Vertauschung und Schirmdurchgang. Ein einfacher Durchgangstester beweist keine Kategorie. Für einen normgerechten Leistungsnachweis sind geeignete Zertifizierungsmessungen einschließlich Längen- und Hochfrequenzparametern nötig; Split Pairs müssen erkannt werden."
+      },
+      {
+        "label": "„Einpolig“ klären",
+        "text": "Für übliches Ethernet ist „einpoliges Kabel“ kein eindeutiger Fachbegriff. Ist ein eindrähtiger Massivleiter gemeint, einen dafür zugelassenen Stecker verwenden. Ist Single Pair Ethernet gemeint, sind es zwei Leiter als ein verdrilltes Paar mit passender SPE-Schnittstelle. Eine einzelne Ader lässt sich nicht durch eine frei erfundene RJ45-Belegung zum Ethernetkabel machen."
+      }
+    ],
+    "mnemonic": "Leiter, Kontakt und Prüfverfahren müssen zur Verbindung passen.",
+    "pitfall": "Litzen- und Massivleiterstecker vertauschen oder aus acht richtigen Durchgangswerten auf garantierte Gigabit-Qualität schließen.",
+    "keywords": [
+      "RJ45",
+      "Crimpen",
+      "Massivleiter",
+      "T568B",
+      "Wiremap",
+      "Single Pair Ethernet"
+    ],
+    "sources": [
+      {
+        "label": "Telegärtner: Datenverkabelung, RJ45 und Anschlusstechnik",
+        "url": "https://www.telegaertner.com/fileadmin/user_upload/Downloads/Kataloge/DV-Enterprise_Katalog_DE.pdf"
+      },
+      {
+        "label": "METZ CONNECT: Reference Guide – Kupfer, LSA-Anschlusstechnik",
+        "url": "https://www.metz-connect.com/media/file/8a8a80ea92e237ff01931b3e86fb7e8f.de.0/reference_guide_de.pdf"
+      },
+      {
+        "label": "Phoenix Contact: Single Pair Ethernet mit zwei Adern",
+        "url": "https://assets.phoenixcontact.com/file/faa818a7-4934-4d78-979b-5551e8160e3b/media/original?SPE_news_release_Final.pdf="
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 57
+  },
+  {
+    "id": "E32",
+    "title": "Netzwerkleitungen und LSA verstehen",
+    "category": "Elektrotechnik",
+    "question": "Vergleichen Sie Kupfer-Twisted-Pair und Lichtwellenleiter mit je zwei Eigenschaften. Wie stellt eine LSA-Verbindung Kontakt her und welche Grenzen sind dabei zu beachten?",
+    "answer": [
+      {
+        "label": "Twisted-Pair-Kupfer",
+        "text": "Verdrillte Aderpaare übertragen elektrische Differenzsignale. Die Verbindung ist kostengünstig und unterstützt bei passender Technik auch die Energieversorgung über PoE. Reichweite und Störfestigkeit hängen von Kategorie, Ausführung und Installation ab; elektromagnetische Einflüsse sowie Potenzialunterschiede sind zu berücksichtigen."
+      },
+      {
+        "label": "Lichtwellenleiter",
+        "text": "Ein LWL überträgt Licht und ist gegen elektromagnetische Einstreuung unempfindlich. Er trennt die Endgeräte galvanisch und eignet sich, mit passenden Fasern und Transceivern, für große Entfernungen. Er benötigt saubere Steckflächen und die Einhaltung zulässiger Biegeradien; elektrisches PoE kann er nicht direkt übertragen."
+      },
+      {
+        "label": "LSA-Verbindung",
+        "text": "LSA bedeutet löt-, schraub- und abisolierfrei. Eine isolierte Einzelader wird mit dem vorgesehenen Auflegewerkzeug in einen Schneidklemmkontakt gedrückt. Die Kontaktkanten durchdringen die Aderisolation und kontaktieren den Leiter; das Werkzeug kann den Überstand zugleich kürzen. Typische Anwendungen sind Anschlussdosen und Patchfelder."
+      },
+      {
+        "label": "Montagegrenzen",
+        "text": "Nur zugelassene Leiterarten und -durchmesser verwenden. Den Außenmantel und gegebenenfalls Schirm bereitet man trotzdem nach Anleitung vor; „abisolierfrei“ bezieht sich auf die einzelne Kontaktstelle. Erneutes Auflegen erfolgt bei Bedarf an einem unbeschädigten Leiterabschnitt."
+      }
+    ],
+    "mnemonic": "Kupfer leitet Strom, Faser leitet Licht, LSA schneidet durch die Aderisolation.",
+    "pitfall": "„Abisolierfrei“ so verstehen, dass die Leitung ohne jede Vorbereitung angeschlossen wird.",
+    "keywords": [
+      "Twisted Pair",
+      "Lichtwellenleiter",
+      "Galvanische Trennung",
+      "PoE",
+      "LSA",
+      "Schneidklemme"
+    ],
+    "sources": [
+      {
+        "label": "Phoenix Contact: Industrielle Kommunikation und Übertragungsmedien",
+        "url": "https://www.phoenixcontact.com/en-au/products/industrial-communication"
+      },
+      {
+        "label": "METZ CONNECT: Reference Guide – Kupfer, LSA-Anschlusstechnik",
+        "url": "https://www.metz-connect.com/media/file/8a8a80ea92e237ff01931b3e86fb7e8f.de.0/reference_guide_de.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 57
+  },
+  {
+    "id": "E33",
+    "title": "Maschinen bewegen und Kranberechtigung einordnen",
+    "category": "Sicherheit",
+    "question": "Welche maschinellen und manuellen Transportmittel kommen für Werkzeugmaschinen infrage, welche Voraussetzungen gelten in Österreich für das Kranführen, welche Anschlagmittel kennen Sie und was ist vor dem Anlagentransport zu planen?",
+    "answer": [
+      {
+        "label": "Transportmöglichkeiten",
+        "text": "Maschinell sind beispielsweise Hallenkran und geeigneter Gabelstapler einsetzbar. Für einen manuellen, aber technisch unterstützten Transport können Handhubwagen oder zugelassene Maschinentransportfahrwerke dienen, wenn Last, Schwerpunkt und Untergrund dazu passen. Eine schwere Werkzeugmaschine wird nicht durch bloße Muskelkraft sicher transportierbar."
+      },
+      {
+        "label": "Kranführen in Österreich",
+        "text": "Erforderlich sind geeignete, entsprechend unterwiesene Personen und eine ausdrückliche Fahrbewilligung des Arbeitgebers; für bestimmte Krane zusätzlich der passende Fachkenntnisnachweis. Die vereinfachte Angabe „über 5 t“ ersetzt nicht die Rechtsprüfung: § 3 FK-V nennt unter anderem flurgesteuerte Krane bis 50 kN als Ausnahme; bei Fahrzeug-/Ladekranen sind auch 100 kNm Lastmoment und die genaue Bauart relevant. 50 kN entsprechen ungefähr 5 t. Für große Krane gelten die entsprechenden Nachweise; Minderjährigenschutz ist zusätzlich zu beachten."
+      },
+      {
+        "label": "Zwei Anschlagmittel",
+        "text": "Anschlagketten und geeignete Rundschlingen beziehungsweise Hebebänder verbinden Lastaufnahmemittel und Last. Tragfähigkeit, Anschlagart, Winkel, Kantenschutz und Herstellerfreigaben müssen zur Last passen. Beschädigte oder nicht eindeutig gekennzeichnete Mittel ausscheiden."
+      },
+      {
+        "label": "Transport vorbereiten",
+        "text": "Masse, Schwerpunkt und freigegebene Anschlagpunkte aus der Dokumentation ermitteln; Transportweg, Boden-/Deckentragfähigkeit und Durchfahrten prüfen. Versorgung fachgerecht trennen, Restenergien sichern, bewegliche Teile und Werkzeug festsetzen und empfindliche Baugruppen schützen. Ein geeigneter Transportplan legt Mittel, Lastsicherung, Zuständigkeiten, Absperrung und Kommunikation fest."
+      }
+    ],
+    "mnemonic": "Masse und Schwerpunkt kennen, Mittel prüfen, Personen berechtigen.",
+    "pitfall": "Eine deutsche Kranregel als österreichische Antwort verwenden oder die 5-t-Angabe ohne Kranart und Lastmoment auslegen.",
+    "keywords": [
+      "Transport",
+      "Kran",
+      "Fachkenntnisnachweis",
+      "Fahrbewilligung",
+      "Schwerpunkt",
+      "Anschlagmittel"
+    ],
+    "sources": [
+      {
+        "label": "RIS Österreich: FK-V § 3 – Ausnahmen und genaue Grenzen",
+        "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20005222&Paragraf=3"
+      },
+      {
+        "label": "Arbeitsinspektion Österreich: Krane, Fachkenntnisse und Fahrbewilligung",
+        "url": "https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsmittel/heben_lasten_personen/krane_lastenaufnahmeeinrichtungen_anschlagmittel.html"
+      },
+      {
+        "label": "DGUV/IFA: Anschlagmittel und Prüfung vor Benutzung",
+        "url": "https://www.dguv.de/ifa/praxishilfen/gefahrenschwerpunkt-frachtcontainer/lexikon/anschlagmittel/index.jsp"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 58
+  },
+  {
+    "id": "E34",
+    "title": "Transportmittel und ablegereife Drahtseile",
+    "category": "Sicherheit",
+    "question": "Welche Einrichtungen unterstützen den mechanischen Transport, wann muss ein Stahlseil aus dem Betrieb genommen werden und welche gemeinsamen Regeln schützen bei maschinellem und manuell unterstütztem Transport?",
+    "answer": [
+      {
+        "label": "Mechanische Transportmittel",
+        "text": "Dazu zählen Krane und Hebezeuge, Stapler, Hubwagen, Rollenbahnen sowie zugelassene Transportfahrwerke. Ihre Eignung wird aus Tragfähigkeit, Lastgeometrie, Schwerpunkt, Hubhöhe, Transportweg und Untergrund bestimmt."
+      },
+      {
+        "label": "Schäden an Drahtseilen",
+        "text": "Ausscheidegründe sind beispielsweise Knicke oder Kinken, Quetschungen, Korbbildung, herausgetretene Einlage, starke Korrosion, Hitzeschäden, beschädigte Endverbindungen und eine unzulässige Zahl von Drahtbrüchen. Auch deutlicher Verschleiß beziehungsweise Durchmesserverlust ist kritisch. Die genaue Ablegegrenze hängt von Seilart, Einsatz und Hersteller-/Prüfvorschrift ab; es gibt keine universelle Drahtbruchzahl."
+      },
+      {
+        "label": "Prüfung und Entscheidung",
+        "text": "Vor Gebrauch Sichtprüfung, Kennzeichnung und geeignete Tragfähigkeit kontrollieren. Bei Zweifel Seil sperren und durch eine fachkundige Person beurteilen lassen. Ein beschädigtes Anschlagseil wird nicht durch Knoten, provisorische Klemmen oder eigenmächtiges Kürzen repariert."
+      },
+      {
+        "label": "Transportregeln",
+        "text": "Last sicher aufnehmen, gegen Verrutschen und Kippen sichern und den Weg freihalten. Personen fernhalten und nie unter schwebender Last stehen. Niemand darf zwischen Last und festem Hindernis eingeklemmt werden; Signale und Zuständigkeiten festlegen. Beim manuellen Bewegen technische Hilfsmittel und ausreichend Personal einsetzen, Belastung beurteilen und abgestimmt handeln."
+      }
+    ],
+    "mnemonic": "Ein beschädigtes Seil wird gesperrt, eine unsichere Last bleibt stehen.",
+    "pitfall": "Eine einzelne pauschale Drahtbruchzahl für jedes Stahlseil lernen oder Tragfähigkeit nur aus dem Seildurchmesser schätzen.",
+    "keywords": [
+      "Drahtseil",
+      "Ablegereife",
+      "Kinke",
+      "Korrosion",
+      "Lastsicherung",
+      "Transportweg"
+    ],
+    "sources": [
+      {
+        "label": "BG BAU: Ablegereife von Anschlag-Drahtseilen",
+        "url": "https://www.bgbau-medien.de/handlungshilfen_gb/daten/dguv/109_005/5.htm"
+      },
+      {
+        "label": "DGUV/IFA: Anschlagmittel und Prüfung vor Benutzung",
+        "url": "https://www.dguv.de/ifa/praxishilfen/gefahrenschwerpunkt-frachtcontainer/lexikon/anschlagmittel/index.jsp"
+      },
+      {
+        "label": "AUVA: Evaluierung manueller Lastenhandhabung",
+        "url": "https://auva.at/praevention/sicher-arbeiten/evaluierung/lastenhandhabung"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 58
+  },
+  {
+    "id": "E35",
+    "title": "Lasten von Hand, auf Rollen und als Blech transportieren",
+    "category": "Sicherheit",
+    "question": "Welche Hilfsmittel und persönliche Schutzausrüstung helfen beim manuellen Transport? Wie schützen Sie Anschlagmittel an Kanten, was ist bei Richtungswechseln mit Rollen zu beachten und welche besonderen Gefahren gehen von Blechen aus?",
+    "answer": [
+      {
+        "label": "Hilfsmittel und PSA",
+        "text": "Vorrang haben geeignete Hub- und Transporthilfen, etwa Hubwagen, Handkarren, Hebehilfen oder zugelassene Tragegriffe. Die manuelle Belastung ist nach Masse, Häufigkeit, Körperhaltung und Weg zu beurteilen. Sicherheitsschuhe und geeignete Schutzhandschuhe gehören je nach Aufgabe dazu; weitere PSA ergibt sich aus der Gefährdungsbeurteilung."
+      },
+      {
+        "label": "Scharfe Lastkanten",
+        "text": "Seile und textile Anschlagmittel gegen Einschneiden, Quetschen und zu enge Biegeradien mit geeigneten Kantenschonern schützen. Tragfähigkeit und zulässigen Kantenradius nach Herstellerangaben einhalten. Ein zufällig untergelegtes dünnes Tuch ist kein nachgewiesener Kantenschutz."
+      },
+      {
+        "label": "Richtungswechsel auf Rollen",
+        "text": "Das Prinzip besteht darin, die Ausrichtung der tragenden Rollen beziehungsweise eines lenkbaren Transportfahrwerks kontrolliert zu ändern. Das erfolgt nur mit abgestimmtem Transportplan und gesichertem Lastzustand; Hände und Füße bleiben aus dem Quetschbereich. Lose Rundstangen und spontanes Umlegen unter einer ungesicherten Maschine sind keine sichere Transportmethode. Bei schweren Anlagen eine geeignete Fachfirma einsetzen."
+      },
+      {
+        "label": "Bleche",
+        "text": "Scharfe Kanten verursachen Schnittverletzungen, große Flächen können ausschwenken und hochkant stehende Bleche umkippen. Geeignete Blechgreifer oder freigegebene Hebemittel benutzen und Abrutschen sowie Kippen verhindern. Wege und Ablage vorbereiten, Hände von Kanten-/Quetschstellen fernhalten und Bleche in dafür geeigneten Einrichtungen standsicher lagern."
+      }
+    ],
+    "mnemonic": "Hilfsmittel tragen die Last, Kantenschutz schützt das Anschlagmittel.",
+    "pitfall": "Mit den Händen unter der Last Rollen nachlegen oder ein Blech nur wegen geringer Dicke für leicht beherrschbar halten.",
+    "keywords": [
+      "Lastenhandhabung",
+      "Kantenschutz",
+      "Transportrollen",
+      "Blechgreifer",
+      "Schnittschutz",
+      "Quetschgefahr"
+    ],
+    "sources": [
+      {
+        "label": "AUVA: Evaluierung manueller Lastenhandhabung",
+        "url": "https://auva.at/praevention/sicher-arbeiten/evaluierung/lastenhandhabung"
+      },
+      {
+        "label": "Suva: Transport und Lagerung von Blechen",
+        "url": "https://www.suva.ch/de-ch/download/checklisten/transport-und-lagerung-von-blechen/transport-und-lagerung-von-blechen--67111.D"
+      },
+      {
+        "label": "DGUV/IFA: Anschlagmittel und Prüfung vor Benutzung",
+        "url": "https://www.dguv.de/ifa/praxishilfen/gefahrenschwerpunkt-frachtcontainer/lexikon/anschlagmittel/index.jsp"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 59
+  },
+  {
+    "id": "E36",
+    "title": "Twisted Pair, Hub und Switch erkennen",
+    "category": "Automation",
+    "question": "Beschreiben Sie eine geschirmte Kupfer-Datenleitung mit vier verdrillten Aderpaaren und RJ45-Anschluss. Warum werden die Adern verdrillt, und wie unterscheidet sich ein Hub von einem Ethernet-Switch?",
+    "answer": [
+      {
+        "label": "Leitung im Bild",
+        "text": "Das Foto zeigt eine Kupfer-Twisted-Pair-Datenleitung mit acht isolierten Adern in vier farbcodierten Paaren, sichtbaren Schirmbestandteilen und Außenmantel sowie einen geschirmten RJ45-Stecker. Eine genaue Kategorie oder vollständige Schirmbezeichnung lässt sich aus dem Foto allein nicht zuverlässig bestimmen; dafür sind Aufdruck und Datenblatt maßgeblich."
+      },
+      {
+        "label": "Wirkung der Verdrillung",
+        "text": "Ein symmetrisches Aderpaar führt gegenläufige Signale. Durch die Verdrillung wirken äußere Störungen möglichst ähnlich auf beide Leiter und können beim Differenzempfang unterdrückt werden. Zugleich werden elektromagnetische Abstrahlung und Übersprechen reduziert. Zu weit aufgedrehte Paare verschlechtern die Übertragungseigenschaften."
+      },
+      {
+        "label": "Hub beziehungsweise Multiport-Repeater",
+        "text": "Ein Hub arbeitet auf der physikalischen Ebene. Er gibt empfangene Signale an die übrigen Ports weiter, ohne Ziel-MAC-Adressen auszuwerten. Klassisches Hub-Ethernet teilt Bandbreite und Kollisionsbereich und arbeitet halbduplex."
+      },
+      {
+        "label": "Switch",
+        "text": "Ein Switch lernt Quell-MAC-Adressen und ihre Ports. Bekannte Unicast-Ziele werden gezielt an den betreffenden Port weitergeleitet. Broadcasts und unbekannte Ziele werden innerhalb des betreffenden Netzes beziehungsweise VLANs weiterhin verteilt. Die einzelnen Verbindungen können vollduplex arbeiten; sie teilen nicht mehr einen gemeinsamen Kollisionsbereich."
+      }
+    ],
+    "mnemonic": "Twisted Pair verbessert das Signal, der Switch wählt den Zielport.",
+    "pitfall": "Behaupten, ein Switch sende niemals an mehrere Ports oder die Kabelfarbe beweise die Kategorie.",
+    "keywords": [
+      "Twisted Pair",
+      "RJ45",
+      "Differenzsignal",
+      "Hub",
+      "Switch",
+      "MAC-Adresse"
+    ],
+    "sources": [
+      {
+        "label": "Telegärtner: Datenverkabelung, RJ45 und Anschlusstechnik",
+        "url": "https://www.telegaertner.com/fileadmin/user_upload/Downloads/Kataloge/DV-Enterprise_Katalog_DE.pdf"
+      },
+      {
+        "label": "Cisco: Hub und Switch – Weiterleitung von Ethernet-Verkehr",
+        "url": "https://www.cisco.com/c/en/us/td/docs/routers/asr9000/software/asr9k-r6-3/interface/configuration/guide/b-interfaces-hardware-component-cg-asr9000-63x/b-interfaces-hardware-component-cg-asr9000-63x_chapter_01001.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 59,
+    "imagePage": 69
+  },
+  {
+    "id": "E37",
+    "title": "Löten, SMD und Reflow",
+    "category": "Elektrotechnik",
+    "question": "Was geschieht beim Löten im Unterschied zum Aufschmelzen des Grundwerkstoffs? Erklären Sie SMD, zwei elektrische Lötverfahren, zwei Entlöthilfen und den Ablaufgedanken des Reflowlötens.",
+    "answer": [
+      {
+        "label": "Löten",
+        "text": "Ein geschmolzenes Lot benetzt die metallischen Fügeflächen und bildet nach dem Erstarren eine stoffschlüssige Verbindung. Die Grundwerkstoffe bleiben dabei fest. Geeignete Oberflächen, Flussmittel und ein beherrschter Wärmeeintrag sind entscheidend; in der Elektronik wird überwiegend weichgelötet."
+      },
+      {
+        "label": "SMD-Technik",
+        "text": "SMD steht für Surface Mounted Device. Die Bauteilanschlüsse werden auf Lötflächen an der Leiterplattenoberfläche kontaktiert, statt Anschlussdrähte durch Bohrungen zu führen. SMT bezeichnet die zugehörige Oberflächenmontagetechnik."
+      },
+      {
+        "label": "Zwei Lötverfahren",
+        "text": "Beim Handlöten führt eine geeignete temperaturgeregelte Lötspitze Wärme an Anschluss und Lötfläche. Beim Reflowlöten wird zuvor aufgebrachte Lotpaste aufgeschmolzen. Weitere industrielle Verfahren sind Wellen- und Selektivlöten, vor allem für bedrahtete Anschlüsse."
+      },
+      {
+        "label": "Entlöten",
+        "text": "Entlötlitze nimmt flüssiges Lot durch Kapillarwirkung auf. Eine Entlötpumpe beziehungsweise Vakuum-Entlötstation saugt aufgeschmolzenes Lot ab. Für bestimmte SMD-Bauformen kommen geregelte Heißluft- oder Reworksysteme hinzu. Zug an noch nicht vollständig freigeschmolzenen Anschlüssen kann Pads abreißen."
+      },
+      {
+        "label": "Reflowprinzip",
+        "text": "Lotpaste auf die Pads aufbringen, Bauteile platzieren und die Baugruppe mit einem zu Paste und Bauteilen passenden Temperaturprofil erwärmen. Nach Vorwärmen und eigentlicher Aufschmelzphase entstehen beim kontrollierten Abkühlen die Verbindungen. ESD-Schutz, Absaugung und Temperaturgrenzen sind zu beachten."
+      }
+    ],
+    "mnemonic": "Lot schmilzt, Grundwerkstoff bleibt fest; Reflow schmilzt vorbereitete Lotpaste.",
+    "pitfall": "SMD mit einer Lötmethode gleichsetzen oder ein Bauteil vor dem vollständigen Entlöten abziehen.",
+    "keywords": [
+      "Löten",
+      "SMD",
+      "SMT",
+      "Reflow",
+      "Entlötlitze",
+      "Lotpaste"
+    ],
+    "sources": [
+      {
+        "label": "Ersa: Lötfibel – THT, SMD, Reflow und Entlöten",
+        "url": "https://www.ersa-shop.de/images/p_info/edb_700030226_Loetfibel_web_deu.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 60
+  },
+  {
+    "id": "E38",
+    "title": "Statische und temporäre Daten, FC und FB",
+    "category": "Automation",
+    "question": "Wie unterscheiden sich bei Siemens-SPS temporäre und statische Variablen sowie FC und FB? Erklären Sie, welcher Baustein für eine reine Berechnung und welcher für einen zustandsbehafteten Antrieb passt.",
+    "answer": [
+      {
+        "label": "Temporäre Variable",
+        "text": "TEMP-Daten dienen als Zwischenergebnisse während eines Bausteinaufrufs. Ihr Wert steht nicht als eigener gespeicherter Zustand für den nächsten Aufruf zur Verfügung. Vor dem Lesen muss ein definierter Wert vorliegen. Bei nicht optimierten Bausteinen können Anfangswerte undefiniert sein; bestimmte optimierte S7-1200/1500-Bausteine initialisieren TEMP-Daten mit dem Datentyp-Standardwert. Darauf darf man nicht systemübergreifend vertrauen."
+      },
+      {
+        "label": "Statische Variable",
+        "text": "STAT-Daten eines FB liegen im zugehörigen Instanzspeicher. Sie behalten ihren Wert zwischen Aufrufen, beispielsweise einen Ablaufzustand oder eine gespeicherte Flanke. Das bedeutet nicht automatisch Remanenz bei Spannungsausfall; Remanenz ist eine gesonderte Eigenschaft beziehungsweise Einstellung."
+      },
+      {
+        "label": "Funktion FC",
+        "text": "Ein Siemens-FC besitzt keinen eigenen Instanz-DB für statische Bausteindaten. Er eignet sich beispielsweise für eine Skalierungs- oder Rechenfunktion mit übergebenen Parametern. Ein FC kann dennoch globale Daten lesen oder schreiben; „kein eigener Speicher“ bedeutet nicht „kein Zugriff auf gespeicherte Daten“."
+      },
+      {
+        "label": "Funktionsbaustein FB",
+        "text": "Ein FB besitzt Instanzdaten und eignet sich für Zustände über mehrere Aufrufe, etwa einen Antrieb mit Betriebszustand und Zeitgliedern. Jede unabhängige Verwendung benötigt eine eigene Instanz; diese kann als Einzelinstanz oder Multiinstanz angelegt sein."
+      }
+    ],
+    "mnemonic": "TEMP für diesen Aufruf, STAT für den nächsten – remanent ist eine eigene Frage.",
+    "pitfall": "STAT mit spannungsausfallsicher verwechseln oder behaupten, ein FC könne grundsätzlich keinen gespeicherten Wert verändern.",
+    "keywords": [
+      "TEMP",
+      "STAT",
+      "FC",
+      "FB",
+      "Instanz-DB",
+      "Remanenz"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Programmierleitfaden S7-1200/S7-1500, FC, FB und Variablen",
+        "url": "https://cache.industry.siemens.com/dl/files/040/90885040/att_970576/v1/81318674_Programming_guideline_DOC_v16_en.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 60
+  },
+  {
+    "id": "E39",
+    "title": "Inbetriebnahme nachweisbar protokollieren",
+    "category": "Automation",
+    "question": "Welche vier Eigenschaften machen ein Inbetriebnahmeprotokoll brauchbar, welche Angaben gehören hinein und welche Prozessdaten benötigen Sie für eine passende Anlagenauslegung?",
+    "answer": [
+      {
+        "label": "Vier Qualitätsmerkmale",
+        "text": "Ein Protokoll soll vollständig, nachvollziehbar, objektiv prüfbar und eindeutig zuordenbar sein. Ein fremder Fachkundiger muss erkennen können, welche Anlage in welchem Zustand nach welchen Kriterien geprüft wurde und ob die Anforderungen erfüllt waren."
+      },
+      {
+        "label": "Inhalt",
+        "text": "Anlagenidentifikation, Datum, beteiligte Personen, Hardware-/Softwarestände und Prüfbedingungen festhalten. Sollwerte, Messmethode, tatsächliche Ergebnisse und Bewertung getrennt dokumentieren. Auch Schutzfunktionen, Schnittstellen, erkannte Mängel, Verantwortliche, Fristen und Freigaben gehören hinein; eine bloße Unterschrift ersetzt keine Ergebnisse."
+      },
+      {
+        "label": "Nutzen",
+        "text": "Die Dokumentation unterstützt Übergabe, Abnahme, spätere Fehlersuche und den Nachweis von Änderungen. Offene Punkte bleiben sichtbar und können gezielt abgearbeitet werden. Für gesetzlich vorgeschriebene Prüfungen gelten zusätzlich die Anforderungen an den jeweiligen Prüfbefund."
+      },
+      {
+        "label": "Dimensionierung",
+        "text": "Benötigt werden geforderter Durchsatz/Takt, Produktvarianten und Toleranzen sowie Werkstücklasten, Kräfte, Drehmomente und Bewegungsprofile. Verfügbarkeit, Rüstzeiten, Ausschuss, Medienversorgung, Platz und Umgebung beeinflussen Kapazität und Reserven. Motorleistung allein beschreibt nicht die Leistungsfähigkeit einer Gesamtanlage."
+      }
+    ],
+    "mnemonic": "Ein gutes Protokoll verbindet Anforderung, Messwert und Entscheidung.",
+    "pitfall": "Nur „funktioniert“ dokumentieren oder eine Anlage ohne Rüst- und Stillstandszeiten auf den theoretischen Takt auslegen.",
+    "keywords": [
+      "Inbetriebnahmeprotokoll",
+      "Prüfkriterium",
+      "Messwert",
+      "Freigabe",
+      "Durchsatz",
+      "Lastprofil"
+    ],
+    "sources": [
+      {
+        "label": "Arbeitsinspektion: Prüfungen vor der ersten Inbetriebnahme",
+        "url": "https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsmittel/pruefung_arbeitsmittel.html"
+      },
+      {
+        "label": "Siemens: Antriebe mit Lastprofil dimensionieren",
+        "url": "https://support.industry.siemens.com/cs/attachments/109773995/micro-drive_in_tst_getting_started_en-US_en-US.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 61
+  },
+  {
+    "id": "E40",
+    "title": "Schrittketten und Bussysteme",
+    "category": "Automation",
+    "question": "Erklären Sie Schritt und Transition an einem einfachen Ablauf, nennen Sie zwei Vorteile von GRAPH/SFC und beschreiben Sie, welche Aufgaben das Kommunikationssystem in der Anlage übernimmt.",
+    "answer": [
+      {
+        "label": "Schritt",
+        "text": "Ein Schritt beschreibt einen Zustand des Ablaufs. Solange er aktiv ist, werden die ihm zugeordneten Aktionen nach ihren Bedingungen und Qualifizierungen bearbeitet. Beispiel: Im Schritt „Spannen“ wird das Werkstück eingespannt und die Rückmeldung überwacht."
+      },
+      {
+        "label": "Transition",
+        "text": "Eine Transition ist die logische Weiterschaltbedingung zwischen Schritten. Ist der Vorgängerschritt aktiv und die Bedingung erfüllt, kann in den Folgeschritt gewechselt werden. Beispiel: Erst wenn die zulässige Spannrückmeldung vorliegt, folgt „Bearbeiten“. Eine Transition ist keine Aktion."
+      },
+      {
+        "label": "Zwei Vorteile",
+        "text": "Der Prozessablauf ist grafisch leichter mit dem tatsächlichen Maschinenablauf zu vergleichen. Zusätzlich lassen sich aktive Schritte, fehlende Bedingungen und Zeitüberschreitungen gezielt diagnostizieren. Parallele oder alternative Abläufe können klar modelliert werden."
+      },
+      {
+        "label": "Busaufgaben",
+        "text": "Bussysteme verbinden SPS, dezentrale Ein-/Ausgänge, Antriebe und Bediengeräte. Sie übertragen zyklische Prozesswerte, azyklische Parameter und Diagnosen, reduzieren Einzelverdrahtung und ermöglichen abgestimmte Abläufe. Zeitverhalten und Ausfallreaktion müssen zur Anwendung passen. Sicherheitskommunikation benötigt dafür ausgelegte Protokolle und Komponenten; ein Standardbus ist allein keine Sicherheitsfunktion."
+      }
+    ],
+    "mnemonic": "Der Schritt handelt, die Transition erlaubt den Wechsel.",
+    "pitfall": "Eine Transition aktiv erzwingen, obwohl die physische Anlage die Weiterschaltbedingung noch nicht erfüllt.",
+    "keywords": [
+      "Schrittkette",
+      "GRAPH",
+      "SFC",
+      "Transition",
+      "Prozessdaten",
+      "Diagnose"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: S7-GRAPH-Handbuch – Schritte und Transitionen",
+        "url": "https://support.industry.siemens.com/cs/attachments/1137630/Graph7_e.pdf"
+      },
+      {
+        "label": "PI: PROFIBUS-Installationsrichtlinien",
+        "url": "https://www.profibus.com/download/profibus-installation-guidelines"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 61
+  },
+  {
+    "id": "E41",
+    "title": "Online-Diagnose gezielt nutzen",
+    "category": "Automation",
+    "question": "Was bringt eine Onlineverbindung zur SPS? Erläutern Sie drei Diagnoseaufgaben und begründen Sie, warum diese Werkzeuge bei modernen Anlagen besonders wichtig sind.",
+    "answer": [
+      {
+        "label": "Vorteil der Onlineverbindung",
+        "text": "Die Engineering- oder Diagnosesoftware kann den tatsächlichen Zustand der Steuerung auslesen. Betriebszustand, Baugruppenmeldungen, aktuelle Variablen und Programmstatus helfen, eine Vermutung mit realen Daten zu vergleichen. Zugriffsrechte, sichere Verbindung und Freigaben der Anlage bleiben dabei maßgeblich."
+      },
+      {
+        "label": "Aufgabe 1: Ereignisse auswerten",
+        "text": "Diagnosepuffer und Meldungen zeigen Fehler mit Zeitbezug, etwa Baugruppenausfall, Kommunikationsabbruch oder einen CPU-STOP. Reihenfolge und Randbedingungen helfen, Ursache und Folge zu unterscheiden."
+      },
+      {
+        "label": "Aufgabe 2: Signalweg verfolgen",
+        "text": "Statusanzeigen und Beobachtungstabellen zeigen, ob ein Eingang ankommt, eine Verriegelung erfüllt ist und ein Ausgang im Programm angesteuert wird. Die elektrische oder mechanische Wirkung muss separat geprüft werden; ein TRUE im Programm beweist keine reale Bewegung."
+      },
+      {
+        "label": "Aufgabe 3: Verläufe und Netzwerk prüfen",
+        "text": "Tracefunktionen zeichnen Signalverläufe auf, um kurze oder sporadische Ereignisse sichtbar zu machen. Geräte-/Netzdiagnose kann ausgefallene Teilnehmer, Portzustände und Topologieabweichungen eingrenzen. Online-/Offline-Vergleich hilft, unpassende Projektstände zu erkennen."
+      },
+      {
+        "label": "Warum wichtiger geworden?",
+        "text": "Vernetzte Systeme, viele Softwarefunktionen und zeitkritische Wechselwirkungen sind mit Sichtkontrolle allein schwer zu verstehen. Gute Diagnose senkt Suchzeiten und unterstützt vorbeugende Instandhaltung. Steuern oder Forcen kann reale Bewegungen auslösen und ist nur in einem fachlich freigegebenen Prüfverfahren zulässig."
+      }
+    ],
+    "mnemonic": "Erst beobachten, dann Ursache belegen, danach kontrolliert ändern.",
+    "pitfall": "Eine beobachtete Programmansteuerung mit einer tatsächlich vorhandenen Spannung oder Bewegung gleichsetzen.",
+    "keywords": [
+      "Online",
+      "Diagnosepuffer",
+      "Beobachten",
+      "Trace",
+      "Netzdiagnose",
+      "Projektvergleich"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Systemdiagnose S7-1500",
+        "url": "https://support.industry.siemens.com/cs/attachments/59192926/s71500_diagnosis_function_manual_en-US_en-US.pdf"
+      },
+      {
+        "label": "Siemens: Diagnosemöglichkeiten in STEP 7",
+        "url": "https://docs.tia.siemens.cloud/r/simatic_s7_1500_et_200mp_manual_collection_enus_21/device-specific-information/communication-modules/simatic-cm-1542-5/diagnostics-and-upkeep/diagnostics/diagnostics-options?contentId=ef79iyH~W3vvvQiD_rZY9g"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 62
+  },
+  {
+    "id": "E42",
+    "title": "Visualisierungsfehler und digitale Unterstützung",
+    "category": "Automation",
+    "question": "Wie grenzen Sie ein dunkles HMI und falsche Anzeigewerte ein? Welche Aufgaben erfüllt industrielle Bildverarbeitung, und welchen Nutzen kann ein abgesicherter mobiler Anlagenzugang bieten?",
+    "answer": [
+      {
+        "label": "Dunkles Display",
+        "text": "Zuerst prüfen, ob nur Energiesparmodus, Helligkeit oder Bildschirmschoner aktiv sind. Danach Gerätestatus und Versorgung einschließlich vorgesehener Sicherung durch zuständige Fachkräfte überprüfen. Bei laufendem Gerät kommen Hintergrundbeleuchtung oder Display als Ursache infrage; bei fehlendem Start auch Netzteil oder Hardware. Nach Befund Einstellungen korrigieren, Versorgung instand setzen oder das freigegebene Ersatzgerät mit gesichertem Projektstand einsetzen."
+      },
+      {
+        "label": "Anzeigewert passt nicht",
+        "text": "Den Weg Sensor → Eingangsmodul → SPS-Wert → HMI-Variable vergleichen. Häufige Ursachen sind Kommunikationsunterbrechung und veraltete Werte, falsche Adresse, Datentyp oder Skalierung, vertauschte Einheit sowie ein unpassender Projektstand. Verbindungsstatus, Zeitstempel und Rohwert prüfen; anschließend die nachgewiesene Ursache korrigieren und mit einem bekannten Referenzzustand kontrollieren."
+      },
+      {
+        "label": "Kamerasysteme",
+        "text": "Digitale Bildverarbeitung kann Bauteile lokalisieren, Vollständigkeit oder Oberflächenfehler prüfen, Abmessungen messen sowie Codes oder Schrift lesen. Sie liefert schnell wiederholbare Prüfergebnisse und kann die Rückverfolgbarkeit verbessern. Beleuchtung, Optik, Kalibrierung und geeignete Auswertung bestimmen die Zuverlässigkeit."
+      },
+      {
+        "label": "Mobilgeräte",
+        "text": "Freigegebene Meldungen, Zustände und Wartungsinformationen erreichen zuständiges Personal schneller; ein Fernzugriff kann die Diagnose unterstützen. Rollenrechte, verschlüsselte beziehungsweise abgesicherte Zugänge und aktuelle Daten sind notwendig. Eine Mobilanzeige ersetzt keine lokale Sicherheitsfunktion oder die sichere Sicht auf die Anlage."
+      }
+    ],
+    "mnemonic": "Bei falschen Werten den ganzen Signalweg prüfen.",
+    "pitfall": "Nur das HMI neu starten, obwohl der Sensorfehler oder die falsche Skalierung in der SPS liegt.",
+    "keywords": [
+      "HMI",
+      "Skalierung",
+      "Kommunikationsfehler",
+      "Bildverarbeitung",
+      "Fernzugriff",
+      "Referenzwert"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: HMI IPC477C – Fehlerdiagnose, dunkles Display",
+        "url": "https://cache.industry.siemens.com/dl/files/499/37443499/att_108164/v1/hmi_ipc477C_operating_instructions_en-US_en-US.pdf"
+      },
+      {
+        "label": "SICK: Aufgaben industrieller Bildverarbeitung",
+        "url": "https://cdn.sick.com/media/docs/2/22/322/Whitepaper_SICK_AG_Whitepaper_Select_the_best_technology_for_your_vision_application_en_IM0063322.PDF"
+      },
+      {
+        "label": "Phoenix Contact: Industrielle Kommunikation und Übertragungsmedien",
+        "url": "https://www.phoenixcontact.com/en-au/products/industrial-communication"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 62
+  },
+  {
+    "id": "E43",
+    "title": "Roboterkoordinaten und Achsantriebe",
+    "category": "Automation",
+    "question": "Welche Koordinatensysteme unterstützen das Roboterprogrammieren? Nennen Sie mindestens vier Anforderungen an einen Achsantrieb und vergleichen Sie elektrische, hydraulische und pneumatische Antriebskonzepte.",
+    "answer": [
+      {
+        "label": "Koordinatensysteme",
+        "text": "Weltkoordinaten beschreiben die Zelle, Basiskoordinaten den Bezug zum Roboterfuß. Werkstück-/Benutzerkoordinaten beziehen Positionen auf Werkstück oder Vorrichtung, Werkzeugkoordinaten auf das Werkzeug und dessen TCP. Achskoordinaten geben die einzelnen Gelenkwinkel beziehungsweise linearen Achspositionen an. Bezeichnungen und Voreinstellungen unterscheiden sich je nach Hersteller."
+      },
+      {
+        "label": "Vier zentrale Anforderungen",
+        "text": "Ein Achsantrieb benötigt ausreichendes Drehmoment beziehungsweise Kraft für Last und Beschleunigung, hohe Regel- und Positioniergüte, passende Geschwindigkeit und Dynamik sowie zuverlässigen Dauerbetrieb. Zusätzlich sind geringe bewegte Masse, passende Steifigkeit/Spiel, Energieeffizienz und sichere Zustände bei Fehlern wichtig."
+      },
+      {
+        "label": "Elektrischer Antrieb",
+        "text": "Industrieroboter verwenden heute überwiegend geregelte elektrische Servoantriebe mit Positionsrückführung. Die Bewegung wird direkt oder über Getriebe auf die Achse übertragen. Die Steuerung regelt Strom/Drehmoment, Geschwindigkeit und Lage abgestimmt."
+      },
+      {
+        "label": "Weitere Konzepte",
+        "text": "Hydraulische Antriebe erreichen hohe Kraft- beziehungsweise Leistungsdichte, benötigen aber ein Hydrauliksystem und sorgfältige Leckage-/Wartungsbeherrschung. Pneumatische Antriebe sind für einfache, schnelle Bewegungen und Greifer verbreitet; wegen der Kompressibilität der Luft ist präzise geregelte Bewegung anspruchsvoller. Diese Energiekonzepte sind von Roboterkinematiken wie SCARA oder Knickarm zu unterscheiden."
+      }
+    ],
+    "mnemonic": "Koordinaten geben den Bezug, der Antrieb liefert die Bewegung.",
+    "pitfall": "SCARA als Energieart nennen oder hohe Geschwindigkeit ohne Last- und Genauigkeitsanforderung bewerten.",
+    "keywords": [
+      "Weltkoordinaten",
+      "Werkstückkoordinaten",
+      "TCP",
+      "Servo",
+      "Drehmoment",
+      "Dynamik"
+    ],
+    "sources": [
+      {
+        "label": "ABB RobotStudio: Koordinatensysteme und TCP",
+        "url": "https://developercenter.robotstudio.com/api/robotstudio/articles/Concepts/Math/Coordinate-Systems.html"
+      },
+      {
+        "label": "ABB: Robotik und Automatisierungsanwendungen",
+        "url": "https://www.abb.com/global/en/areas/robotics"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 63
+  },
+  {
+    "id": "E44",
+    "title": "Schweißen als Fügeverfahren",
+    "category": "Mechanik",
+    "question": "Wie entsteht eine Schweißverbindung und welcher Verbindungsart gehört sie an? Nennen Sie je zwei Vorteile und Nachteile sowie zwei Schmelzschweißverfahren.",
+    "answer": [
+      {
+        "label": "Prinzip und Verbindungsart",
+        "text": "Beim Schweißen werden Werkstoffe durch Wärme und/oder Druck dauerhaft verbunden, mit oder ohne Zusatzwerkstoff. Beim Schmelzschweißen schmilzt der Grundwerkstoff im Fügebereich auf und erstarrt zur Naht. Das Ergebnis ist eine stoffschlüssige, im üblichen Sinn unlösbare Verbindung; Trennen erfordert einen zerstörenden Eingriff."
+      },
+      {
+        "label": "Zwei Vorteile",
+        "text": "Gut ausgelegte Schweißverbindungen können hohe Kräfte übertragen und dichte Bauteile ermöglichen. Häufig werden zusätzliche Verbindungselemente und Überlappungen eingespart, sodass leichte und wirtschaftliche Konstruktionen möglich sind."
+      },
+      {
+        "label": "Zwei Nachteile",
+        "text": "Der Wärmeeintrag kann Verzug, Eigenspannungen und Gefügeänderungen verursachen. Qualität und Werkstoffeignung verlangen sorgfältige Vorbereitung, qualifiziertes Personal und passende Prüfung; Fehler im Inneren sind nicht immer äußerlich sichtbar. Eine spätere zerstörungsfreie Demontage ist in der Regel nicht möglich."
+      },
+      {
+        "label": "Zwei Schmelzschweißverfahren",
+        "text": "Beim MAG-Schweißen schmilzt eine kontinuierlich zugeführte Drahtelektrode ab; ein aktives Schutzgas schützt und beeinflusst den Prozess. Beim WIG-Schweißen brennt der Lichtbogen an einer nicht abschmelzenden Wolframelektrode unter inertem Gas, gegebenenfalls mit getrenntem Zusatzwerkstoff. Beide schmelzen den Grundwerkstoff im Nahtbereich auf."
+      },
+      {
+        "label": "Arbeitsumgebung",
+        "text": "Schweißarbeiten erfordern den passenden Schutz gegen Strahlung, heiße Teile, Rauch und Brandgefahr sowie die für das Verfahren qualifizierte Durchführung. Die Erklärung ist keine Anleitung zur selbstständigen Schweißreparatur tragender Teile."
+      }
+    ],
+    "mnemonic": "Beim Löten schmilzt das Lot; beim Schmelzschweißen auch der Grundwerkstoff.",
+    "pitfall": "Jedes Schweißen als Schmelzen erklären: Es gibt auch Pressschweißverfahren.",
+    "keywords": [
+      "Schweißen",
+      "Stoffschluss",
+      "MAG",
+      "WIG",
+      "Verzug",
+      "Wärmeeinflusszone"
+    ],
+    "sources": [
+      {
+        "label": "Fronius: WIG-Schweißen, Verfahren und Eigenschaften",
+        "url": "https://www.fronius.com/de/schweissen/know-how/schweissverfahren/wig-schweissen"
+      },
+      {
+        "label": "Fronius: MIG/MAG-Schweißen – Grundprinzip und Schutzgase",
+        "url": "https://www.fronius.com/de/schweissen/know-how/schweissverfahren/mig-mag-schweissen"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 63
+  },
+  {
+    "id": "E45",
+    "title": "Roboterhaltebremse und Werkzeugnullpunkt",
+    "category": "Automation",
+    "question": "Welche Aufgabe hat die Haltebremse einer Roboterachse und wie wirkt sie typischerweise? Wozu dienen die verschiedenen Koordinatenbezüge und wie heißt der Ursprung des Werkzeugkoordinatensystems?",
+    "answer": [
+      {
+        "label": "Aufgabe der Haltebremse",
+        "text": "Sie hält eine bereits stillgesetzte Achse gegen unbeabsichtigtes Verdrehen, insbesondere durch Schwerkraft. Sie ist im Regelfall keine Betriebsbremse zum regelmäßigen Abbremsen laufender Achsbewegungen. Diese Verzögerung übernimmt normalerweise der geregelte Antrieb; mögliche Notbremsfälle und Grenzen sind herstellerabhängig."
+      },
+      {
+        "label": "Typische Eigenschaften",
+        "text": "Oft ist die Bremse federbetätigt und wird elektrisch gelüftet: Ohne Freigabe beziehungsweise Energie fällt sie ein. Zulässiges Haltemoment, Verschleiß und Funktionsprüfung sind zu beachten. Eine Haltebremse ist nicht automatisch eine vollständige sichere Lastsicherung; bei Arbeiten unter einer gefährdeten Achse sind die vorgesehenen zusätzlichen Maßnahmen nötig."
+      },
+      {
+        "label": "Zweck der Koordinatensysteme",
+        "text": "Sie geben an, worauf Positionen, Richtungen und Orientierungen bezogen sind. Ein Werkstückbezug erleichtert die Anpassung an eine versetzte Vorrichtung, ein Werkzeugbezug das Bewegen entlang einer Werkzeugrichtung. Korrekt eingemessene Bezüge machen Programme verständlicher und wiederverwendbar."
+      },
+      {
+        "label": "TCP",
+        "text": "Der Ursprung des Werkzeugkoordinatensystems heißt Tool Center Point, kurz TCP. Er ist der definierte wirksame Werkzeugpunkt, etwa eine Schweißdrahtspitze oder ein Greifbezugspunkt. Er muss nicht mit dem Roboterflansch zusammenfallen; seine Lage und Orientierung werden gegenüber dem Flansch beschrieben."
+      }
+    ],
+    "mnemonic": "Der Antrieb bremst die Bewegung, die Haltebremse hält den Stillstand.",
+    "pitfall": "Zum normalen Stoppen die Haltebremse verwenden oder den TCP immer am Flansch annehmen.",
+    "keywords": [
+      "Haltebremse",
+      "Federkraft",
+      "Lastsicherung",
+      "Werkzeugkoordinaten",
+      "TCP",
+      "Flansch"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Haltebremse eines Servoantriebs",
+        "url": "https://support.industry.siemens.com/cs/attachments/109762402/V90_PTI_1FL6_op_instr_0818_en-US.pdf"
+      },
+      {
+        "label": "ABB RobotStudio: Koordinatensysteme und TCP",
+        "url": "https://developercenter.robotstudio.com/api/robotstudio/articles/Concepts/Math/Coordinate-Systems.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 64
+  },
+  {
+    "id": "E46",
+    "title": "Die sechs Bedingungen einer guten Inbetriebnahme",
+    "category": "Automation",
+    "question": "Was umfasst Inbetriebnahme über das erste Einschalten hinaus? Erläutern Sie die Beiträge von Planung, Montage, Bedienpersonal, Systemkopplung, Aufstellung und standortspezifischen Bedingungen.",
+    "answer": [
+      {
+        "label": "Inbetriebnahme",
+        "text": "Inbetriebnahme ist das geplante Herstellen, Prüfen und Nachweisen des vorgesehenen funktionsfähigen und sicheren Betriebszustands. Dazu gehören Kontrollen vor dem Start, Parametrierung, Funktions- und Schnittstellenprüfungen, geeignete Probeläufe sowie dokumentierte Übergabe und Freigabe durch die zuständigen Personen."
+      },
+      {
+        "label": "Planungsqualität",
+        "text": "Anforderungen, Leistungsdaten, Schutzkonzept, Prüfplan und Schnittstellen müssen vorliegen. Fehlende Festlegungen lassen sich nicht zuverlässig erst beim Einschalten lösen."
+      },
+      {
+        "label": "Montagequalität",
+        "text": "Mechanik, Anschlüsse, Medienführung, Erdung und Schutzeinrichtungen müssen den Unterlagen entsprechen. Montagefehler wie Verspannung oder falsche Verdrahtung beeinflussen Funktion und Sicherheit."
+      },
+      {
+        "label": "Qualifikation des Bedienpersonals",
+        "text": "Bedienende benötigen verständliche Unterlagen und eine anlagenbezogene Unterweisung. Sie müssen Betriebsarten, zulässige Eingriffe, Störungsreaktionen und Verantwortlichkeiten kennen."
+      },
+      {
+        "label": "Funktionelle Kopplung",
+        "text": "Mit vor- und nachgelagerten Anlagen sind Signale, Daten, Takt, Materialfluss und Reaktionen auf Stillstand abzustimmen. Die gemeinsame Sicherheitsfunktion und der Wiederanlauf müssen über die Schnittstellen hinweg geprüft werden."
+      },
+      {
+        "label": "Aufstellungsbedingungen",
+        "text": "Untergrund, Tragfähigkeit, Befestigung, Ausrichtung, Zugänglichkeit und Wartungsräume müssen passen. Auch der sichere Materialtransport und Fluchtwege sind Teil der Aufstellung."
+      },
+      {
+        "label": "Standortspezifische Bedingungen",
+        "text": "Energie- und Medienqualität, Temperatur, Feuchte, Staub, elektromagnetische Einflüsse und gegebenenfalls besondere Umgebungsgefahren berücksichtigen. Die am Standort geltenden betrieblichen Vorgaben beeinflussen Prüfung und Betrieb."
+      }
+    ],
+    "mnemonic": "Planen, montieren, befähigen, koppeln, aufstellen und den Standort prüfen.",
+    "pitfall": "Inbetriebnahme mit einem erfolgreichen Einschaltversuch gleichsetzen oder nur die Einzelmaschine ohne ihre Schnittstellen prüfen.",
+    "keywords": [
+      "Inbetriebnahme",
+      "Planung",
+      "Montage",
+      "Unterweisung",
+      "Systemkopplung",
+      "Aufstellung"
+    ],
+    "sources": [
+      {
+        "label": "Arbeitsinspektion: Prüfungen vor der ersten Inbetriebnahme",
+        "url": "https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsmittel/pruefung_arbeitsmittel.html"
+      },
+      {
+        "label": "Arbeitsinspektion: Auswahl und Benutzung von Arbeitsmitteln",
+        "url": "https://www.arbeitsinspektion.gv.at/arbeitsschutz/arbeitsmittel/gemeinsame_bestimmungen/definition_allgemeine_vorschriften.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 64,
+    "imagePage": 70
+  },
+  {
+    "id": "E47",
+    "title": "Qualitätsmanagement, TQM und KVP",
+    "category": "Automation",
+    "question": "Welche Aufgaben erfüllt Qualitätsmanagement, wofür stehen TQM und KVP und wie trägt Qualitätslenkung dazu bei, festgelegte Anforderungen im Prozess einzuhalten?",
+    "answer": [
+      {
+        "label": "Qualitätsmanagement",
+        "text": "Es richtet Ziele, Zuständigkeiten und Prozesse so aus, dass Produkte und Leistungen festgelegte Kunden- und weitere Anforderungen verlässlich erfüllen. Dazu gehören Qualitätsplanung, Qualitätslenkung, Qualitätssicherung und Verbesserung. Qualität entsteht damit bereits in Entwicklung und Prozessgestaltung."
+      },
+      {
+        "label": "TQM",
+        "text": "Total Quality Management ist ein umfassender Führungsansatz. Alle Bereiche und Mitarbeitenden beziehen Qualität in ihre Arbeit ein; Kundenorientierung, Führung, Prozessdenken und fortlaufende Verbesserung gehören zusammen. Es handelt sich nicht nur um die Endkontrolle eines Produkts."
+      },
+      {
+        "label": "KVP",
+        "text": "Kontinuierlicher Verbesserungsprozess bedeutet, Abläufe und Ergebnisse regelmäßig in kleinen, nachvollziehbaren Schritten zu verbessern. Ein Beispiel ist die Ursache wiederkehrender Montagefehler zu untersuchen, eine Änderung zu erproben, ihre Wirkung zu messen und eine wirksame Lösung zu standardisieren. PDCA – Plan, Do, Check, Act – unterstützt diesen Ablauf."
+      },
+      {
+        "label": "Ziel der Qualitätslenkung",
+        "text": "Qualitätslenkung hält den laufenden Prozess innerhalb festgelegter Anforderungen. Dazu werden geeignete Merkmale überwacht, Abweichungen erkannt und gezielt korrigiert, etwa über Prüfungen, Prozessparameter und Reaktionspläne. Ziel sind stabile Prozesse und konforme Ergebnisse mit wenig Fehlern und Nacharbeit."
+      }
+    ],
+    "mnemonic": "Qualität planen, im Prozess lenken, absichern und laufend verbessern.",
+    "pitfall": "KVP als gelegentliche große Umstrukturierung oder Qualitätsmanagement ausschließlich als Aufgabe der Prüfabteilung verstehen.",
+    "keywords": [
+      "Qualitätsmanagement",
+      "TQM",
+      "KVP",
+      "PDCA",
+      "Qualitätslenkung",
+      "Prozessstabilität"
+    ],
+    "sources": [
+      {
+        "label": "ISO: Qualitätsmanagement und fortlaufende Verbesserung",
+        "url": "https://www.iso.org/quality-management"
+      },
+      {
+        "label": "ISO: Qualitätssicherung und Qualitätslenkung",
+        "url": "https://www.iso.org/quality-management/quality-assurance"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 65
+  },
+  {
+    "id": "E48",
+    "title": "PROFIBUS-Segmente, Repeater und Busabschluss",
+    "category": "Automation",
+    "question": "Deuten Sie eine PROFIBUS-Linie mit Steuerung, HMI, Feldgeräten und einem Repeater. Welche Aufgabe übernimmt der Repeater, und warum benötigt jedes elektrische Segment korrekte Busabschlüsse?",
+    "answer": [
+      {
+        "label": "Aufbau der Übersicht",
+        "text": "Die Darstellung zeigt einen PROFIBUS-Master, ein HMI und mehrere als Slaves bezeichnete Feldgeräte. Der Master koordiniert den Datenaustausch mit den zugeordneten Teilnehmern. Der eingezeichnete RS-485-Repeater verbindet zwei elektrische Bussegmente; die Netzwerkkommunikation läuft über diese Segmentgrenze hinweg."
+      },
+      {
+        "label": "Aufgabe des Repeaters",
+        "text": "Er empfängt die elektrischen Signale, bereitet sie auf und sendet sie in das jeweils andere Segment weiter. So lassen sich Leitungslänge und Teilnehmerverteilung innerhalb der erlaubten Netzwerkregeln erweitern. Je nach Gerät trennt er die Segmente galvanisch. Er übersetzt dabei nicht automatisch in ein anderes Busprotokoll."
+      },
+      {
+        "label": "Busabschluss",
+        "text": "An beiden physischen Enden jedes RS-485-Segments ist der vorgeschriebene Abschluss zu aktivieren. Er passt die Leitung elektrisch an und verhindert störende Signalreflexionen; bei PROFIBUS stabilisiert das aktive Widerstandsnetzwerk zusätzlich den Ruhepegel. Die dafür erforderliche Versorgung muss vorhanden sein."
+      },
+      {
+        "label": "Wichtige Grenzen",
+        "text": "Nicht an jedem Teilnehmer terminieren und nicht nur die beiden äußersten Enden des gesamten Netzes betrachten: Der Repeater erzeugt Segmentgrenzen. Im vereinfachten Bild sind nicht alle erforderlichen Abschlüsse ausführlich dargestellt. Teilnehmerzahl, Baudrate, Segmentlänge, Repeaterzählung und Montage richten sich nach den Gerätedaten und den PROFIBUS-Regeln."
+      }
+    ],
+    "mnemonic": "Jedes Segment hat zwei Enden – beide brauchen Abschluss.",
+    "pitfall": "Den Repeater als Protokoll-Gateway bezeichnen oder die Terminierung an einer Segmentgrenze vergessen.",
+    "keywords": [
+      "PROFIBUS",
+      "Master",
+      "Slave",
+      "RS-485",
+      "Repeater",
+      "Busabschluss"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: RS-485-Repeater – Segmente und Busabschluss",
+        "url": "https://support.industry.siemens.com/cs/attachments/48598071/rs_485_repeater_manual_en-US_en-US.pdf"
+      },
+      {
+        "label": "PI: PROFIBUS-RS-485-Busabschluss",
+        "url": "https://www.profibus.com/fileadmin/media/wbt/WBT_Assembly_V10_Dec06/en/Seiten/2_1_Busabschluss.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 65,
+    "imagePage": 71
+  }
+]

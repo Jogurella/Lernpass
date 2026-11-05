@@ -1,0 +1,1284 @@
+[
+  {
+    "id": "D1",
+    "title": "Greifprinzip und Greiferauswahl",
+    "category": "Pneumatik",
+    "question": "Ordne Greifer nach ihrem Wirkprinzip, erläutere zwei Backenbauformen und begründe drei Kriterien für die Auswahl an einem Werkstück.",
+    "answer": [
+      {
+        "label": "Wirkprinzipien",
+        "text": "Eine sinnvolle Einteilung unterscheidet mechanische Greifer und haftende Greifer. Mechanische Greifer halten mit Fingern durch Reibung (Kraftschluss) oder durch passende Konturen (Formschluss). Zu haftenden Systemen gehören Vakuumgreifer und Magnetgreifer; Magnete setzen einen geeigneten ferromagnetischen Werkstoff voraus."
+      },
+      {
+        "label": "Zwei Bauformen",
+        "text": "Beim Parallelgreifer bewegen sich die Backen geradlinig aufeinander zu. Das eignet sich für definierte Außen- und Innengriffe. Beim Winkelgreifer schwenken die Finger; der größere Öffnungsraum kann das Freigeben eines Werkstücks erleichtern. Pneumatisch oder elektrisch beschreibt dagegen die Antriebsart."
+      },
+      {
+        "label": "Drei Auswahlkriterien",
+        "text": "Erstens zählen Masse, Schwerpunkt, Geometrie und Oberfläche des Werkstücks. Zweitens müssen Haltekraft und Fingerbelastung auch bei Beschleunigung, Bremsen und ungünstiger Reibung ausreichen. Drittens müssen Hub, Zugänglichkeit, Wiederholgenauigkeit und Umgebungsbedingungen zur Aufgabe passen; empfindliche Teile dürfen dabei nicht verformt werden."
+      }
+    ],
+    "mnemonic": "Erst Werkstück und Bewegung beurteilen, dann Greifprinzip, Kraft und Baugröße wählen.",
+    "pitfall": "Die statische Gewichtskraft allein genügt nicht zur Greiferauslegung; Beschleunigung und Reibung verändern die erforderliche Haltekraft.",
+    "keywords": [
+      "Greifer",
+      "Parallelgreifer",
+      "Winkelgreifer",
+      "Kraftschluss",
+      "Formschluss",
+      "Vakuum"
+    ],
+    "sources": [
+      {
+        "label": "Festo: Auswahl eines Roboter-Greifers",
+        "url": "https://www.festo.com/ch/de/e/blog/in-practice/wie-sie-den-richtigen-roboter-greifer-auswaehlen-id_4159813"
+      },
+      {
+        "label": "Festo: Pneumatische Greifer",
+        "url": "https://media.festo.com/media/276594_documentation.pdf?fwacid=b3f7f5f5de13b33f"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 2
+  },
+  {
+    "id": "D2",
+    "title": "Gefährdungen durch Druckluft",
+    "category": "Sicherheit",
+    "question": "Erkläre mindestens zwei Gefährdungen und zwei Schutzmaßnahmen einer Pneumatikanlage und fasse die fünf Verhaltensregeln für befugtes Instandhaltungspersonal zusammen.",
+    "answer": [
+      {
+        "label": "Gefährdungen",
+        "text": "Unerwartete Zylinderbewegungen können quetschen oder scheren, etwa durch Restdruck, Ventilfehler oder wiederkehrende Energie. Gelöste Schläuche und fortgeschleuderte Teile können Personen treffen. Hinzu kommen Abluftlärm und die Gefahr absinkender Lasten bei Druckverlust."
+      },
+      {
+        "label": "Schutzmaßnahmen",
+        "text": "Geeignete trennende oder überwachte Schutzeinrichtungen begrenzen den Zugang zu Bewegungen. Zur Anlage gehören außerdem eine passend ausgelegte Energieabschaltung mit Wiederanlaufschutz, kontrollierbarer Entlüftung und eine sichere Lastabstützung. Geeignete Schlauchbefestigungen, Sicherheitskupplungen und Schalldämpfer mindern weitere Gefährdungen."
+      },
+      {
+        "label": "Fünf Verhaltensregeln",
+        "text": "Die Prüfungserklärung für Arbeiten nach Betriebsanleitung lautet: 1. Hochgehaltene Lasten und abrutschende Maschinenteile sicher absenken oder abstützen. 2. Die Steuerung ausschalten. 3. Sämtliche Energiequellen trennen und gegen Wiedereinschalten sichern. 4. Alle betroffenen Anlagenteile einschließlich eingeschlossener Druckräume drucklos machen lassen und den sicheren Zustand überprüfen; weitere gespeicherte Energie berücksichtigen. 5. Gefährdungen durch benachbarte oder verkettete Maschinen durch Abschalten oder Abschranken verhindern."
+      }
+    ],
+    "mnemonic": "Last sichern, Steuerung aus, Energie sichern, Restenergie prüfen, Nachbaranlagen beachten.",
+    "pitfall": "Ein ausgeschalteter Magnet oder eine Anzeige von 0 bar an einer Stelle beweist keine Druckfreiheit in allen eingeschlossenen Anlagenteilen.",
+    "keywords": [
+      "Restdruck",
+      "Quetschgefahr",
+      "Energieabschaltung",
+      "Wiederanlauf",
+      "Lastabstützung"
+    ],
+    "sources": [
+      {
+        "label": "DGUV/IFA: Sicherer Umgang mit pneumatischen Anlagen, insbesondere fünf Verhaltensregeln",
+        "url": "https://www.dguv.de/medien/ifa/de/pra/hydraulik_pneumatik/pneumatische_anlagen.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 2
+  },
+  {
+    "id": "D3",
+    "title": "Geführte und kolbenstangenlose Antriebe",
+    "category": "Pneumatik",
+    "question": "Welche Vorteile bringt eine zusätzliche Zylinderführung, was kennzeichnet einen kolbenstangenlosen Antrieb und wie unterscheiden sich dessen zwei gängige Kopplungsprinzipien?",
+    "answer": [
+      {
+        "label": "Nutzen einer Führung",
+        "text": "Eine passende Führung nimmt Querkräfte und Kippmomente auf und verhindert das Verdrehen des Schlittens. Das entlastet Kolbenstange und Dichtungen und verbessert die reproduzierbare Ausrichtung des Werkzeugs. Ein gewöhnlicher Kolbenstangenzylinder ist hauptsächlich für axiale Kräfte vorgesehen."
+      },
+      {
+        "label": "Ohne ausfahrende Kolbenstange",
+        "text": "Bei einem kolbenstangenlosen Zylinder fährt ein außenliegender Schlitten entlang des Zylindergehäuses. Der innere Kolben treibt ihn an. Der Bauraum wächst dadurch weniger stark mit dem Hub als bei einem Zylinder mit ausfahrender Stange."
+      },
+      {
+        "label": "Zwei Kopplungen",
+        "text": "Bei mechanischer Kopplung verbindet ein Mitnehmer den Kolben durch einen längs verlaufenden Gehäuseschlitz mit dem Schlitten; Dichtbänder verschließen den Schlitz. Bei magnetischer Kopplung übertragen Magnete die Bewegung durch ein geschlossenes Zylinderrohr. Diese Kopplung besitzt eine begrenzte übertragbare Kraft und kann bei Überlast entkoppeln."
+      }
+    ],
+    "mnemonic": "Die Führung trägt Querlasten; die Kopplung überträgt die Kolbenbewegung.",
+    "pitfall": "Kolbenstangenlos bedeutet weder unbegrenzt belastbar noch selbsttätig gegen Absinken gesichert.",
+    "keywords": [
+      "Linearführung",
+      "Querkräfte",
+      "Moment",
+      "Kolbenstangenlos",
+      "Magnetkopplung",
+      "Dichtband"
+    ],
+    "sources": [
+      {
+        "label": "SMC: Kolbenstangenlose Zylinder und Kopplungsprinzipien",
+        "url": "https://www.smc.eu/de-de/produkte/kolbenstangenlose-antriebe~17914~nav"
+      },
+      {
+        "label": "Festo: Magnetisch gekoppelte Zylinder",
+        "url": "https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders/rodless-cylinders/magnetically-coupled-cylinders-id_pim385"
+      },
+      {
+        "label": "Festo: Geführte Pneumatikzylinder",
+        "url": "https://www.festo.com/de/de/c/produkte/antriebe-aktuatoren/pneumatische-zylinder/fuehrungszylinder-id_pim219"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 3
+  },
+  {
+    "id": "D4",
+    "title": "Legierungen und Messing",
+    "category": "Mechanik",
+    "question": "Erkläre, wie und warum eine Legierung entsteht, nenne zwei technische Anwendungen und beschreibe typische Merkmale einer Kupfer-Zink-Legierung.",
+    "answer": [
+      {
+        "label": "Legieren",
+        "text": "Beim Legieren werden mindestens zwei Elemente gezielt zu einem metallischen Werkstoff kombiniert; mindestens eines ist ein Metall. Häufig werden die Bestandteile in der Schmelze zusammengeführt und gleichmäßig verteilt. Beim Erstarren entsteht je nach Zusammensetzung ein Gefüge aus Mischkristallen oder mehreren Phasen. Ziel sind beispielsweise höhere Festigkeit, bessere Bearbeitbarkeit oder günstigere Korrosionseigenschaften."
+      },
+      {
+        "label": "Zwei Anwendungen",
+        "text": "Kupfer mit Zink ergibt Messing, etwa für Armaturen und mechanische Drehteile. Kupfer mit Zinn ergibt Zinnbronze, beispielsweise für Lager- und Gleitteile. Die genaue Sorte richtet sich nach der Beanspruchung."
+      },
+      {
+        "label": "Kupfer und Zink",
+        "text": "Messing ist typischerweise gelblich, gut verarbeitbar und bei passenden Sorten gut umformbar oder zerspanbar. Es ist meist fester als reines Kupfer und leitet Wärme und elektrischen Strom, jedoch schlechter als reines Kupfer. Seine Korrosionsbeständigkeit hängt von Legierung und Medium ab; bestimmte Bedingungen können Entzinkung oder Spannungsrisskorrosion auslösen."
+      }
+    ],
+    "mnemonic": "Eine Legierung wird auf Eigenschaften abgestimmt; Kupfer plus Zink heißt Messing.",
+    "pitfall": "Legieren ist kein bloßes Mischen fertiger Metallspäne, und Messing ist nicht gegen jedes Medium beständig.",
+    "keywords": [
+      "Legierung",
+      "Messing",
+      "Kupfer",
+      "Zink",
+      "Mischkristall",
+      "Bronze"
+    ],
+    "sources": [
+      {
+        "label": "Kupferverband: Kupfer-Zink-Legierungen",
+        "url": "https://kupfer.de/kupferwerkstoffe/kupfer-legierungen/kupfer-zink-legierungen-messing/"
+      },
+      {
+        "label": "Kupferverband: Kupfer-Legierungen",
+        "url": "https://kupfer.de/kupferwerkstoffe/kupfer-legierungen/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 3
+  },
+  {
+    "id": "D5",
+    "title": "Korrosion und Werkstoffwahl",
+    "category": "Mechanik",
+    "question": "Was geschieht bei Korrosion und welche Überlegungen zur Werkstoffauswahl können einen Korrosionsangriff verhindern oder ausreichend begrenzen?",
+    "answer": [
+      {
+        "label": "Reaktion mit der Umgebung",
+        "text": "Korrosion ist eine physikalisch-chemische Wechselwirkung zwischen einem Werkstoff und seiner Umgebung, die Eigenschaften verändert und die Funktion beeinträchtigen kann. Bei Metallen sind oft elektrochemische Vorgänge beteiligt. Rost ist ein Korrosionsprodukt von Eisen; nicht jede Korrosion ist Rost und nicht jeder Angriff ist sofort sichtbar."
+      },
+      {
+        "label": "Passende Werkstoffe",
+        "text": "Der Werkstoff muss zum tatsächlichen Medium, seiner Konzentration, Temperatur und Feuchtigkeit passen. Geeignete nichtrostende Stähle, korrosionsbeständige Legierungen oder geeignete Kunststoffe können einen Angriff im vorgesehenen Einsatz vermeiden. Elektrisch leitend verbundene unterschiedliche Metalle sind bei vorhandenem Elektrolyten auf Kontaktkorrosion zu prüfen; geeignete Paarung oder elektrische Trennung helfen."
+      },
+      {
+        "label": "Grenze der Aussage",
+        "text": "Eine pauschale Zusage „korrosionsfrei“ ist durch die Bezeichnung Edelstahl oder Kunststoff nicht möglich. Beständigkeitsdaten, konstruktiver Schutz und gegebenenfalls eine Beschichtung müssen gemeinsam zur Umgebung passen."
+      }
+    ],
+    "mnemonic": "Korrosionsbeständigkeit ergibt sich aus Werkstoff und Umgebung gemeinsam.",
+    "pitfall": "Edelstahl ist kein universeller Schutz gegen Chloride, Säuren und Spaltkorrosion.",
+    "keywords": [
+      "Korrosion",
+      "Rost",
+      "Elektrolyt",
+      "Kontaktkorrosion",
+      "Werkstoffwahl",
+      "Beständigkeit"
+    ],
+    "sources": [
+      {
+        "label": "Fraunhofer IFAM: Korrosion FAQ",
+        "url": "https://www.ifam.fraunhofer.de/de/technologien/korrosion/korrosion-faq.html"
+      },
+      {
+        "label": "BAM: Beständigkeitsbewertung",
+        "url": "https://tes.bam.de/gefahrgut/werkstoffbestaendigkeit/bestaendigkeitsbewertung"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 4
+  },
+  {
+    "id": "D6",
+    "title": "Drei Kunststoffgruppen",
+    "category": "Mechanik",
+    "question": "Vergleiche Thermoplaste, Duroplaste und Elastomere hinsichtlich Molekülaufbau, Wärmeverhalten und typischer Verwendung.",
+    "answer": [
+      {
+        "label": "Thermoplaste",
+        "text": "Ihre langen Molekülketten sind nicht dauerhaft chemisch miteinander vernetzt. Sie werden beim Erwärmen weich beziehungsweise schmelzbar und erstarren beim Abkühlen erneut. Innerhalb zulässiger Temperaturgrenzen lassen sie sich deshalb mehrfach formen und häufig schweißen. Beispiele sind PE, PP und PVC, etwa für Rohre, Gehäuse oder Isolierungen."
+      },
+      {
+        "label": "Duroplaste",
+        "text": "Sie bilden beim Aushärten ein eng vernetztes Netzwerk. Danach sind sie hart, formstabil und häufig spröde. Erneutes Erwärmen macht sie nicht wieder schmelzbar; bei zu hoher Temperatur zersetzen sie sich. Ein Beispiel ist ausgehärtetes Epoxidharz, etwa als Matrix in Verbundwerkstoffen und Leiterplatten."
+      },
+      {
+        "label": "Elastomere",
+        "text": "Ihr weitmaschig vernetztes Netzwerk erlaubt große, überwiegend rückstellbare Verformungen. Klassische Elastomere sind ebenfalls nicht wieder aufschmelzbar. Beispiele sind NBR und EPDM für Dichtungen oder elastische Bauteile. Wärme-, Kälte- und Medienbeständigkeit hängen stark von der jeweiligen Mischung ab."
+      }
+    ],
+    "mnemonic": "Unvernetzt lässt sich warm formen, eng vernetzt bleibt hart, weit vernetzt federt zurück.",
+    "pitfall": "Nicht jeder Kunststoff wird bei Wärme flüssig; klassische Elastomere und ausgehärtete Duroplaste lassen sich nicht wie Thermoplaste einschmelzen.",
+    "keywords": [
+      "Thermoplast",
+      "Duroplast",
+      "Elastomer",
+      "Vernetzung",
+      "Epoxidharz",
+      "PE"
+    ],
+    "sources": [
+      {
+        "label": "VdS: Kunststoffe, Aufbau und Wärmeverhalten",
+        "url": "https://vds.de/fileadmin/Website_Content_Images/VdS_Publikationen/vds_2516_web.pdf"
+      },
+      {
+        "label": "Ensinger: Thermoplastische Kunststoffe",
+        "url": "https://www.ensingerplastics.com/de-de/thermoplastische-kunststoffe"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 4
+  },
+  {
+    "id": "D7",
+    "title": "Stärken, Grenzen und Abluftlärm",
+    "category": "Pneumatik",
+    "question": "Stelle je drei Vorteile und Nachteile pneumatischer Antriebe gegenüber und erkläre die Geräuschminderung an der Abluft.",
+    "answer": [
+      {
+        "label": "Drei Vorteile",
+        "text": "Pneumatische Antriebe sind häufig einfach, robust und leicht. Sie ermöglichen schnelle Bewegungen und ein günstiges Verhältnis von Kraft zu Baugröße. Druckluft lässt sich über Leitungen verteilen und in dafür ausgelegten Behältern speichern."
+      },
+      {
+        "label": "Drei Nachteile",
+        "text": "Die Drucklufterzeugung und Leckagen verursachen Energieverluste und Betriebskosten. Die Kompressibilität erschwert eine lastunabhängig konstante Geschwindigkeit und das genaue Halten einer beliebigen Zwischenposition. Entspannende Abluft verursacht Lärm; die Luft muss außerdem passend gefiltert und getrocknet werden."
+      },
+      {
+        "label": "Schalldämpfung",
+        "text": "Ein passend dimensionierter Schalldämpfer am Entlüftungsanschluss verteilt und beruhigt den Luftstrom. Alternativ kann Abluft gesammelt zu einem zentralen Schalldämpfer geführt werden. Ausreichender Durchfluss und saubere Dämpferelemente sind wichtig: zu großer Gegendruck verändert die Zylinderbewegung und kann die Funktion beeinträchtigen."
+      }
+    ],
+    "mnemonic": "Druckluft bewegt schnell, kostet Energie und muss kontrolliert ausströmen.",
+    "pitfall": "Ein immer stärker gedrosselter Abluftausgang ist keine beliebig gute Lärmschutzlösung.",
+    "keywords": [
+      "Kompressibilität",
+      "Druckluft",
+      "Schalldämpfer",
+      "Leckage",
+      "Abluft",
+      "Energie"
+    ],
+    "sources": [
+      {
+        "label": "Festo: Wissenswertes über Pneumatik",
+        "url": "https://techblog.festo.at/wissenswertes-ueber-pneumatik-festo"
+      },
+      {
+        "label": "Festo: Schalldämpfer und Durchfluss",
+        "url": "https://www.festo.com/ch/de/c/produkte/sonstige-pneumatische-komponenten/schalldaempfer-pneumatik-id_pim163"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 5
+  },
+  {
+    "id": "D8",
+    "title": "Vakuum erzeugen",
+    "category": "Pneumatik",
+    "question": "Nenne verschiedene technische Vakuumerzeuger und erkläre den Luftweg sowie die Unterdruckentstehung in einem Druckluftejektor.",
+    "answer": [
+      {
+        "label": "Erzeugerarten",
+        "text": "Gängige Möglichkeiten sind mechanisch angetriebene Vakuumpumpen, beispielsweise Drehschieberpumpen, Vakuumgebläse für größere Volumenströme und druckluftbetriebene Ejektoren. Die Auswahl hängt von benötigtem Unterdruck, Saugvermögen, Leckage und Betriebsdauer ab."
+      },
+      {
+        "label": "Ejektorprinzip",
+        "text": "Druckluft strömt durch eine verengte Treibdüse und wird stark beschleunigt. Der schnelle Luftstrahl reißt Gas aus dem angeschlossenen Saugraum mit; dort sinkt der Druck unter den Umgebungsdruck. Im nachfolgenden Misch- und Auslassbereich werden Treibluft und angesaugte Luft gemeinsam abgeführt, meist über einen Schalldämpfer. Es gibt keine mechanisch bewegte Pumpe im Ejektor."
+      },
+      {
+        "label": "Wirkung am Sauger",
+        "text": "Die Haltekraft entsteht durch die Druckdifferenz zwischen Umgebung und Saugerinnerem über der wirksamen Fläche. Ein Vakuum ist kein eigener „Sogstoff“; Undichtheiten und poröse Oberflächen erfordern entsprechend mehr Saugvermögen."
+      }
+    ],
+    "mnemonic": "Der Ejektor verbraucht Druckluft, um Luft aus dem Saugraum mitzunehmen.",
+    "pitfall": "Ein hoher maximaler Unterdruck und ein großes Saugvermögen sind unterschiedliche Auswahlgrößen.",
+    "keywords": [
+      "Vakuum",
+      "Ejektor",
+      "Venturi",
+      "Saugvermögen",
+      "Vakuumpumpe",
+      "Druckdifferenz"
+    ],
+    "sources": [
+      {
+        "label": "Schmalz: Vakuum-Ejektoren und Funktionsprinzip",
+        "url": "https://www.schmalz.com/de/support/know-how/vakuum-wissen/vakuumsystem-und-seine-bauteile/vakuum-erzeuger/vakuum-ejektoren"
+      },
+      {
+        "label": "Schmalz: Vakuum-Pumpen",
+        "url": "https://www.schmalz.com/de/support/know-how/vakuum-wissen/vakuumsystem-und-seine-bauteile/vakuum-erzeuger/vakuum-pumpen"
+      },
+      {
+        "label": "Schmalz: Vakuum-Gebläse",
+        "url": "https://www.schmalz.com/de/support/know-how/vakuum-wissen/vakuumsystem-und-seine-bauteile/vakuum-erzeuger/vakuum-geblaese"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 5
+  },
+  {
+    "id": "D9",
+    "title": "Dichtungen und Dichtungswerkstoffe",
+    "category": "Mechanik",
+    "question": "Erkläre die Aufgaben einer Dichtung, vergleiche zwei Werkstoffe und nenne je zwei Beispiele für ruhende und bewegte Dichtstellen.",
+    "answer": [
+      {
+        "label": "Aufgabe",
+        "text": "Dichtungen begrenzen den Austritt eines Mediums und verhindern je nach Ausführung das Eindringen von Schmutz, Feuchtigkeit oder Fremdmedien. An bewegten Stellen müssen zusätzlich Reibung, Verschleiß und eine ausreichende Schmierung berücksichtigt werden."
+      },
+      {
+        "label": "Zwei Werkstoffe",
+        "text": "NBR ist ein elastischer Kautschuk mit guter Beständigkeit gegenüber vielen Mineralölen und Fetten; seine Ozon- und Witterungsbeständigkeit ist begrenzt. EPDM ist gut gegen Ozon, Alterung und viele Heißwasseranwendungen beständig, eignet sich aber im Allgemeinen nicht für Mineralöle. Die konkrete Mischung und Herstellerfreigabe bleiben entscheidend."
+      },
+      {
+        "label": "Ruhende und bewegte Flächen",
+        "text": "Statische Beispiele sind eine Flachdichtung zwischen Flanschen und ein O-Ring in einer ruhenden Gehäusefuge. Dynamische Beispiele sind ein Radialwellendichtring an einer rotierenden Welle und ein Nutring an einer hin- und hergehenden Kolbenstange. Ein O-Ring kann in passend ausgelegten Anwendungen auch dynamisch verwendet werden."
+      }
+    ],
+    "mnemonic": "Das Medium, die Temperatur und die Relativbewegung bestimmen die Dichtung.",
+    "pitfall": "Zwei ähnlich aussehende schwarze Dichtungen müssen weder aus demselben Werkstoff bestehen noch dieselbe Medienbeständigkeit haben.",
+    "keywords": [
+      "Dichtung",
+      "NBR",
+      "EPDM",
+      "Statisch",
+      "Dynamisch",
+      "Nutring"
+    ],
+    "sources": [
+      {
+        "label": "Trelleborg: Statische Dichtungen, Werkstoffe und Einsatzbereiche",
+        "url": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/static_seals_de.pdf?rev=43b3c558ce9c4e54b882d8318af374a5"
+      },
+      {
+        "label": "Trelleborg: Elektronischer Dichtungskatalog",
+        "url": "https://www.trelleborg.com/de-de/seals/resources/e-catalog"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 6
+  },
+  {
+    "id": "D10",
+    "title": "Schraubenformen und Festigkeitsklasse",
+    "category": "Mechanik",
+    "question": "Beschreibe typische Schrauben- und Mutterformen, unterscheide Durchsteck- und Stiftschraubverbindungen und entschlüssele die Klasse 8.8.",
+    "answer": [
+      {
+        "label": "Formen erkennen",
+        "text": "Vier Schraubenbeispiele sind Sechskantschraube, Zylinderschraube mit Innensechskant, Senkschraube und kopfloser Gewindestift. Vier Mutterbeispiele sind Sechskantmutter, Hutmutter mit geschlossenem Ende, Flügelmutter zur Handbetätigung und Kronenmutter mit Schlitzen für eine Splintsicherung. Kopf, Antrieb und Gewinde sind jeweils getrennte Merkmale."
+      },
+      {
+        "label": "Verbindungsprinzip",
+        "text": "Bei der Durchsteckverbindung führt die Schraube durch Durchgangslöcher; Kopf und Mutter verspannen die Teile. Bei der Stiftschraube sitzt ein Ende in einem Gewindeloch des Grundteils, während das andere Ende mit einer Mutter das Anbauteil hält. Die Stiftschraube besitzt keinen normalen Schraubenkopf."
+      },
+      {
+        "label": "Bedeutung von 8.8",
+        "text": "Die erste 8 ergibt den Nennwert der Zugfestigkeit: 8 × 100 = 800 N/mm². Die zweite 8 bedeutet das Verhältnis 0,8 für die nominelle Dehngrenze: 800 × 0,8 = 640 N/mm². Bei 8.8 wird hierfür die 0,2-%-Dehngrenze Rp0,2 verwendet. Normative Mindestwerte können vom Durchmesser abhängen; die Kennzeichnung ist keine direkt zulässige Betriebslast."
+      }
+    ],
+    "mnemonic": "Bei 8.8 stehen 800 für die Nennzugfestigkeit und 640 für die nominelle 0,2-%-Dehngrenze.",
+    "pitfall": "8.8 ist weder ein Anziehdrehmoment noch ein Gewindedurchmesser und gilt nicht als Belastungsfreigabe der ganzen Verbindung.",
+    "keywords": [
+      "Schraube",
+      "Mutter",
+      "Stiftschraube",
+      "Durchsteckverbindung",
+      "8.8",
+      "Dehngrenze"
+    ],
+    "sources": [
+      {
+        "label": "Bossard: Schraubenformen",
+        "url": "https://www.bossard.com/de-de/eshop/produkte/verbindungstechnik/norm-und-standard-verbindungselemente/schrauben/c/01.100.100/"
+      },
+      {
+        "label": "Bossard: Mechanische Eigenschaften nach ISO 898-1",
+        "url": "https://media.bossard.com/global-en/-/media/bossard-group/website/documents/technical-resources/en/f-004-en.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 6
+  },
+  {
+    "id": "D11",
+    "title": "Drehmoment zwischen Welle und Nabe",
+    "category": "Mechanik",
+    "question": "Vergleiche drei Übertragungsprinzipien einer Welle-Nabe-Verbindung, erläutere feste und verschiebbare Passfederverbindungen mit Anwendungen und erkläre eine Keilwelle.",
+    "answer": [
+      {
+        "label": "Drei Prinzipien",
+        "text": "Formschluss überträgt Drehmoment über ineinandergreifende Konturen, etwa eine Passfeder. Kraft- beziehungsweise Reibschluss nutzt Anpressung und Reibung, etwa bei einem Spannsatz oder Pressverband. Stoffschluss verbindet die Werkstoffe beispielsweise durch Kleben oder Schweißen."
+      },
+      {
+        "label": "Zwei Passfederverbindungen",
+        "text": "Bei einer festen Passfederverbindung überträgt die Passfeder das Drehmoment über ihre Seitenflächen; die Nabe wird zusätzlich axial festgelegt, zum Beispiel bei einer Riemenscheibe auf einer Motorwelle. Bei einer Gleitfederverbindung bleibt eine passende Nabe axial verschiebbar, während Drehmoment übertragen wird, etwa bei einem verschiebbaren Maschinenteil. Die Passfeder allein ist keine axiale Sicherung."
+      },
+      {
+        "label": "Keilwelle",
+        "text": "Mehrere längs verlaufende Mitnehmerprofile sind in die Welle eingearbeitet; die Nabe besitzt das passende Gegenprofil. Die Last verteilt sich auf mehrere Flanken. Das eignet sich für größere oder wechselnde Drehmomente und, bei passender Auslegung, axiale Verschiebung, etwa in einer längenausgleichenden Antriebswelle."
+      }
+    ],
+    "mnemonic": "Passfedern und Keilwellen übertragen am Profil; ein Pressverband überträgt durch Reibung.",
+    "pitfall": "Eine Passfeder ist kein Spannkeil: Sie soll die Nabe nicht durch Keilwirkung verspannen.",
+    "keywords": [
+      "Welle",
+      "Nabe",
+      "Passfeder",
+      "Gleitfeder",
+      "Keilwelle",
+      "Reibschluss"
+    ],
+    "sources": [
+      {
+        "label": "TU Chemnitz, IKAT: Welle-Nabe-Verbindungen",
+        "url": "https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/41541369871/CourseNode/1617158128348601010/121_VL_KL-ME_III_16_WNV_FS.pdf"
+      },
+      {
+        "label": "RINGSPANN: Welle-Nabe-Verbindungen",
+        "url": "https://www.ringspann.com/de/service/downloads/einbauanleitungen/welle-nabe-verbindungen/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 7
+  },
+  {
+    "id": "D12",
+    "title": "Spannzylinder und sichere Positionsabfrage",
+    "category": "Pneumatik",
+    "question": "Nenne zwei fluidtechnische Spannprinzipien, erläutere die Gefahr eines blockierten Schwenkspanners und vergleiche Möglichkeiten zur Positionsüberwachung.",
+    "answer": [
+      {
+        "label": "Zwei Spannprinzipien",
+        "text": "Ein linearer Druck- oder Zugspanner bewegt sein Spannelement geradlinig. Ein Schwenkspanner schwenkt zunächst das Spanneisen über das Werkstück und führt danach den eigentlichen Spannhub aus. Beide Prinzipien lassen sich je nach Bauart pneumatisch oder hydraulisch verwirklichen."
+      },
+      {
+        "label": "Blockierung",
+        "text": "Ein verklemmter Schwenkspanner kann unter Druck und mechanischer Spannung stehen. Beim Freigeben ist deshalb eine plötzliche Bewegung möglich. Die Prüfungserklärung lautet: Werkstück und bewegliche Teile sichern, Energiezustand einschließlich Restenergie nach Betriebsanleitung durch befugtes Personal sichern und die Ursache untersuchen lassen. Mehr Druck oder gewaltsames Lösen ersetzt keine Diagnose."
+      },
+      {
+        "label": "Positionsabfrage",
+        "text": "Möglich sind magnetische Zylindersensoren, induktive Näherungsschalter an einer Schaltstange, mechanische Endschalter oder eine pneumatische Staudruck- beziehungsweise Differenzdruckabfrage. Ein Wegmesssystem liefert einen kontinuierlichen Positionswert. Reiner Versorgungsdruck ist kein verlässlicher Positionsnachweis: Druck kann auch bei blockiertem Spanner anstehen."
+      }
+    ],
+    "mnemonic": "Druck vorhanden heißt nicht Werkstück richtig gespannt.",
+    "pitfall": "Eine Endlagenmeldung allein beweist nur die erfasste Stellung, nicht automatisch eine ausreichende Spannkraft oder korrekte Werkstücklage.",
+    "keywords": [
+      "Schwenkspanner",
+      "Linearspanner",
+      "Restenergie",
+      "Positionskontrolle",
+      "Staudruck",
+      "Näherungsschalter"
+    ],
+    "sources": [
+      {
+        "label": "ROEMHELD: Schwenkspanner und Schwenkhub",
+        "url": "https://mh.roemheld.de/de/produkte/schwenkspanner~pcZoNbbWoNwE"
+      },
+      {
+        "label": "ROEMHELD: Betriebsanleitung B1854, Positionskontrolle",
+        "url": "https://ws.roemheld.de/fr/download/jLOVLXnKgn?filename=BA_B1854_DE_0524.PDF"
+      },
+      {
+        "label": "DGUV: Sicherheit bei der Hydraulik-Instandhaltung",
+        "url": "https://publikationen.dguv.de/widgets/pdf/download/article/254"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 7
+  },
+  {
+    "id": "D13",
+    "title": "Stufenlos steuern mit Proportionaltechnik",
+    "category": "Automation",
+    "question": "Erkläre den Zusammenhang zwischen elektrischem Sollwert und fluidtechnischer Stellgröße sowie die Eigenschaften eines Proportionalmagneten.",
+    "answer": [
+      {
+        "label": "Prinzip",
+        "text": "Proportionaltechnik verändert Druck, Volumenstrom oder Ventilöffnung stufenlos innerhalb eines Arbeitsbereichs entsprechend einem elektrischen Sollwert. Eine Elektronik setzt beispielsweise ein 0–10-V- oder 4–20-mA-Signal in einen geregelten Magnetstrom um. Ein Proportionalventil besitzt dadurch Zwischenstellungen statt ausschließlich Ein und Aus."
+      },
+      {
+        "label": "Resultierende Bewegung",
+        "text": "Ein veränderter Druck beeinflusst die Antriebskraft; ein veränderter Volumenstrom beeinflusst die Bewegungsgeschwindigkeit. Damit lassen sich weiche Anfahr- und Bremsrampen und unterschiedliche Kraft- oder Geschwindigkeitsvorgaben erzeugen. Eine Rückführung und ein Regler sind nötig, wenn Abweichungen vom Sollwert automatisch ausgeregelt werden sollen."
+      },
+      {
+        "label": "Proportionalmagnet",
+        "text": "Seine Magnetkraft ist im vorgesehenen Bereich annähernd proportional zum Strom und über den nutzbaren Hub möglichst gleichmäßig. Gegen eine passende Feder ergibt sich daraus eine einstellbare Ankerstellung. Reale Magnete besitzen Hysterese, Reibung und Grenzen; Dither oder eine Lageregelung können das Verhalten verbessern. Die Ansteuerung erfolgt vorzugsweise stromgeregelt."
+      }
+    ],
+    "mnemonic": "Strom stellt den Magneten, das Ventil stellt Druck oder Durchfluss, der Antrieb entwickelt Kraft oder Geschwindigkeit.",
+    "pitfall": "Ein proportionales Sollsignal macht aus einer Steuerung noch keine geschlossene Regelung.",
+    "keywords": [
+      "Proportionalventil",
+      "Magnetstrom",
+      "Volumenstrom",
+      "Druck",
+      "Hysterese",
+      "Regelung"
+    ],
+    "sources": [
+      {
+        "label": "HAWE Hydraulik: Proportionalmagnet",
+        "url": "https://www.hawe.com/de-at/fluidlexikon/detail/proportionalmagnet/"
+      },
+      {
+        "label": "Wandfluh: Funktions- und Kennlinienbeschreibung von Proportionalmagneten",
+        "url": "https://www.wandfluh.de/fileadmin/user_upload/Wandfluh/Products/Components/DataSheets/Deutsch/1.1_Magnete%20%26%20Handnotbet%C3%A4tigungen/1_1_410_d.pdf"
+      },
+      {
+        "label": "Festo Didactic: Proportional-Wege- und Druckregelventile",
+        "url": "https://www.festo.com/media/catalog/156206_documentation.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 8
+  },
+  {
+    "id": "D14",
+    "title": "Dauerhafte Verbindungen und Niete",
+    "category": "Mechanik",
+    "question": "Nenne drei nicht zerstörungsfrei lösbare Verbindungen, erkläre ein Beispiel und begründe die Werkstoffverträglichkeit von Niet und Fügeteilen.",
+    "answer": [
+      {
+        "label": "Drei Beispiele",
+        "text": "Niet-, Schweiß- und Klebeverbindungen gelten als unlösbar, weil ihre Trennung den Verbinder oder die Verbindungsschicht zerstört. Beim Schweißen entsteht Stoffschluss, beim Kleben wirkt eine haftende Verbindungsschicht, beim Nieten hält die geformte Nietgeometrie die Teile zusammen."
+      },
+      {
+        "label": "Beispiel Blindniet",
+        "text": "Ein Blindniet besteht aus Hohlniet und Nietdorn. Beim Setzen zieht das Werkzeug am Dorn und verformt das verdeckte Ende des Hohlniets zum Schließkopf. Danach bricht der Dorn an seiner vorgesehenen Sollbruchstelle. Der Vorteil ist die Verarbeitung von nur einer zugänglichen Seite. Klemmbereich und Nietwerkstoff müssen zur Verbindung passen."
+      },
+      {
+        "label": "Werkstoffpaarung",
+        "text": "Gleicher oder elektrochemisch verträglicher Werkstoff vermindert das Risiko von Kontaktkorrosion, wenn Feuchtigkeit als Elektrolyt vorhanden ist. Ähnliche Wärmeausdehnung kann zusätzlich günstig sein. Identischer Werkstoff ist jedoch keine ausnahmslose Pflicht: zugelassene Werkstoffkombinationen oder eine geeignete Trennung können ebenfalls funktionieren."
+      }
+    ],
+    "mnemonic": "Unlösbar bedeutet: Beim Trennen wird die Verbindung oder der Verbinder beschädigt.",
+    "pitfall": "Eine beliebige Aluminium-Stahl- oder Kupfer-Aluminium-Paarung bleibt bei Feuchtigkeit nicht automatisch korrosionsarm.",
+    "keywords": [
+      "Nieten",
+      "Schweißen",
+      "Kleben",
+      "Blindniet",
+      "Schließkopf",
+      "Kontaktkorrosion"
+    ],
+    "sources": [
+      {
+        "label": "GESIPA: Aufbau und Funktion von Blindnieten",
+        "url": "https://www.gesipa.de/produkte/blindniete/"
+      },
+      {
+        "label": "OBO: Kontaktkorrosion bei verschiedenen Metallen",
+        "url": "https://www.obo.ch/out/media/Befestigungsmaterial.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 8
+  },
+  {
+    "id": "D15",
+    "title": "Federn als Kraft- und Energiespeicher",
+    "category": "Mechanik",
+    "question": "Beschreibe drei Federarten, ihre technischen Aufgaben und zwei geeignete Werkstoffgruppen.",
+    "answer": [
+      {
+        "label": "Drei Arten",
+        "text": "Eine Schraubendruckfeder wirkt gegen das Zusammendrücken. Eine Schraubenzugfeder nimmt Zug über ihre Enden auf. Eine Schenkel- oder Drehfeder liefert bei Verdrehung ihrer Schenkel ein rückstellendes Moment. Weitere Bauformen sind Blatt-, Teller- und Spiralfedern."
+      },
+      {
+        "label": "Aufgaben",
+        "text": "Federn speichern elastische Energie und geben sie wieder ab, stellen Bauteile zurück, erzeugen Vorspann- oder Kontaktkräfte und gleichen Wege oder Toleranzen aus. Über eine bekannte Federkennlinie lässt sich auch eine Kraft messen. In einer Federung mindern sie zusammen mit geeigneter Dämpfung die Wirkung von Stößen."
+      },
+      {
+        "label": "Zwei Werkstoffe",
+        "text": "Häufig verwendet werden unlegierte oder legierte Federstähle, beispielsweise Federstahldraht nach EN 10270-1, sowie nichtrostender Federstahl, beispielsweise 1.4310. Werkstoff, Wärmebehandlung und Oberflächenzustand beeinflussen Dauerfestigkeit, Korrosionsverhalten und zulässige Temperatur."
+      }
+    ],
+    "mnemonic": "Eine Feder speichert Energie und erzeugt Rückstellkraft; ein Dämpfer baut Bewegungsenergie ab.",
+    "pitfall": "Eine ideale Feder vernichtet keine Schwingungsenergie und ersetzt keinen Dämpfer.",
+    "keywords": [
+      "Druckfeder",
+      "Zugfeder",
+      "Schenkelfeder",
+      "Federstahl",
+      "Rückstellkraft",
+      "Energiespeicher"
+    ],
+    "sources": [
+      {
+        "label": "Gutekunst: Federarten und Federwerkstoffe",
+        "url": "https://www.federnshop.com/de/service-und-informationen/katalogfedern.html"
+      },
+      {
+        "label": "Hochschule Anhalt: Maschinenelemente, Federn und Aufgaben",
+        "url": "https://www.hs-anhalt.de/fileadmin/Dateien/FB6/personen/voigt_st/Lehrunterlagen/01_ME_Vorlesung/08_ME_Federn_Stud.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 9
+  },
+  {
+    "id": "D16",
+    "title": "Zahnräder und Achsanordnung",
+    "category": "Mechanik",
+    "question": "Welche Größen können Zahnradtriebe verändern? Benenne drei Zahnradarten anhand ihrer Form und erläutere zwei typische Achsanordnungen genauer.",
+    "answer": [
+      {
+        "label": "Aufgabe",
+        "text": "Zahnräder übertragen Drehbewegung und Drehmoment formschlüssig. Mit der Zähnezahlübersetzung verändern sie Drehzahl und Drehmoment; abhängig von der Anordnung ändern sie Drehrichtung und Richtung der Wellenachsen. Ein Ritzel mit Zahnstange wandelt Dreh- in Linearbewegung."
+      },
+      {
+        "label": "Stirnrad",
+        "text": "Beim Stirnrad liegen die Zähne auf einer zylindrischen Umfangsfläche. Gerade oder schräg verzahnte Stirnräder übertragen zwischen parallelen Wellen. Ein außenverzahntes Radpaar dreht gegensinnig; Schrägverzahnung läuft in der Regel ruhiger, erzeugt aber zusätzliche Axialkräfte."
+      },
+      {
+        "label": "Kegelrad und Schneckenrad",
+        "text": "Kegelräder besitzen eine kegelige Grundform und eignen sich für sich schneidende Wellenachsen, häufig mit 90° Achswinkel. Eine Schnecke greift in ein Schneckenrad ein; die Achsen sind versetzt und kreuzen sich räumlich. Damit sind große Übersetzungen in einer Stufe möglich, allerdings mit höheren Gleitanteilen und Verlusten."
+      }
+    ],
+    "mnemonic": "Stirnrad: parallele Achsen; Kegelrad: sich schneidende Achsen; Schnecke: räumlich versetzte Achsen.",
+    "pitfall": "Ein Schneckengetriebe ist nicht grundsätzlich selbsthemmend; das hängt unter anderem von Steigungswinkel und Reibung ab.",
+    "keywords": [
+      "Stirnrad",
+      "Kegelrad",
+      "Schneckenrad",
+      "Übersetzung",
+      "Zähnezahl",
+      "Drehmoment"
+    ],
+    "sources": [
+      {
+        "label": "KHK Gears: The ABC's of Gears, Bauarten und Eigenschaften",
+        "url": "https://khkgears.us/media/fqrlut1m/abcs-of-gearing-b.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 9
+  },
+  {
+    "id": "D17",
+    "title": "Drei Arten der Bewegungsübertragung",
+    "category": "Mechanik",
+    "question": "Vergleiche Riemen-, Ketten- und Zahnradtrieb nach Wirkprinzip und Achsabstand und gib für jeden ein Anwendungsbeispiel.",
+    "answer": [
+      {
+        "label": "Riemenantrieb",
+        "text": "Ein biegsamer Riemen verbindet Riemenscheiben und überbrückt einen größeren Achsabstand. Flach- und Keilriemen übertragen durch Reibung und können schlupfen. Zahnriemen übertragen durch Zahneingriff formschlüssig. Beispiel: ein Keilriemen am Lüfter oder ein Zahnriemen an einer Positionierachse."
+      },
+      {
+        "label": "Kettenantrieb",
+        "text": "Eine Gelenkkette greift formschlüssig in Kettenräder ein, etwa an einem Förderer oder Fahrrad. Es gibt keinen Reibschlupf wie beim Keilriemen. Gelenkverschleiß verändert jedoch die Teilung; außerdem können Geräusch und ungleichförmiger Lauf durch den Polygoneffekt entstehen. Schmierung und Wartung sind bauartabhängig."
+      },
+      {
+        "label": "Zahnradantrieb",
+        "text": "Die Zähne der Räder greifen unmittelbar ineinander. Das eignet sich für kompakte, belastbare Übersetzungen, zum Beispiel im Getriebe einer Werkzeugmaschine. Der Abstand wird durch die Radgeometrie festgelegt; Schmierung und genaue Lagerung sind wichtig. Kette und Riemen können dagegen größere Abstände ohne Zwischenrad überbrücken."
+      }
+    ],
+    "mnemonic": "Riemen läuft über Scheiben, Kette greift in Räder, Zahnräder greifen direkt ineinander.",
+    "pitfall": "Die Aussage „Riemen haben immer Schlupf“ stimmt für korrekt ausgelegte Zahnriemen nicht.",
+    "keywords": [
+      "Riementrieb",
+      "Kettentrieb",
+      "Zahnradtrieb",
+      "Schlupf",
+      "Formschluss",
+      "Achsabstand"
+    ],
+    "sources": [
+      {
+        "label": "Optibelt: Kraft- und formschlüssige Riemenantriebe",
+        "url": "https://www.optibelt.com/fileadmin/pdf/kataloge/Optibelt-Kompaktkatalog-Power-Transmission.pdf"
+      },
+      {
+        "label": "iwis: Handbuch Kettentechnik",
+        "url": "https://www.iwis.com/antriebssysteme-drive-systems/as-handbook/iwis-handbuch-kettentechnik-konstruktionsunterlagen-berechnungsbeispiele.pdf"
+      },
+      {
+        "label": "SEW-EURODRIVE: Funktion und Bauarten von Getrieben",
+        "url": "https://www.sew-eurodrive.de/produkte/getriebe/getriebe.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 10
+  },
+  {
+    "id": "D18",
+    "title": "Lagerbauarten und Schmierung",
+    "category": "Mechanik",
+    "question": "Wie unterscheiden sich Gleit- und Wälzlager? Beschreibe drei Wälzlagerbauarten und begründe die Wahl zwischen Fett und Öl.",
+    "answer": [
+      {
+        "label": "Grundausführungen",
+        "text": "Bei Gleitlagern bewegen sich die Lagerflächen gegeneinander gleitend, gegebenenfalls durch einen Schmierfilm getrennt. Wälzlager besitzen rollende Körper zwischen den Laufbahnen. Zusätzlich unterscheidet man nach Belastungsrichtung Radial-, Axial- und kombinierte Lager sowie nach Lagerungsfunktion Fest- und Loslager."
+      },
+      {
+        "label": "Drei Wälzlager",
+        "text": "Ein Rillenkugellager besitzt Kugeln in tiefen Laufbahnrillen und nimmt radiale sowie begrenzte axiale Kräfte in beiden Richtungen auf. Ein Zylinderrollenlager besitzt zylindrische Rollen und trägt hohe Radiallasten; die Axialfähigkeit hängt von der Bauform ab. Beim Kegelrollenlager laufen kegelige Rollen auf kegeligen Bahnen; es trägt kombinierte Lasten, axial vor allem in einer Richtung."
+      },
+      {
+        "label": "Fett oder Öl",
+        "text": "Fett bleibt gut in der Lagerstelle, unterstützt die Abdichtung und ermöglicht einfache, wartungsarme Konstruktionen. Öl ist insbesondere sinnvoll, wenn Wärme abgeführt werden muss, hohe Beanspruchungen dies erfordern oder benachbarte Teile bereits mit Öl versorgt werden. Ausschlaggebend sind Herstellerangaben, Drehzahl, Temperatur und Last; zu viel Fett erhöht Reibung und Erwärmung."
+      }
+    ],
+    "mnemonic": "Nicht die Lagergröße allein, sondern Betriebsbedingungen und Wärmehaushalt bestimmen den Schmierstoff.",
+    "pitfall": "Mehr Fett bedeutet nicht automatisch bessere Schmierung; Überfüllung kann das Lager stark erwärmen.",
+    "keywords": [
+      "Gleitlager",
+      "Wälzlager",
+      "Rillenkugellager",
+      "Kegelrollenlager",
+      "Fettschmierung",
+      "Ölschmierung"
+    ],
+    "sources": [
+      {
+        "label": "NSK: Was ist ein Wälzlager?",
+        "url": "https://www.nskeurope.com/eu-de/tools-resources/training/whats-a-bearing/"
+      },
+      {
+        "label": "Schaeffler: Wälzlagerkatalog HR1",
+        "url": "https://www.schaeffler.de/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/catalogue_1/downloads_6/hr1_de_de.pdf"
+      },
+      {
+        "label": "Schaeffler: Schmierung von Wälzlagern",
+        "url": "https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/tpi/downloads_8/tpi_176_de_de.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 10
+  },
+  {
+    "id": "D19",
+    "title": "Störeinflüsse auf Sensorsignale",
+    "category": "Elektrotechnik",
+    "question": "Unterscheide typische elektromagnetische Einkopplungen, erkläre galvanische Beeinflussung und nenne wirksame Maßnahmen gegen induktive Einstreuung.",
+    "answer": [
+      {
+        "label": "Vier Kopplungsarten",
+        "text": "Galvanische Kopplung wirkt über gemeinsame leitende Verbindungen, kapazitive Kopplung über elektrische Felder, induktive Kopplung über veränderliche Magnetfelder und Strahlungskopplung über elektromagnetische Wellen. Sie können analoge Messwerte verfälschen oder digitale Signale stören."
+      },
+      {
+        "label": "Galvanische Ursache",
+        "text": "Nutzen Leistungs- und Signalstrom einen gemeinsamen Leiter oder eine gemeinsame Impedanz, erzeugt der Leistungsstrom dort einen Spannungsabfall. Dieser verschiebt das Bezugspotenzial des Sensors. Auch Potenzialunterschiede und Ausgleichsströme zwischen Anlagenteilen können Störungen einkoppeln."
+      },
+      {
+        "label": "Gegen induktive Einstreuung",
+        "text": "Signalleitungen werden mit Abstand zu Motor- und Lastleitungen geführt; lange parallele Wege werden vermieden und nötige Kreuzungen möglichst rechtwinklig ausgeführt. Verdrillte Hin- und Rückleiter verkleinern die wirksame Schleifenfläche. Geeignete Schirmung, fachgerechter Potenzialausgleich und Entstörung schaltender Spulen ergänzen die Maßnahmen nach Hersteller- und EMV-Konzept."
+      }
+    ],
+    "mnemonic": "Kleine Leiterschleifen und großer Abstand zu Störströmen verringern induktive Einkopplung.",
+    "pitfall": "Ein Schirm ersetzt weder Schutzleiter noch Potenzialausgleich; seine Anbindung muss zum Signal- und Anlagenkonzept passen.",
+    "keywords": [
+      "EMV",
+      "Galvanische Kopplung",
+      "Induktive Kopplung",
+      "Schirmung",
+      "Twisted Pair",
+      "Potenzialausgleich"
+    ],
+    "sources": [
+      {
+        "label": "Siemens: Kopplungsmechanismen der EMV",
+        "url": "https://docs.tia.siemens.cloud/r/simatic_et_200eco_pn_manual_collection_dede_20/funktionshandbucher/funktionshandbucher-peripherie/steuerungen-storsicher-aufbauen/grundlagen-zur-elektromagnetischen-vertraglichkeit/kopplungsmechanismen?contentId=3e1horHNaH4dv~VQRtqsdw"
+      },
+      {
+        "label": "Beckhoff: Analogtechnische Hinweise zu Schirm und Erde",
+        "url": "https://infosys.beckhoff.com/content/1031/ioanalogmanual/2346576779.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 11
+  },
+  {
+    "id": "D20",
+    "title": "Prozesszustände sichtbar machen",
+    "category": "Automation",
+    "question": "Erkläre Prozessvisualisierung, nenne ihren betrieblichen Nutzen und gib drei mögliche Anzeigegeräte an.",
+    "answer": [
+      {
+        "label": "Bedeutung",
+        "text": "Eine Prozessvisualisierung stellt aktuelle Zustände, Messwerte und Abläufe einer Maschine oder Anlage verständlich dar. Eine HMI kann zusätzlich berechtigte Bedienhandlungen ermöglichen, etwa Sollwerteingaben und das Quittieren von Meldungen. Die angezeigten Informationen werden aus der Steuerung oder anderen Datenquellen übernommen."
+      },
+      {
+        "label": "Nutzen",
+        "text": "Übersichtsbilder machen den Anlagenzustand schneller erkennbar. Meldungen unterstützen die Störungssuche, Trends zeigen zeitliche Veränderungen und gespeicherte Daten helfen bei Qualitätssicherung und Optimierung. Eine gute Oberfläche zeigt Einheiten, Grenzwerte und die Aktualität der Werte deutlich."
+      },
+      {
+        "label": "Drei Geräte",
+        "text": "Möglich sind ein industrielles Bedienpanel, ein Industrie-PC beziehungsweise Panel-PC und ein autorisiertes Tablet oder Smartphone mit geeigneter Web-HMI. Die Visualisierung ist die Software; Bildschirm und Eingabegerät sind ihre Hardware. Sicherheitsfunktionen dürfen nicht allein von einer gewöhnlichen HMI-Anzeige abhängen."
+      }
+    ],
+    "mnemonic": "Visualisieren heißt Zustände verstehen; Bedienen verlangt passende Rechte und Rückmeldungen.",
+    "pitfall": "Ein grünes Symbol beweist keine sichere Maschinenstellung, wenn Daten veraltet, falsch zugeordnet oder nicht sicherheitsgerichtet erfasst sind.",
+    "keywords": [
+      "HMI",
+      "Visualisierung",
+      "Bedienpanel",
+      "Trends",
+      "Meldungen",
+      "Prozesswerte"
+    ],
+    "sources": [
+      {
+        "label": "Beckhoff: TwinCAT HMI und Plattformen",
+        "url": "https://www.beckhoff.com/de-de/produkte/automation/twincat-hmi/"
+      },
+      {
+        "label": "Beckhoff: Multitouch-Control-Panels",
+        "url": "https://www.beckhoff.com/de-de/produkte/ipc/control-panels/cp29xx-cp39xx-multitouch-control-panels/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 11
+  },
+  {
+    "id": "D21",
+    "title": "Kupplungen zwischen Antriebswellen",
+    "category": "Mechanik",
+    "question": "Welche Aufgaben erfüllen Kupplungen? Beschreibe zwei erkennbare Bauarten mit je einer typischen Anwendung.",
+    "answer": [
+      {
+        "label": "Aufgaben",
+        "text": "Kupplungen verbinden An- und Abtriebswelle zur Drehmomentübertragung. Je nach Bauart gleichen sie begrenzten axialen, radialen oder winkligen Versatz aus, dämpfen Drehschwingungen oder erlauben Schalten beziehungsweise Überlastbegrenzung. Diese Zusatzfunktionen sind nicht bei jeder Kupplung vorhanden."
+      },
+      {
+        "label": "Elastische Klauenkupplung",
+        "text": "Zwei Naben mit Klauen greifen über ein elastisches Zwischenstück ineinander. Das Zwischenstück kann Stöße und Drehschwingungen dämpfen und begrenzte Verlagerungen zulassen. Eine typische Anwendung ist die Verbindung eines Elektromotors mit einer Pumpe."
+      },
+      {
+        "label": "Metallbalgkupplung",
+        "text": "Zwischen den Naben sitzt ein dünnwandiger, gefalteter Metallbalg. Er ist gegenüber Verlagerungen biegsam, überträgt die Drehung aber mit hoher Torsionssteife und bei entsprechender Ausführung spielfrei. Das eignet sich etwa für eine Servoachse zwischen Motor und Kugelgewindetrieb oder Drehgeber."
+      }
+    ],
+    "mnemonic": "Die Kupplung überträgt Drehmoment; ihre Bauart bestimmt Dämpfung, Steifigkeit und Versatzausgleich.",
+    "pitfall": "Eine ausgleichende Kupplung ersetzt keine sorgfältige Wellenausrichtung und ist nicht automatisch eine Sicherheitskupplung.",
+    "keywords": [
+      "Kupplung",
+      "Drehmoment",
+      "Klauenkupplung",
+      "Metallbalg",
+      "Wellenversatz",
+      "Torsionssteife"
+    ],
+    "sources": [
+      {
+        "label": "KTR: Antriebstechnik und Kupplungsbauarten",
+        "url": "https://www.ktr.com/dam/jcr%3A674923f2-6eae-4fab-83e9-1b6bb25c0178/KTR-KATALOG-ANTRIEBSTECHNIK.PDF"
+      },
+      {
+        "label": "KTR: Metallbalgkupplung TOOLFLEX",
+        "url": "https://www.ktr.com/de/de/produkte/toolflex-metallbalgkupplungen/"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 12
+  },
+  {
+    "id": "D22",
+    "title": "Keilriemen und Zahnriemen",
+    "category": "Mechanik",
+    "question": "Wozu wird ein Riementrieb eingesetzt und wie erkennst und erklärst du Keilriemen und Zahnriemen?",
+    "answer": [
+      {
+        "label": "Zweck",
+        "text": "Ein Riementrieb überträgt Leistung zwischen Wellen über einen umlaufenden Riemen. Unterschiedliche wirksame Scheibendurchmesser beziehungsweise Zähnezahlen ergeben eine Übersetzung. Die flexible Verbindung überbrückt größere Achsabstände und kann je nach Bauart Schwingungen mindern."
+      },
+      {
+        "label": "Keilriemen",
+        "text": "Sein Querschnitt ist trapezförmig und läuft in einer passenden Rille. Die Kraft wird über Reibung an den Flanken übertragen; dazu ist eine geeignete Vorspannung nötig. Schlupf ist möglich. Eine gezahnte Innenseite bei manchen Keilriemen verbessert die Biegsamkeit, macht sie aber nicht zu Zahnriemen."
+      },
+      {
+        "label": "Zahnriemen",
+        "text": "Seine Zähne greifen in passende Zahnlücken der Riemenscheibe ein. Das ergibt eine formschlüssige, im normalen Betrieb schlupffreie Übertragung mit fester Zuordnung der Drehwinkel. Zahnprofil, Teilung, Breite und zulässige Last müssen zueinander passen."
+      }
+    ],
+    "mnemonic": "Keilriemen hält an den Flanken durch Reibung; Zahnriemen greift mit seinen Zähnen.",
+    "pitfall": "Sichtbare Querkerben an einem Keilriemen sind keine formschlüssig eingreifenden Zahnriemenzähne.",
+    "keywords": [
+      "Keilriemen",
+      "Zahnriemen",
+      "Riemenscheibe",
+      "Vorspannung",
+      "Reibschluss",
+      "Zahneingriff"
+    ],
+    "sources": [
+      {
+        "label": "Optibelt: Riemenbauarten und Übertragungsprinzipien",
+        "url": "https://www.optibelt.com/fileadmin/pdf/kataloge/Optibelt-Kompaktkatalog-Power-Transmission.pdf"
+      },
+      {
+        "label": "Gates: Keilriemen",
+        "url": "https://www.gates.com/de/de/power-transmission/v-belts.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 12
+  },
+  {
+    "id": "D23",
+    "title": "CEE-Codierung und Kontaktfolge",
+    "category": "Elektrotechnik",
+    "question": "Ordne drei CEE-Kennfarben Spannungsbereichen zu, erkläre die mechanische Unverwechselbarkeit, den Schutzkontakt und die Aufgabe eines Pilotkontakts einschließlich Kontaktfolge.",
+    "answer": [
+      {
+        "label": "Kennfarben",
+        "text": "Drei typische Zuordnungen sind Gelb für 100–130 V, Blau für 200–250 V und Rot für 380–480 V. Maßgeblich sind stets die aufgedruckten Bemessungsdaten einschließlich Frequenz und Polzahl; eine Farbe allein beschreibt nicht jede zulässige Kombination."
+      },
+      {
+        "label": "Mechanische Codierung",
+        "text": "Führungsnase und Nut sowie die festgelegte Uhrzeitstellung des Schutzleiterkontakts verhindern unpassende Paarungen. Auch Baugröße und Kontaktanordnung müssen zusammenpassen. Die Farbe unterstützt die Erkennung; die mechanische Codierung verhindert das Zusammenstecken."
+      },
+      {
+        "label": "Schutzkontakt",
+        "text": "Der Schutzleiterkontakt besitzt einen größeren Durchmesser als die aktiven Kontakte und ist voreilend ausgeführt. Beim Stecken verbindet PE zuerst, beim Ziehen trennt PE zuletzt. Die Kontaktgeometrie von Stift und Buchse verwirklicht diese Reihenfolge."
+      },
+      {
+        "label": "Pilotkontakt",
+        "text": "Der zusätzliche Steuerkontakt kann ein vorgeschaltetes Schütz elektrisch verriegeln: Er schließt nach den Hauptkontakten und öffnet vor ihnen. Beim Stecken lautet die Reihenfolge PE, Hauptkontakte, Pilotkontakt; beim Ziehen umgekehrt. Ein richtig ausgelegter Steuerkreis schaltet dadurch die Last vor dem Trennen der Hauptkontakte ab. Der Pilotkontakt führt keinen Laststrom und ist kein Ersatz für PE."
+      }
+    ],
+    "mnemonic": "Beim Stecken schützt PE zuerst; der Pilot gibt die Last zuletzt frei.",
+    "pitfall": "Die Gehäusefarbe allein verhindert keine Fehlverbindung, und ein Pilotkontakt wirkt nur mit der zugehörigen Verriegelungsschaltung.",
+    "keywords": [
+      "CEE",
+      "Uhrzeitstellung",
+      "Schutzkontakt",
+      "Pilotkontakt",
+      "Verriegelung",
+      "Kennfarben"
+    ],
+    "sources": [
+      {
+        "label": "MENNEKES: Kennfarben und Uhrzeitstellungen",
+        "url": "https://www.iv-ott.de/fileadmin/user_upload/Downloads/Mennekes-PK.pdf"
+      },
+      {
+        "label": "MENNEKES: Pilotkontakt und nacheilende Kontaktgabe",
+        "url": "https://www.mennekes.de/industry/services/fragen-antworten/faq-detailansicht/kann-ich-einen-rueckmeldungsignal-von-der-cee-steckvorrichtung-erhalten/"
+      },
+      {
+        "label": "MENNEKES: Technische Informationen zu CEE-Kontakten",
+        "url": "https://www.elec.ru/brands/mennekes/_Mennekes_Deutsch.pdf"
+      },
+      {
+        "label": "LAPP: Cable Guide, voreilender Schutzkontakt",
+        "url": "https://t3.lappcdn.com/fileadmin/DAM/Lapp_Austria/Kataloge_Flyer/CableGuide_de_at.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 13
+  },
+  {
+    "id": "D24",
+    "title": "Antrieb passend zur Aufgabe wählen",
+    "category": "Mechanik",
+    "question": "Begründe die Unterschiede von Riemen-, Ketten- und Zahnradtrieb an den Kriterien Kraftübertragung, Abstand, Laufverhalten und Wartung.",
+    "answer": [
+      {
+        "label": "Riemen",
+        "text": "Keil- und Flachriemen übertragen durch Reibung, Zahnriemen durch Formschluss. Riemen sind leicht, laufen meist leise und benötigen keine Gelenkschmierung. Sie überbrücken größere Achsabstände. Vorspannung, Alterung und bei Reibtrieben Schlupf beeinflussen den Betrieb."
+      },
+      {
+        "label": "Kette",
+        "text": "Ketten übertragen durch Formschluss und sind für belastbare Antriebe über größere Abstände geeignet. Gelenke und Zahneingriff verursachen Verschleiß und Geräusche; meist ist eine geeignete Schmierung nötig. Der Polygoneffekt kann die Geschwindigkeit periodisch schwanken lassen."
+      },
+      {
+        "label": "Zahnräder",
+        "text": "Direkt eingreifende Räder ergeben einen kompakten, formschlüssigen Trieb mit geometrisch festgelegtem Achsabstand. Präzise Fertigung, Lagerung und ausreichende Schmierung ermöglichen hohe Belastbarkeit. Die gewünschte Übersetzung und Achsanordnung bestimmen die Bauart; vorhandenes Zahnflankenspiel ist kein Reibschlupf."
+      }
+    ],
+    "mnemonic": "Zur Auswahl gehören Abstand, Drehwinkelbezug, Last, Geräusch und Wartungsaufwand.",
+    "pitfall": "Formschluss bedeutet nicht vollkommen gleichförmigen oder spielfreien Lauf; Ketten können den Polygoneffekt und Zahnräder Flankenspiel besitzen.",
+    "keywords": [
+      "Riemen",
+      "Kette",
+      "Zahnräder",
+      "Polygoneffekt",
+      "Flankenspiel",
+      "Antriebsauswahl"
+    ],
+    "sources": [
+      {
+        "label": "Gates: Riemenspannung, Verschleiß und Synchronisierung",
+        "url": "https://www.gates.com/content/dam/documents-library/operating-manuals/preventive-maintenance-manual-de-de.pdf"
+      },
+      {
+        "label": "iwis: Kettenhandbuch, Schlupf und Polygoneffekt",
+        "url": "https://www.iwis.com/antriebssysteme-drive-systems/as-handbook/iwis-handbuch-kettentechnik-konstruktionsunterlagen-berechnungsbeispiele.pdf"
+      },
+      {
+        "label": "SEW-EURODRIVE: Funktion und Bauarten von Getrieben",
+        "url": "https://www.sew-eurodrive.de/produkte/getriebe/getriebe.html"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 13
+  },
+  {
+    "id": "D25",
+    "title": "Zwei Fahrbefehle für einen Zylinder",
+    "category": "Pneumatik",
+    "question": "Erkläre für die Zuordnung D25 den Signalweg von SF1 beziehungsweise SF2 über die Relais zu den Ventilspulen, die beiden Zylinderbewegungen und das Verhalten nach Loslassen der Taster. Welcher Ventiltyp ist dargestellt?",
+    "answer": [
+      {
+        "label": "Geprüfte Schaltung",
+        "text": "Auf der zugehörigen Quellseite 38 sind zwei unabhängige 24-V-Zweige zu erkennen: SF1 betätigt QA1, dessen Schließer MB1 versorgt. SF2 betätigt QA2, dessen Schließer MB2 versorgt. Die Relais besitzen hier keine eingezeichnete Selbsthaltung."
+      },
+      {
+        "label": "Pneumatischer Ablauf",
+        "text": "MB1 schaltet die Versorgung 1 auf Anschluss 4 zur Kolbenseite; die Stangenseite wird über 2 und 3 entlüftet. Der doppeltwirkende Zylinder fährt aus. MB2 schaltet 1 auf 2 zur Stangenseite und entlüftet die Kolbenseite über 4 und 5; der Zylinder fährt ein."
+      },
+      {
+        "label": "Ventil und Speicherverhalten",
+        "text": "Dargestellt ist ein 5/2-Wegeventil mit zwei elektromagnetischen Betätigungen und ohne Rückstellfeder, also eine bistabile Ansteuerung. Nach Loslassen des Tasters fällt das betreffende Relais ab; das Ventil behält seine zuletzt geschaltete Stellung. Die Bewegung kann bei weiter vorhandener Druckluft deshalb bis zur Endlage weiterlaufen."
+      },
+      {
+        "label": "Grenzen der Darstellung",
+        "text": "Es sind weder automatische Endlagenrückmeldungen noch eine gegenseitige elektrische Verriegelung erkennbar. Für gleichzeitig betätigte Taster ist damit kein eindeutiger Fahrbefehl aus dem Plan ableitbar. Eine federdefinierte Ventilgrundstellung darf ebenfalls nicht angenommen werden."
+      }
+    ],
+    "mnemonic": "Das Relais speichert hier nicht; das bistabile Wegeventil behält den letzten Schaltbefehl.",
+    "pitfall": "Loslassen eines Tasters ist bei dieser Schaltung keine sichere Stoppfunktion.",
+    "keywords": [
+      "5/2-Wegeventil",
+      "Bistabil",
+      "Relais",
+      "MB1",
+      "MB2",
+      "Doppeltwirkend"
+    ],
+    "sources": [
+      {
+        "label": "WKO Oberösterreich: D25, Sichtprüfung der zugeordneten Schaltung auf PDF-Seite 38",
+        "url": "https://www.wko.at/ooe/bildung-lehre/fragenkatalog-kandidat-mec-h1.pdf"
+      },
+      {
+        "label": "Festo: Bistabile 5/2-Magnetventile",
+        "url": "https://www.festo.com/media/catalog/202473_documentation.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 14,
+    "imagePage": 38
+  },
+  {
+    "id": "D26",
+    "title": "Pneumatische Zeitverzögerung",
+    "category": "Pneumatik",
+    "question": "Nenne günstige und ungünstige Eigenschaften der Pneumatik und erkläre Aufbau, Einschaltverzögerung und Rückstellung eines typischen pneumatischen Zeitglieds.",
+    "answer": [
+      {
+        "label": "Eigenschaften",
+        "text": "Günstig sind einfache, robuste Komponenten, schnelle Bewegungen und das Speichern sowie Verteilen der Druckluft. Ungünstig sind der Energieaufwand bei Erzeugung und Leckage, Abluftlärm und die nachgiebige, lastabhängige Wirkung der kompressiblen Luft. Die Luftqualität muss zu den Komponenten passen."
+      },
+      {
+        "label": "Bauteile des Zeitglieds",
+        "text": "Ein klassisches Zeitverzögerungsventil kombiniert ein einstellbares Drossel-Rückschlagventil, ein kleines Luftvolumen und ein pneumatisch betätigtes, federzurückgestelltes 3/2-Wegeventil. Es existieren Ausführungen mit unterschiedlicher Ruhestellung und unterschiedlicher Verzögerungsrichtung."
+      },
+      {
+        "label": "Funktion am Beispiel Einschaltverzögerung",
+        "text": "Ein anliegendes Steuersignal füllt das Luftvolumen durch die Drossel langsam. Erst beim Erreichen des erforderlichen Steuerdrucks schaltet das 3/2-Ventil den Ausgang. Beim Wegfall des Steuersignals entleert sich das Volumen über den Rückschlagweg schneller und die Feder stellt zurück. Drosselquerschnitt und Volumen bestimmen die Verzögerung; Druck und Luftzustand beeinflussen die Wiederholgenauigkeit."
+      }
+    ],
+    "mnemonic": "Die Drossel füllt den Speicher langsam; der erreichte Druck löst das Schalten aus.",
+    "pitfall": "Ein pneumatisches Zeitglied zählt keine exakten Sekunden unabhängig von Druck, Leckage und Temperatur.",
+    "keywords": [
+      "Zeitverzögerung",
+      "Drossel",
+      "Rückschlagventil",
+      "Luftspeicher",
+      "3/2-Wegeventil",
+      "Steuerdruck"
+    ],
+    "sources": [
+      {
+        "label": "SFS-Fluidsysteme: Pneumatisches Zeitverzögerungsventil",
+        "url": "https://www.sfs-fluidsysteme.com/pneumatisches-zeitverzoegerungsventil/"
+      },
+      {
+        "label": "Festo: Product Guide Fluid-Power, pneumatische Komponenten",
+        "url": "https://www.festo.com/media/catalog/156206_documentation.pdf"
+      },
+      {
+        "label": "Festo: Wissenswertes über Pneumatik",
+        "url": "https://techblog.festo.at/wissenswertes-ueber-pneumatik-festo"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 14
+  },
+  {
+    "id": "D37",
+    "title": "Dübel passend zum Untergrund",
+    "category": "Mechanik",
+    "question": "Vergleiche drei Dübelarten, wähle eine Befestigung für ein Rohr auf verputztem Mauerwerk unter begründeten Annahmen und erläutere Tragfähigkeit sowie Montageprinzip.",
+    "answer": [
+      {
+        "label": "Drei Bauarten",
+        "text": "Ein Kunststoffspreizdübel wird durch die Schraube gegen die Bohrlochwand gepresst. Ein Universaldübel kann je nach Untergrund spreizen, klappen oder verknoten. Ein Hohlraumdübel stützt sich hinter einer geeigneten Plattenwand ab; er ist kein beliebiger Ersatz für einen Mauerwerksdübel."
+      },
+      {
+        "label": "Auswahl",
+        "text": "„Verputzt“ beschreibt nur die Deckschicht. Für tragfähigen Vollziegel oder Beton eignet sich beispielsweise ein dafür freigegebener Kunststoffspreiz- oder Universaldübel mit passender Schraube und ausreichender Verankerung im Grundmaterial. Bei Lochstein oder Porenbeton ist eine dafür geeignete Ausführung nötig. Die Putzschicht darf nicht als tragende Verankerungszone angesetzt werden."
+      },
+      {
+        "label": "Belastbarkeit",
+        "text": "Entscheidend sind Art und Zustand des Baustoffs, Verankerungstiefe, Dübel- und Schraubenabmessungen, Zug- oder Querbelastung, Rand- und Achsabstände sowie die Montagequalität. Die Herstellerlasten gelten nur für ihre jeweiligen Randbedingungen."
+      },
+      {
+        "label": "Montageprinzip am Spreizdübel",
+        "text": "Vor dem Bohren werden Leitungsverlauf und Untergrund geklärt. Bohrverfahren, Durchmesser und Tiefe folgen der Produktanleitung; anschließend wird das Bohrloch vorschriftsgemäß gereinigt. Der passende Dübel wird gesetzt und die Rohrschelle mit der vorgeschriebenen Schraube befestigt. Dabei entsteht durch das Spreizen die Haltewirkung; ein mitdrehender Dübel oder zerbröselnder Untergrund ist kein ordnungsgemäßer Sitz."
+      }
+    ],
+    "mnemonic": "Der tragende Untergrund bestimmt den Dübel; Putz allein trägt die Befestigung nicht.",
+    "pitfall": "Ein längerer Dübel erhöht die Tragfähigkeit nicht automatisch, wenn die Spreizzone im falschen Material liegt.",
+    "keywords": [
+      "Dübel",
+      "Mauerwerk",
+      "Putz",
+      "Verankerungstiefe",
+      "Spreizdübel",
+      "Hohlraumdübel"
+    ],
+    "sources": [
+      {
+        "label": "fischer: Dübelratgeber und Untergrundwahl",
+        "url": "https://www.fischer.de/de-de/service/ratgeber/duebelratgeber"
+      },
+      {
+        "label": "fischer: DuoPower, Verankerung und Putzüberbrückung",
+        "url": "https://www.fischer.de/de-de/produkte/standardbefestigungen/kunststoffduebel/duopower/duopower-2-komponenten-universalduebel"
+      },
+      {
+        "label": "fischer Austria: Hinweise zur Montage",
+        "url": "https://www.fischer.at/de-at/service/wir-helfen-weiter/tipps"
+      },
+      {
+        "label": "fischer: Bedingungen der angegebenen Haltewerte",
+        "url": "https://www.fischer-international.com/en/service/our-support/safety-important/german"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 20
+  },
+  {
+    "id": "D38",
+    "title": "Haftung und Festigkeit beim Kleben",
+    "category": "Mechanik",
+    "question": "Erkläre die beiden maßgeblichen Bindungskräfte einer Klebung, nenne drei Klebstoffarten und stelle je zwei Vorteile und Nachteile gegenüber.",
+    "answer": [
+      {
+        "label": "Adhäsion und Kohäsion",
+        "text": "Adhäsion bezeichnet die Haftung zwischen Klebstoff und Fügeteiloberfläche. Dazu müssen Oberfläche und Klebstoff einander ausreichend benetzen und passende Wechselwirkungen aufbauen. Kohäsion bezeichnet den inneren Zusammenhalt der Klebstoffschicht. Die Verbindung ist nur tragfähig, wenn sowohl die Grenzflächen als auch die ausgehärtete beziehungsweise abgebundene Schicht genügend Festigkeit besitzen."
+      },
+      {
+        "label": "Drei Klebstoffarten",
+        "text": "Epoxidharzklebstoffe sind häufig für feste Strukturverbindungen geeignet. Cyanacrylatklebstoffe ermöglichen schnelles Fügen kleiner, passend vorbereiteter Flächen. Polyurethanklebstoffe können je nach Rezeptur vergleichsweise elastische Verbindungen bilden. Die Anzahl der Komponenten und die Aushärtungsbedingungen hängen vom konkreten Produkt ab."
+      },
+      {
+        "label": "Zwei Vorteile",
+        "text": "Kleben kann unterschiedliche Werkstoffe großflächig verbinden, ohne Bohrungen und deren Kerbwirkung zu benötigen. Außerdem erfolgt das Fügen meist mit geringerem Wärmeeintrag als beim Schweißen; eine geeignete Klebschicht kann zusätzlich abdichten."
+      },
+      {
+        "label": "Zwei Nachteile",
+        "text": "Oberflächenvorbereitung und kontrollierte Aushärtung sind oft aufwendig und verzögern die Belastbarkeit. Temperatur, Alterung und chemische Einflüsse begrenzen die Anwendung; Schälbelastung ist bei vielen Klebungen ungünstig."
+      }
+    ],
+    "mnemonic": "Adhäsion hält an der Oberfläche, Kohäsion hält die Klebstoffschicht zusammen.",
+    "pitfall": "Hohe Klebstofffestigkeit allein hilft nicht, wenn eine verschmutzte oder schlecht benetzte Grenzfläche versagt.",
+    "keywords": [
+      "Kleben",
+      "Adhäsion",
+      "Kohäsion",
+      "Epoxidharz",
+      "Cyanacrylat",
+      "Polyurethan"
+    ],
+    "sources": [
+      {
+        "label": "UHU: Grundlagen der Klebetechnik",
+        "url": "https://www.uhu.com/de-de/klebeberatung/klebetechnik"
+      },
+      {
+        "label": "3M: Verbindungs- und Befestigungslösungen",
+        "url": "https://www.3mdeutschland.de/3M/de_DE/kleben-und-verbinden/oberflache/"
+      },
+      {
+        "label": "proHPL: Reaktionsklebstoffe und Verarbeitung",
+        "url": "https://www.pro-hpl.org/assets/uploads/prohpl/files/220101_TM_Allgemeine_Verarbeitungsempfehlungen_fuer_HPL.pdf"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 20
+  },
+  {
+    "id": "D40",
+    "title": "Schraubverbindungen gezielt sichern",
+    "category": "Mechanik",
+    "question": "Unterscheide Sicherungsprinzip und Sicherungszweck, nenne vier geeignete Beispiele und erkläre die Ausführung sowie Grenzen zweier Sicherungen.",
+    "answer": [
+      {
+        "label": "Einteilung",
+        "text": "Mechanische Sicherungen lassen sich nach ihrem Wirkprinzip in kraftschlüssige beziehungsweise klemmende und formschlüssige Sicherungen einteilen. Chemische Schraubensicherungen ergänzen dies durch Stoffschluss. Nach dem Zweck sind Vorspannkraftverlust durch Lockern, selbsttätiges Losdrehen und vollständiger Verlust des Verbindungselements zu unterscheiden."
+      },
+      {
+        "label": "Vier Möglichkeiten",
+        "text": "Beispiele sind eine Mutter mit Klemmteil, ein abgestimmtes Keilsicherungsscheibenpaar, eine Kronenmutter mit Splint und ein geeigneter Gewindesicherungsklebstoff. Die Auswahl richtet sich nach Belastung, Temperatur, Oberflächen und erforderlicher Wiederverwendbarkeit."
+      },
+      {
+        "label": "Kronenmutter und Splint",
+        "text": "Eine dafür vorgesehene Schraube besitzt eine Querbohrung, die Mutter besitzt Kronenschlitze. Ein eingesetzter und gegen Herausfallen gesicherter Splint begrenzt das Weiterdrehen. Das ist vor allem eine formschlüssige Verliersicherung; begrenzte Drehbewegung und Vorspannkraftverlust bleiben möglich."
+      },
+      {
+        "label": "Mutter mit Klemmteil",
+        "text": "Ein verformter metallischer Gewindebereich oder ein geeigneter Kunststoffeinsatz erzeugt zusätzliches Reibmoment im Gewinde. Der Einsatz ist bereits bei der Herstellung in die Mutter integriert. Temperaturgrenzen und Wiederverwendung sind produktabhängig. Das Klemmmoment darf nicht mit der für die Verbindung benötigten Vorspannkraft verwechselt werden."
+      }
+    ],
+    "mnemonic": "Zuerst das Versagen unterscheiden: Vorspannkraftverlust, Losdrehen oder Verlust.",
+    "pitfall": "Ein Splint sichert den Verbleib, aber nicht automatisch die Vorspannkraft; gewöhnliche Federringe sind keine pauschal wirksame Sicherung gegen dynamisches Losdrehen.",
+    "keywords": [
+      "Schraubensicherung",
+      "Vorspannkraft",
+      "Losdrehen",
+      "Klemmteil",
+      "Kronenmutter",
+      "Splint"
+    ],
+    "sources": [
+      {
+        "label": "Bossard: Lockern, Losdrehen und Verliersicherungen",
+        "url": "https://assets.eu.ctfassets.net/0vp0u5uh75zd/4sP1THZ8d8OFO95VbhBonq/81c948affa9638b61ce85f060a0a5a44/075_077_Sichern_Schraubverbindungen_Fastening_DE_01_2025.pdf"
+      },
+      {
+        "label": "Würth Industrie Service: Sicherung gegen Losdrehen",
+        "url": "https://www.wuerth-industrie.com/web/de/wuerthindustrie/technikportal/technische_informationen___tools/schraubensicherung_3/sicherung-gegen-losdrehen.php"
+      }
+    ],
+    "minutes": 4,
+    "pdfPage": 21
+  }
+]
