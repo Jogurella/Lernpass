@@ -4,12 +4,12 @@ import {fileURLToPath} from 'node:url';
 const root=fileURLToPath(new URL('../',import.meta.url));
 if(process.platform!=='darwin')throw Error('iPhone-Projekt auf dem MacBook oder einem macOS-CI-Runner vorbereiten.');
 const run=(args)=>{const r=spawnSync(process.execPath,['node_modules/@capacitor/cli/bin/capacitor',...args],{cwd:root,stdio:'inherit'});if(r.status!==0)process.exit(r.status||1);};
-try{await readFile(new URL('../ios/App/App.xcodeproj/project.pbxproj',import.meta.url));}catch{run(['add','ios','--packagemanager','SPM']);}
+try{await readFile(new URL('../ios/native/App/App.xcodeproj/project.pbxproj',import.meta.url));}catch{run(['add','ios','--packagemanager','SPM']);}
 run(['sync','ios']);
-const project=new URL('../ios/App/App/',import.meta.url);await mkdir(project,{recursive:true});
+const project=new URL('../ios/native/App/App/',import.meta.url);await mkdir(project,{recursive:true});
 for(const file of ['LernpassNative.swift','LernpassViewController.swift'])await copyFile(new URL('../ios/'+file,import.meta.url),new URL(file,project));
 const storyboard=new URL('Base.lproj/Main.storyboard',project);let xml=await readFile(storyboard,'utf8');xml=xml.replace('customClass="CAPBridgeViewController" customModule="Capacitor"','customClass="LernpassViewController" customModule="App"');await writeFile(storyboard,xml);
-const pbx=new URL('../ios/App/App.xcodeproj/project.pbxproj',import.meta.url);let code=await readFile(pbx,'utf8');
+const pbx=new URL('../ios/native/App/App.xcodeproj/project.pbxproj',import.meta.url);let code=await readFile(pbx,'utf8');
 for(const [file,id] of [['LernpassNative.swift','AB17A100'],['LernpassViewController.swift','AB17A200']]){
  if(code.includes('/* '+file+' */'))continue;
  const ref=id+'0000000000000001',build=id+'0000000000000002';

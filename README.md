@@ -100,7 +100,7 @@ pnpm run build
 pnpm run ios:sync
 ```
 
-Danach `ios/App/App.xcodeproj` in Xcode öffnen. Die Bundle-ID `at.lernpass.mec`
+Danach `ios/native/App/App.xcodeproj` in Xcode öffnen. Die Bundle-ID `at.lernpass.mec`
 beibehalten. Der macOS-Workflow erzeugt eine unsignierte IPA, die SideStore mit dem
 Apple-Zugang des Nutzers signiert. Erst nach einer tatsächlich gebauten IPA wird
 eine Version mit echter Dateigröße in `sidestore/source.json` eingetragen.

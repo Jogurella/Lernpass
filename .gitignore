@@ -11,6 +11,7 @@ dist/.openai/
 server/generated/
 .DS_Store
 ios/App/
+ios/native/
 build/
 *.key
 *.key.pub

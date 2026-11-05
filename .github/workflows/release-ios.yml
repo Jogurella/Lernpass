@@ -22,7 +22,7 @@ jobs:
       - name: Archive without an Apple signing identity
         run: |
           VERSION=$(node -p "require('./package.json').version")
-          xcodebuild archive -project ios/App/App.xcodeproj -scheme App -configuration Release -sdk iphoneos -archivePath build/App.xcarchive MARKETING_VERSION="$VERSION" CURRENT_PROJECT_VERSION="${GITHUB_RUN_NUMBER}" CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
+          xcodebuild archive -project ios/native/App/App.xcodeproj -scheme App -configuration Release -sdk iphoneos -archivePath build/App.xcarchive MARKETING_VERSION="$VERSION" CURRENT_PROJECT_VERSION="${GITHUB_RUN_NUMBER}" CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
           mkdir -p build/Payload
           cp -R build/App.xcarchive/Products/Applications/App.app build/Payload/
           cd build
