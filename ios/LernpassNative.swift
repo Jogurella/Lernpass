@@ -12,6 +12,7 @@ public class LernpassNativePlugin: CAPPlugin, CAPBridgedPlugin, URLSessionTaskDe
         "apiRequest", "backupStorage", "openExternal", "appUpdate", "signatureInfo"
     ].map { CAPPluginMethod(name: $0, returnType: CAPPluginReturnPromise) }
     private let queue = DispatchQueue(label: "at.lernpass.storage")
+    private var pendingDownload: URL?
     private var folder: URL {
         FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appendingPathComponent("Lernpass", isDirectory: true)
     }
@@ -122,7 +123,12 @@ public class LernpassNativePlugin: CAPPlugin, CAPBridgedPlugin, URLSessionTaskDe
     @objc func appUpdate(_ call: CAPPluginCall) {
         if call.getString("action") == "install" {
             DispatchQueue.main.async {
-                guard let url = URL(string: "sidestore://") else { call.reject("Öffne SideStore und aktualisiere Lernpass unter Meine Apps."); return }
+                var parts = URLComponents(string: "sidestore://")!
+                if let download = self.pendingDownload {
+                    parts.host = "install"
+                    parts.queryItems = [URLQueryItem(name: "url", value: download.absoluteString)]
+                }
+                guard let url = parts.url else { call.reject("Öffne SideStore und aktualisiere Lernpass unter Meine Apps."); return }
                 UIApplication.shared.open(url, options: [:]) { opened in
                     if opened { call.resolve(["opened": true]) }
                     else { call.reject("Öffne SideStore und aktualisiere Lernpass unter Meine Apps. Füge bei Bedarf die Lernpass-Quelle aus der Anleitung hinzu.") }
@@ -139,6 +145,7 @@ public class LernpassNativePlugin: CAPPlugin, CAPBridgedPlugin, URLSessionTaskDe
                   let apps = source["apps"] as? [[String: Any]] else { call.reject("Die SideStore-Quelle ist momentan nicht erreichbar."); return }
             guard let app = apps.first(where: { $0["bundleIdentifier"] as? String == "at.lernpass.mec" }), let versions = app["versions"] as? [[String: Any]], let latest = versions.first, let version = latest["version"] as? String else { call.resolve(["configured": true, "available": false]); return }
             let current = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.7.0"
+            if version.compare(current, options: .numeric) == .orderedDescending, let value = latest["downloadURL"] as? String, let download = URL(string: value), download.scheme == "https", download.host == "github.com", download.path.hasPrefix("/Jogurella/Lernpass/releases/download/") { self.pendingDownload = download }
             call.resolve(["configured": true, "available": version.compare(current, options: .numeric) == .orderedDescending, "version": version, "date": latest["date"] as? String ?? "", "size": latest["size"] as? Int ?? 0, "body": latest["localizedDescription"] as? String ?? "", "sourceUrl": url.absoluteString])
         }.resume()
     }

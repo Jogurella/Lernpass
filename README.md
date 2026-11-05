@@ -126,7 +126,9 @@ node server/node-server.mjs
 tailscale serve --bg --https=8443 http://127.0.0.1:8796
 ```
 
-Eine eigene HTTPS-Adresse kann über `MEC_SERVER_PUBLIC_URL` gesetzt werden.
+Vor dem Start für Tailscale `MEC_SERVER_PUBLIC_URL` auf die eigene vollständige
+HTTPS-Adresse inklusive Port setzen; sie wird auch zur Host-Prüfung verwendet.
+Die hier eingerichtete Instanz nutzt dafür ihre lokale Startkonfiguration.
 Der Node-Server bindet ausschließlich an `127.0.0.1`. Bestehende Serve-Routen
 zuerst prüfen und für den Lernpass einen freien Port verwenden. Ein optionaler
 Cloudflare-Betrieb benötigt D1-Bindung `DB`, R2-Bindung `BUCKET`, die Migrationen

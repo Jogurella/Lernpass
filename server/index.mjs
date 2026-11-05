@@ -1,4 +1,5 @@
 import base from './generated/base-worker.mjs';
+import {VERSION} from './generated/version.mjs';
 import {authenticate,createDevices,json} from './devices.mjs';
 const devices=createDevices();
 const nativeOrigins=['http://tauri.localhost','https://tauri.localhost','tauri://localhost','capacitor://localhost','https://localhost','http://localhost'];
@@ -8,8 +9,8 @@ export function createNativeHandler(baseWorker=base){return {async fetch(request
  const cors=origin&&allowed?{'Access-Control-Allow-Origin':origin,'Vary':'Origin','Access-Control-Allow-Headers':'Authorization, Content-Type, X-Case-Id, X-Image-Name','Access-Control-Allow-Methods':'GET, HEAD, POST, PUT, DELETE, OPTIONS'}:{};
  const respond=response=>{const headers=new Headers(response.headers);for(const [k,v]of Object.entries(cors))headers.set(k,v);return new Response(response.body,{status:response.status,headers});};
  if(request.method==='OPTIONS')return respond(new Response(null,{status:204}));
- if(url.pathname==='/health')return respond(json({app:'Lernpass',version:'1.7.0',ready:Boolean(env.DB&&env.BUCKET&&env.AI_KEY_ENCRYPTION_KEY)}));
- if(!url.pathname.startsWith('/api/'))return respond(json({app:'Lernpass',version:'1.7.0',message:'Dieser Server verbindet deine Lernpass-Apps.'}));
+ if(url.pathname==='/health')return respond(json({app:'Lernpass',version:VERSION,ready:Boolean(env.DB&&env.BUCKET&&env.AI_KEY_ENCRYPTION_KEY)}));
+ if(!url.pathname.startsWith('/api/'))return respond(json({app:'Lernpass',version:VERSION,message:'Dieser Server verbindet deine Lernpass-Apps.'}));
  try{
   const device=await authenticate(request,env);
   if(['/api/account','/api/pair/start','/api/pair/claim','/api/devices'].includes(url.pathname)||url.pathname.startsWith('/api/devices/'))return respond(await devices(request,env,device));

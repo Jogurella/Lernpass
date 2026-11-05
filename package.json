@@ -1,6 +1,6 @@
 {
   "name": "lernpass",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "private": true,
   "description": "Lernpass für MEC H1 – gemeinsame App für Windows und iPhone",
   "scripts": {

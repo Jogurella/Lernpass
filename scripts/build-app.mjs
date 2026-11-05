@@ -7,6 +7,7 @@ const root=new URL('../',import.meta.url),version=JSON.parse(await readFile(new 
 await writeFile(new URL('app/version.js',root),'window.LERNPASS_VERSION='+JSON.stringify(version)+';\n');
 const legacy=spawnSync(process.execPath,['scripts/build-worker.mjs'],{cwd:root,stdio:'inherit'});if(legacy.status!==0)process.exit(legacy.status||1);
 await mkdir(new URL('server/generated/',root),{recursive:true});
+await writeFile(new URL('server/generated/version.mjs',root),'export const VERSION='+JSON.stringify(version)+';\n');
 await build({entryPoints:[fileURLToPath(new URL('ios/mobile-entry.js',root))],bundle:true,format:'iife',outfile:fileURLToPath(new URL('app/mobile.js',root)),minify:false});
 const files=(await readdir(new URL('app/',root))).filter(f=>/\.(html|css|js|svg|png)$/.test(f));
 const assets={};for(const file of files)assets[file]=(await readFile(new URL('app/'+file,root))).toString('base64');
