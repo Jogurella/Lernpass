@@ -2,6 +2,33 @@
   "name": "Lernpass",
   "identifier": "at.lernpass.source",
   "iconURL": "https://raw.githubusercontent.com/Jogurella/Lernpass/main/windows/icons/icon-1024.png",
-  "apps": [],
+  "apps": [
+    {
+      "name": "Lernpass",
+      "bundleIdentifier": "at.lernpass.mec",
+      "developerName": "Jogurella",
+      "localizedDescription": "Lernplan, Tests und Wiederholungen für Mechatronik MEC H1.",
+      "iconURL": "https://raw.githubusercontent.com/Jogurella/Lernpass/main/windows/icons/icon-1024.png",
+      "tintColor": "DD7419",
+      "versions": [
+        {
+          "version": "1.7.2",
+          "date": "2026-11-05T18:39:06.112Z",
+          "downloadURL": "https://github.com/Jogurella/Lernpass/releases/download/v1.7.2/Lernpass-1.7.2.ipa",
+          "size": 1016502,
+          "localizedDescription": "Kompakte Windows-Navigation: Einstellungen bleiben unten, Symbole haben eindeutige Beschriftungen. Update-Datum in lesbarem Format. Signierte Aktualisierung von 1.7.0 auf 1.7.1 erfolgreich geprüft; Lernmodule bleiben unverändert.",
+          "minOSVersion": "16.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "Füge Fotos deiner Skizzen in deine eigenen Antworten ein.",
+          "NSPhotoLibraryUsageDescription": "Wähle Bilder für deine eigenen Antworten.",
+          "NSPhotoLibraryAddUsageDescription": "Speichere eigene Lernbilder."
+        }
+      }
+    }
+  ],
   "news": []
 }
